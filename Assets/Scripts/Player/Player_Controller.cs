@@ -20,7 +20,8 @@ public class Player_Controller : MonoBehaviour {
 	private float currentElevation;
 
 	private Vector2 amountToMove = new Vector2();		//vector representing player movement change
-	private Player_Physics playerPhysics;				
+	private Player_Physics playerPhysics;	
+	private Vector3 scale;
 
 	// Use this for initialization
 	void Start () {
@@ -52,6 +53,13 @@ public class Player_Controller : MonoBehaviour {
 				amountToMove.y = JumpHeight;
 			}
 		}*/
+
+		scale = transform.localScale;
+
+		if((targetSpeed != 0) && (Mathf.Sign(scale.x) != Mathf.Sign(targetSpeed))){
+			scale.x = -1 * scale.x;
+			transform.localScale = scale;
+		}
 
 		amountToMove.x = currentSpeed;
 		amountToMove.y = currentElevation;

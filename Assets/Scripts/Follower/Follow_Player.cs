@@ -12,6 +12,9 @@ public class Follow_Player : MonoBehaviour {
 	private Light playerLight;
 	private bool hitPlayer = false;
 	private const float FALL_OFFSET = 1.2f;
+	private Animator anim;
+	private Follower_AnimHash hash;
+	private Vector3 scale;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +22,9 @@ public class Follow_Player : MonoBehaviour {
 			//player = GameObject.FindGameObjectWithTag("Player");
 			playerLight = Follows.GetComponentInChildren<Light>();
 		}
+
+		anim = gameObject.GetComponent<Animator>();
+		hash = gameObject.GetComponent<Follower_AnimHash>();
 	}
 	
 	// Update is called once per frame
@@ -49,13 +55,28 @@ public class Follow_Player : MonoBehaviour {
 		   !(Follows.transform.position.x - Offset < transform.position.x && 
 		 	Follows.transform.position.x + Offset > transform.position.x) &&
 		   !hitPlayer){
-
+		
 			currentX = incrementTowards(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, Speed);
 
 			if(CheckForHole(currentX)){
 				currentX = transform.position.x;
 			}
+
+
 		}
+
+
+		anim.SetFloat(hash.Direction, Mathf.Abs(currentX - transform.position.x));
+		//Debug.LogError(anim.GetFloat(hash.Direction));
+		scale = transform.localScale;
+
+		if((currentX - transform.position.x != 0) && Mathf.Sign(scale.x) != Mathf.Sign(currentX - transform.position.x)){
+			scale.x = -1 * scale.x;
+			transform.localScale = scale;
+		}
+
+
+	
 
 		Vector3 moveTo = new Vector3(currentX, transform.position.y, transform.position.z);
 

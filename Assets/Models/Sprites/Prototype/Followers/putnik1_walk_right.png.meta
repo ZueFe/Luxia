@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 5f40029add8f91348a5133959f096d55
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: sheet_gandalf_NewAnimation_anime_1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1078
+        width: 460
+        height: 688
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_1
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1074
+        width: 468
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_2
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1072
+        width: 482
+        height: 694
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_3
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1072
+        width: 476
+        height: 697
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_4
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 1071
+        width: 476
+        height: 699
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_5
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 1071
+        width: 482
+        height: 705
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_6
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 1072
+        width: 476
+        height: 698
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_7
+      rect:
+        serializedVersion: 2
+        x: 3551
+        y: 1074
+        width: 479
+        height: 695
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 63
+        width: 476
+        height: 699
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 70
+        width: 470
+        height: 698
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_10
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 64
+        width: 460
+        height: 698
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_11
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 556
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_12
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 66
+        width: 467
+        height: 703
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_13
+      rect:
+        serializedVersion: 2
+        x: 2804
+        y: 556
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_gandalf_NewAnimation_anime_1_14
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 64
+        width: 462
+        height: 704
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: putnik1_walk_right_15
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 74
+        width: 465
+        height: 695
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: putnik1_walk_right_16
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 77
+        width: 462
+        height: 691
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

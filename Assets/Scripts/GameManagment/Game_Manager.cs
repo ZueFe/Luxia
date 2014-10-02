@@ -4,7 +4,7 @@ using System.Collections;
 public class Game_Manager : MonoBehaviour {
 
 	public GameObject Player;
-	public GameObject Follower;
+	public GameObject[] Followers;
 	public int NumberOfFollowers;
 
 	private GameObject[] followerInstances;
@@ -18,13 +18,13 @@ public class Game_Manager : MonoBehaviour {
 	}
 
 	private void spawnPlayer(){
-		GameObject p = Instantiate(Player, new Vector3(0, 0f, 0f), Quaternion.identity) as GameObject;
+		GameObject p = Instantiate(Player, new Vector3(0, 0.5f, 0f), Quaternion.identity) as GameObject;
 		gameCamera.setTarget(p.transform);
 
 		GameObject fol;
 		Follow_Player fp;
 
-		fol = Instantiate(Follower, new Vector3(-2f, 1f, 0f), Quaternion.identity) as GameObject;
+		fol = Instantiate(Followers[Random.Range(0, Followers.Length)], new Vector3(-2f, 1f, 0f), Quaternion.identity) as GameObject;
 		fp = (Follow_Player)fol.GetComponent("Follow_Player");
 		fp.Follows = p;
 		fp.followsPlayer = true;
@@ -32,11 +32,11 @@ public class Game_Manager : MonoBehaviour {
 		followerInstances[0] = fol;
 
 		for(int i = 1; i < NumberOfFollowers; i++){
-		fol = Instantiate(Follower, new Vector3(-4f - 2*i, 1f, 0f), Quaternion.identity) as GameObject;
-		fp = (Follow_Player)fol.GetComponent("Follow_Player");
-		fp.Follows = followerInstances[i - 1];
-		fp.followsPlayer = false;
-		followerInstances[i] = fol;
+			fol = Instantiate(Followers[Random.Range(0, Followers.Length)], new Vector3(-4f - 2*i, 1f, 0f), Quaternion.identity) as GameObject;
+			fp = (Follow_Player)fol.GetComponent("Follow_Player");
+			fp.Follows = followerInstances[i - 1];
+			fp.followsPlayer = false;
+			followerInstances[i] = fol;
 		}
 	}
 }

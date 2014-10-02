@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: c9b9a6bb4e1238e46a8f06f0c69bc5ac
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: putnik4_walk_right_blue_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1110
+        width: 367
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_1
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1110
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_2
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1110
+        width: 360
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_3
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1110
+        width: 364
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_4
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 1110
+        width: 372
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_5
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1110
+        width: 380
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_6
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 1110
+        width: 372
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_7
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 1110
+        width: 364
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 106
+        width: 368
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_9
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 106
+        width: 362
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_10
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 106
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_11
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 106
+        width: 360
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_12
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 106
+        width: 362
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_13
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 106
+        width: 360
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik4_walk_right_blue_14
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 106
+        width: 360
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
