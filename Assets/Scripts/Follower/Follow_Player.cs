@@ -29,7 +29,6 @@ public class Follow_Player : MonoBehaviour {
 		anim = gameObject.GetComponent<Animator>();
 		hash = gameObject.GetComponent<Follower_AnimHash>();
 		colSize = gameObject.GetComponent<BoxCollider>().size;
-		Debug.LogError(colSize);
 	}
 	
 	// Update is called once per frame
@@ -136,8 +135,7 @@ public class Follow_Player : MonoBehaviour {
 		for(int i = -1; i < 2; i++){
 			ray = new Ray(new Vector2(transform.position.x, transform.position.y + colSize.y /6 * i),
 			              direction);
-			Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + colSize.y /6 * i,0),
-			              direction);
+		
 			if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMask)){
 					return true;
 			}

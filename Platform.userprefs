@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\SpriteCelShading.shader">
+    <Files>
+      <File FileName="Assets\Scripts\Player\Player_Stats.cs" Line="14" Column="39" />
+      <File FileName="Assets\Scripts\Player\Player_Physics.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Follower\Follow_Player.cs" Line="31" Column="57" />
+      <File FileName="Assets\Shaders\SpriteCelShading.shader" Line="20" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
