@@ -7,7 +7,9 @@ public class Follow_Player : MonoBehaviour {
 	public GameObject Follows;
 	public float Speed = 5f;
 	public float MaxFallDistance = 3f;
+	public float ObsticleCheck = 1f;
 	public bool followsPlayer;
+	public LayerMask CollisionMask;
 
 	private Light playerLight;
 	private bool hitPlayer = false;
@@ -15,6 +17,7 @@ public class Follow_Player : MonoBehaviour {
 	private Animator anim;
 	private Follower_AnimHash hash;
 	private Vector3 scale;
+	private Vector3 colSize;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +28,8 @@ public class Follow_Player : MonoBehaviour {
 
 		anim = gameObject.GetComponent<Animator>();
 		hash = gameObject.GetComponent<Follower_AnimHash>();
+		colSize = gameObject.GetComponent<BoxCollider>().size;
+		Debug.LogError(colSize);
 	}
 	
 	// Update is called once per frame
@@ -46,6 +51,7 @@ public class Follow_Player : MonoBehaviour {
 		float currentX = transform.position.x;
 
 		if(followsPlayer && dist >= playerLight.range){
+			anim.SetFloat(hash.Direction, 0f);
 			return;
 		}
 
@@ -58,7 +64,7 @@ public class Follow_Player : MonoBehaviour {
 		
 			currentX = incrementTowards(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, Speed);
 
-			if(CheckForHole(currentX)){
+			if(CheckForHole(currentX) || CheckForObsticles(currentX - transform.position.x)){
 				currentX = transform.position.x;
 			}
 
@@ -117,6 +123,24 @@ public class Follow_Player : MonoBehaviour {
 
 		if(!Physics.Raycast(new Vector2(currentX - FALL_OFFSET, transform.position.y), Vector3.down, MaxFallDistance + FALL_OFFSET)){
 			return true;
+		}
+
+		return false;
+	}
+
+	private bool CheckForObsticles(float dir){
+		RaycastHit hit;
+		Ray ray;
+		Vector2 direction = new Vector2(Mathf.Sign(dir), 0);
+
+		for(int i = -1; i < 2; i++){
+			ray = new Ray(new Vector2(transform.position.x, transform.position.y + colSize.y /6 * i),
+			              direction);
+			Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + colSize.y /6 * i,0),
+			              direction);
+			if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMask)){
+					return true;
+			}
 		}
 
 		return false;

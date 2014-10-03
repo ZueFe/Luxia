@@ -21,6 +21,7 @@ public class Player_Physics : MonoBehaviour {
 	private Ray rayForward;
 	private RaycastHit hit;
 	private RaycastHit hitForward;
+	private const int RAY_DIVIDE = 5;
 
 	private float skin = 0.0005f; 		//to keep space between collider and ground
 
@@ -41,9 +42,8 @@ public class Player_Physics : MonoBehaviour {
 		MovementStopped = false;
 
 		for(int i = 0; i < 3; i++){
-			float x = (playerPosition.x + center.x - size.x /2) + size.x/2 * i;
-			float y = (playerPosition.y + center.y + size.y/2 * Mathf.Sign(deltaY));
-
+			float x = (playerPosition.x + center.x - size.x /RAY_DIVIDE) + size.x/RAY_DIVIDE * i;
+			float y = (playerPosition.y + center.y + size.y/RAY_DIVIDE * Mathf.Sign(deltaY));
 
 
 			ray = new Ray(new Vector2(x,y), new Vector2(0, Mathf.Sign(deltaY)));
@@ -68,10 +68,12 @@ public class Player_Physics : MonoBehaviour {
 
 		for(int i = 0; i < 3; i++){
 		
-		float xF = playerPosition.x + center.x + size.x/2 * Mathf.Sign (deltaX);
-		float yF = (playerPosition.y + center.y - size.y /2) + size.y/2 * i;
+		float xF = playerPosition.x + center.x + size.x/RAY_DIVIDE * Mathf.Sign (deltaX);
+		float yF = (playerPosition.y + center.y - size.y /RAY_DIVIDE) + size.y/RAY_DIVIDE * i;
 
 		rayForward = new Ray(new Vector2(xF,yF), new Vector2(Mathf.Sign(deltaX), 0));
+	
+
 			if(Mathf.Abs(deltaX) > 0){
 				if(Physics.Raycast(rayForward, out hitForward, Mathf.Abs(deltaX) + skin, CollisionMask)){
 					float dst = Vector3.Distance(rayForward.origin, hitForward.point);
