@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{50F09B44-A13D-B696-1B9A-C2E5C7DEA92E}</ProjectGuid>
+	<ProjectGuid>{C9C5ACED-AF37-B251-9AC8-2374AADD4A08}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,12 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Crystals\Crystal_Flicker.cs" />
+     <Compile Include="Assets\Scripts\Crystals\Crystal_Use.cs" />
      <Compile Include="Assets\Scripts\Follower\Follow_Player.cs" />
      <Compile Include="Assets\Scripts\Follower\Follower_AnimHash.cs" />
-     <Compile Include="Assets\Scripts\Follower\Follower_Physics.cs" />
      <Compile Include="Assets\Scripts\GameManagment\Game_Camera.cs" />
      <Compile Include="Assets\Scripts\GameManagment\Game_Manager.cs" />
+     <Compile Include="Assets\Scripts\GameManagment\Global_Variables.cs" />
      <Compile Include="Assets\Scripts\Misc\HangOnNoodle.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Obsticle_Stats.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Obsticle_Trigger.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Controller.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Physics.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Stats.cs" />

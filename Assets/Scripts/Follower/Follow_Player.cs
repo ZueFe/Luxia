@@ -33,16 +33,20 @@ public class Follow_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		FollowPlayer();
+		if(Global_Variables.Instance.FolloweresFollowing){
+			FollowPlayer();
+		}else{
+			anim.SetFloat(hash.Direction, 0f);
+		}
 	}
 
-	void OnColliderEnter(Collision col){
+	/*void OnColliderEnter(Collision col){
 		if(col.collider.tag == "Player" || col.collider.tag == "Follower"){
 			hitPlayer = true;
 		}else{
 			hitPlayer = false;
 		}
-	}
+	}*/
 
 	private void FollowPlayer(){
 		float dist = GetDistanceWithPlayer();

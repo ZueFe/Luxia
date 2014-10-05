@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Crystals\Crystal_Use.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Player\Player_Stats.cs" Line="28" Column="26" />
+      <File FileName="Assets\Scripts\Crystals\Crystal_Use.cs" Line="17" Column="16" />
+      <File FileName="Assets\Scripts\Obsticle\Obsticle_Trigger.cs" Line="27" Column="76" />
+      <File FileName="Assets\Scripts\GameManagment\Global_Variables.cs" Line="13" Column="58" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

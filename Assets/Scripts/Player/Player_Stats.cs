@@ -25,6 +25,7 @@ public class Player_Stats : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ChangeEnergy(-1 * energyLosePerSec * Time.deltaTime);
+		Debug.LogError(energy);
 	}
 
 	public void ChangeEnergy(float change){

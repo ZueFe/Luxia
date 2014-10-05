@@ -30,48 +30,8 @@ public class Player_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		if(playerPhysics.MovementStopped){		//if player hit right/left wall -- to remove 'sticky' effect
-			targetSpeed = 0;
-			currentSpeed = 0;
-		}
-
-		//climbSpeed = Input.GetAxisRaw("Vertical") * ClimbingSpeed;
-
-		//get targeted elevation and speed based on input and compute current elevation and speed based on acceleration
-		targetElevation = Input.GetAxisRaw("Vertical") * Speed;
-		targetSpeed = Input.GetAxisRaw("Horizontal") * Speed;
-		currentSpeed = incrementTowards(currentSpeed, targetSpeed, Acceleration);
-		currentElevation = incrementTowards(currentElevation, targetElevation, Acceleration);
-
-
-		/*if(playerPhysics.Grounded){
-			//amountToMove.y = 0;  		//has to zero out, since grounded is set in physics class
-
-			//Jump
-			/*if(Input.GetButtonDown("Jump")){
-				amountToMove.y = JumpHeight;
-			}
-		}*/
-
-		scale = transform.localScale;
-
-		if((targetSpeed != 0) && (Mathf.Sign(scale.x) != Mathf.Sign(targetSpeed))){
-			scale.x = -1 * scale.x;
-			transform.localScale = scale;
-		}
-
-		amountToMove.x = currentSpeed;
-		amountToMove.y = currentElevation;
-
-		//if player is not hanging on noodle or is jumping on noodle
-		/*if(!playerPhysics.Hanging || amountToMove.y /*- Gravity * Time.deltaTime > ClimbingSpeed){		
-			amountToMove.y -= Gravity * Time.deltaTime;			//apply gravity
-		}else{
-			amountToMove.y = currentClimb;						//just let him climb
-		}*/
-
-		playerPhysics.Move(amountToMove * Time.deltaTime);
+		ProcessLocomotion();
+		ProcessPlayerInput();
 	}
 
 	//returns value in which player should move, in respect to current speed and acceleration factor
@@ -89,5 +49,56 @@ public class Player_Controller : MonoBehaviour {
 
 		return target;								//if target speed is reached (or is smaller) return traget speed
 													//so you won't ever go faster than target speed
+	}
+
+	private void ProcessLocomotion(){
+		
+		if(playerPhysics.MovementStopped){		//if player hit right/left wall -- to remove 'sticky' effect
+			targetSpeed = 0;
+			currentSpeed = 0;
+		}
+		
+		//climbSpeed = Input.GetAxisRaw("Vertical") * ClimbingSpeed;
+		
+		//get targeted elevation and speed based on input and compute current elevation and speed based on acceleration
+		targetElevation = Input.GetAxisRaw("Vertical") * Speed;
+		targetSpeed = Input.GetAxisRaw("Horizontal") * Speed;
+		currentSpeed = incrementTowards(currentSpeed, targetSpeed, Acceleration);
+		currentElevation = incrementTowards(currentElevation, targetElevation, Acceleration);
+		
+		
+		/*if(playerPhysics.Grounded){
+			//amountToMove.y = 0;  		//has to zero out, since grounded is set in physics class
+
+			//Jump
+			/*if(Input.GetButtonDown("Jump")){
+				amountToMove.y = JumpHeight;
+			}
+		}*/
+		
+		scale = transform.localScale;
+		
+		if((targetSpeed != 0) && (Mathf.Sign(scale.x) != Mathf.Sign(targetSpeed))){
+			scale.x = -1 * scale.x;
+			transform.localScale = scale;
+		}
+		
+		amountToMove.x = currentSpeed;
+		amountToMove.y = currentElevation;
+		
+		//if player is not hanging on noodle or is jumping on noodle
+		/*if(!playerPhysics.Hanging || amountToMove.y /*- Gravity * Time.deltaTime > ClimbingSpeed){		
+			amountToMove.y -= Gravity * Time.deltaTime;			//apply gravity
+		}else{
+			amountToMove.y = currentClimb;						//just let him climb
+		}*/
+		
+		playerPhysics.Move(amountToMove * Time.deltaTime);
+	}
+
+	private void ProcessPlayerInput(){
+		if(Input.GetButtonUp(Global_Variables.TOOGLE_FOLLOW)){
+			Global_Variables.Instance.FolloweresFollowing = !Global_Variables.Instance.FolloweresFollowing;
+		}
 	}
 }

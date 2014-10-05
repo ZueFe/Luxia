@@ -7,9 +7,12 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject Player;
 	public GameObject[] Followers;
 	public int NumberOfFollowers;
+	public Vector3 StartPosition = new Vector3(0f, 0.5f, 0f);
 
 	private GameObject[] followerInstances;
 	private Game_Camera gameCamera;
+	private const float FOLLOWER_START_OFFSET = 5f;
+	private const float FOLLOWER_HEIGHT_OFFSET = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -19,14 +22,14 @@ public class Game_Manager : MonoBehaviour {
 	}
 
 	private void spawnPlayer(){
-		GameObject p = Instantiate(Player, new Vector3(0, 0.5f, 0f), Quaternion.identity) as GameObject;
+		GameObject p = Instantiate(Player, StartPosition, Quaternion.identity) as GameObject;
 		gameCamera.setTarget(p.transform);
 
 
-		GenerateFollower(p, true, 0, Random.Range(0, Followers.Length), -2f, 1f);
+		GenerateFollower(p, true, 0, Random.Range(0, Followers.Length), StartPosition.x - FOLLOWER_START_OFFSET, FOLLOWER_HEIGHT_OFFSET);
 
 		for(int i = 1; i < NumberOfFollowers; i++){
-			GenerateFollower(followerInstances[i - 1], false, i, Random.Range(0, Followers.Length), (-5f -2*i), 1f);
+			GenerateFollower(followerInstances[i - 1], false, i, Random.Range(0, Followers.Length), (-1 * FOLLOWER_START_OFFSET -2*i), FOLLOWER_HEIGHT_OFFSET);
 		}
 	}
 
