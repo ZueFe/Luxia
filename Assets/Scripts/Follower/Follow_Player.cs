@@ -49,6 +49,11 @@ public class Follow_Player : MonoBehaviour {
 	}*/
 
 	private void FollowPlayer(){
+		if(followsPlayer && Follows.GetComponent<Player_Stats>().GetEnergy() <= 0){
+			anim.SetFloat(hash.Direction, 0f);
+			return;
+		}
+
 		float dist = GetDistanceWithPlayer();
 		float direction = 0;
 		float currentX = transform.position.x;

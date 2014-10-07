@@ -31,11 +31,13 @@ public class Player_Stats : MonoBehaviour {
 	public void ChangeEnergy(float change){
 		float energyPercentage;
 
-		if(energy + change >= 0){
+		if(energy + change >= 0 && energy + change <= 100f){
 		energy += change;
 	    
-		}else{
+		}else if(energy + change < 0){
 			energy = 0;
+		}else{
+			energy = 100;
 		}
 
 		energyPercentage = energy / 100f;
@@ -43,5 +45,9 @@ public class Player_Stats : MonoBehaviour {
 		playerLight.intensity = (MaxIntensity - MinIntensity) * energyPercentage + MinIntensity;
 		playerLight.range = (MaxRange - MinRange) * energyPercentage + MinRange;
 		
+	}
+
+	public float GetEnergy(){
+		return energy;
 	}
 }
