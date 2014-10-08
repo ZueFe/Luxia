@@ -80,10 +80,8 @@ public class Follow_Player : MonoBehaviour {
 
 		}
 
-
 		anim.SetFloat(hash.Direction, Mathf.SmoothDamp(anim.GetFloat(hash.Direction), 
 		                                                         Mathf.Abs(currentX - transform.position.x), ref directionDamp, 0.1f));
-		//Debug.LogError(anim.GetFloat(hash.Direction));
 		scale = transform.localScale;
 
 		if((currentX - transform.position.x != 0) && Mathf.Sign(scale.x) != Mathf.Sign(currentX - transform.position.x)){
