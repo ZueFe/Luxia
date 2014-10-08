@@ -3,46 +3,46 @@ guid: 789c6857521c6874aa7c947fcbccf0b0
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cube.2-Cube.3-Sphere.21
-    100006: Cylinder.4
-    100008: Cylinder.4-Cylinder
-    100010: Cylinder.6
-    100012: Cylinder.8
-    100014: Sphere.21
-    400000: //RootNode
-    400002: Cube
-    400004: Cube.2-Cube.3-Sphere.21
-    400006: Cylinder.4
-    400008: Cylinder.4-Cylinder
-    400010: Cylinder.6
-    400012: Cylinder.8
-    400014: Sphere.21
-    2300000: Cube
-    2300002: Cube.2-Cube.3-Sphere.21
-    2300004: Cylinder.4
-    2300006: Cylinder.4-Cylinder
-    2300008: Cylinder.6
-    2300010: Cylinder.8
-    2300012: Sphere.21
-    3300000: Cube
-    3300002: Cube.2-Cube.3-Sphere.21
-    3300004: Cylinder.4
-    3300006: Cylinder.4-Cylinder
-    3300008: Cylinder.6
-    3300010: Cylinder.8
-    3300012: Sphere.21
-    4300000: Cylinder.4-Cylinder
-    4300002: Cube.2-Cube.3-Sphere.21
-    4300004: Sphere.21
-    4300006: Cylinder.8
-    4300008: Cylinder.6
-    4300010: Cylinder.4
+    100000: Between_Wheels
+    100002: Between_Wheels_2
+    100004: //RootNode
+    100006: Bumps
+    100008: Cart
+    100010: Coal
+    100012: Cube
+    100014: Wheels
+    400000: Between_Wheels
+    400002: Between_Wheels_2
+    400004: //RootNode
+    400006: Bumps
+    400008: Cart
+    400010: Coal
+    400012: Cube
+    400014: Wheels
+    2300000: Between_Wheels
+    2300002: Between_Wheels_2
+    2300004: Bumps
+    2300006: Cart
+    2300008: Coal
+    2300010: Cube
+    2300012: Wheels
+    3300000: Between_Wheels
+    3300002: Between_Wheels_2
+    3300004: Bumps
+    3300006: Cart
+    3300008: Coal
+    3300010: Cube
+    3300012: Wheels
+    4300000: Wheels
+    4300002: Cart
+    4300004: Coal
+    4300006: Between_Wheels
+    4300008: Between_Wheels_2
+    4300010: Bumps
     4300012: Cube
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -75,7 +75,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

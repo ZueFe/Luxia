@@ -34,7 +34,6 @@ public class Follow_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.LogError(anim.GetFloat(hash.Direction));
 		if(Global_Variables.Instance.FolloweresFollowing){
 			FollowPlayer();
 		}else{
