@@ -12,6 +12,10 @@ ModelImporter:
     100012: Cylinder.6
     100014: Cylinder.8
     100016: wheels
+    100018: betweenWheels
+    100020: bumps
+    100022: metal parts of cart
+    100024: wooden part of cart
     400000: //RootNode
     400002: coal
     400004: Cube
@@ -21,6 +25,10 @@ ModelImporter:
     400012: Cylinder.6
     400014: Cylinder.8
     400016: wheels
+    400018: betweenWheels
+    400020: bumps
+    400022: metal parts of cart
+    400024: wooden part of cart
     2300000: coal
     2300002: Cube
     2300004: Cube.1-Cube.2
@@ -29,6 +37,10 @@ ModelImporter:
     2300010: Cylinder.6
     2300012: Cylinder.8
     2300014: wheels
+    2300016: betweenWheels
+    2300018: bumps
+    2300020: metal parts of cart
+    2300022: wooden part of cart
     3300000: coal
     3300002: Cube
     3300004: Cube.1-Cube.2
@@ -37,6 +49,10 @@ ModelImporter:
     3300010: Cylinder.6
     3300012: Cylinder.8
     3300014: wheels
+    3300016: betweenWheels
+    3300018: bumps
+    3300020: metal parts of cart
+    3300022: wooden part of cart
     4300000: coal
     4300002: wheels
     4300004: Cylinder.8
@@ -45,6 +61,10 @@ ModelImporter:
     4300010: Cube.2-Cube.3
     4300012: Cube
     4300014: Cube.1-Cube.2
+    4300016: bumps
+    4300018: betweenWheels
+    4300020: metal parts of cart
+    4300022: wooden part of cart
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -81,7 +101,7 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

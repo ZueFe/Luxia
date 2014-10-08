@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 081f88972f820eb498b1e832daf29730
+guid: ffd5f629a2b02454d9a4ea0e5ed6fb8f
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -48,118 +48,145 @@ TextureImporter:
     - name: putnik3_walk_right_redish_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 1058
-        width: 240
-        height: 880
+        x: 66
+        y: 1054
+        width: 212
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_1
       rect:
         serializedVersion: 2
-        x: 496
-        y: 1058
-        width: 226
-        height: 879
+        x: 530
+        y: 1054
+        width: 212
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_2
       rect:
         serializedVersion: 2
-        x: 966
-        y: 1058
-        width: 212
-        height: 876
+        x: 992
+        y: 1054
+        width: 210
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_3
       rect:
         serializedVersion: 2
-        x: 1623
-        y: 1795
-        width: 6
-        height: 6
+        x: 1454
+        y: 1054
+        width: 212
+        height: 898
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_4
       rect:
         serializedVersion: 2
-        x: 1902
-        y: 1058
-        width: 210
-        height: 876
+        x: 1918
+        y: 1054
+        width: 212
+        height: 896
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_5
       rect:
         serializedVersion: 2
-        x: 2366
-        y: 1054
+        x: 2382
+        y: 1050
         width: 212
-        height: 883
+        height: 902
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_6
       rect:
         serializedVersion: 2
-        x: 2832
-        y: 1054
-        width: 214
-        height: 880
+        x: 2846
+        y: 1050
+        width: 211
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_7
       rect:
         serializedVersion: 2
-        x: 3278
-        y: 1054
-        width: 212
-        height: 883
+        x: 3310
+        y: 1050
+        width: 208
+        height: 902
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_8
       rect:
         serializedVersion: 2
-        x: 78
-        y: 50
+        x: 110
+        y: 46
         width: 208
-        height: 880
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_9
       rect:
         serializedVersion: 2
-        x: 522
-        y: 48
-        width: 208
-        height: 882
+        x: 558
+        y: 46
+        width: 212
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_10
       rect:
         serializedVersion: 2
-        x: 966
-        y: 50
+        x: 1006
+        y: 46
         width: 212
-        height: 880
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_11
       rect:
         serializedVersion: 2
-        x: 1407
-        y: 50
-        width: 227
-        height: 880
+        x: 1458
+        y: 46
+        width: 208
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: putnik3_walk_right_redish_12
       rect:
         serializedVersion: 2
-        x: 1866
-        y: 48
-        width: 230
-        height: 882
+        x: 1906
+        y: 50
+        width: 208
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik3_walk_right_redish_13
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 47
+        width: 212
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik3_walk_right_redish_14
+      rect:
+        serializedVersion: 2
+        x: 2802
+        y: 46
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: putnik3_walk_right_redish_15
+      rect:
+        serializedVersion: 2
+        x: 3258
+        y: 46
+        width: 214
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 

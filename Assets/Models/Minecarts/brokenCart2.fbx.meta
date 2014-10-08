@@ -11,6 +11,13 @@ ModelImporter:
     100010: Coal
     100012: Cube
     100014: Wheels
+    100016: betweenWheels
+    100018: bumps
+    100020: coal
+    100022: fallen wheel
+    100024: metal parts of cart
+    100026: wheels
+    100028: wooden part of cart
     400000: Between_Wheels
     400002: Between_Wheels_2
     400004: //RootNode
@@ -19,6 +26,13 @@ ModelImporter:
     400010: Coal
     400012: Cube
     400014: Wheels
+    400016: betweenWheels
+    400018: bumps
+    400020: coal
+    400022: fallen wheel
+    400024: metal parts of cart
+    400026: wheels
+    400028: wooden part of cart
     2300000: Between_Wheels
     2300002: Between_Wheels_2
     2300004: Bumps
@@ -26,6 +40,13 @@ ModelImporter:
     2300008: Coal
     2300010: Cube
     2300012: Wheels
+    2300014: betweenWheels
+    2300016: bumps
+    2300018: coal
+    2300020: fallen wheel
+    2300022: metal parts of cart
+    2300024: wheels
+    2300026: wooden part of cart
     3300000: Between_Wheels
     3300002: Between_Wheels_2
     3300004: Bumps
@@ -33,6 +54,13 @@ ModelImporter:
     3300008: Coal
     3300010: Cube
     3300012: Wheels
+    3300014: betweenWheels
+    3300016: bumps
+    3300018: coal
+    3300020: fallen wheel
+    3300022: metal parts of cart
+    3300024: wheels
+    3300026: wooden part of cart
     4300000: Wheels
     4300002: Cart
     4300004: Coal
@@ -40,6 +68,13 @@ ModelImporter:
     4300008: Between_Wheels_2
     4300010: Bumps
     4300012: Cube
+    4300014: fallen wheel
+    4300016: coal
+    4300018: bumps
+    4300020: wheels
+    4300022: metal parts of cart
+    4300024: wooden part of cart
+    4300026: betweenWheels
     9500000: //RootNode
   materials:
     importMaterials: 0

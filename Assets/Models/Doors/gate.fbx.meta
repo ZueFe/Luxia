@@ -1,0 +1,108 @@
+fileFormatVersion: 2
+guid: ecac69566cc0e86499ed9e63256cdced
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Left
+    100004: left door
+    100006: left door iron features
+    100008: left door nails
+    100010: Lock
+    100012: lock
+    100014: lock bottom
+    100016: right
+    100018: right door
+    100020: right door iron features
+    100022: right door nails
+    400000: //RootNode
+    400002: Left
+    400004: left door
+    400006: left door iron features
+    400008: left door nails
+    400010: Lock
+    400012: lock
+    400014: lock bottom
+    400016: right
+    400018: right door
+    400020: right door iron features
+    400022: right door nails
+    2300000: left door
+    2300002: left door iron features
+    2300004: left door nails
+    2300006: lock
+    2300008: lock bottom
+    2300010: right door
+    2300012: right door iron features
+    2300014: right door nails
+    3300000: left door
+    3300002: left door iron features
+    3300004: left door nails
+    3300006: lock
+    3300008: lock bottom
+    3300010: right door
+    3300012: right door iron features
+    3300014: right door nails
+    4300000: lock bottom
+    4300002: lock
+    4300004: right door iron features
+    4300006: right door nails
+    4300008: right door
+    4300010: left door iron features
+    4300012: left door nails
+    4300014: left door
+    7400000: C4D Animation Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
