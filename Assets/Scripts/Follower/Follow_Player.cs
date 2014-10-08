@@ -18,6 +18,7 @@ public class Follow_Player : MonoBehaviour {
 	private Follower_AnimHash hash;
 	private Vector3 scale;
 	private Vector3 colSize;
+	private float directionDamp;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,7 @@ public class Follow_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.LogError(anim.GetFloat(hash.Direction));
 		if(Global_Variables.Instance.FolloweresFollowing){
 			FollowPlayer();
 		}else{
@@ -80,7 +82,8 @@ public class Follow_Player : MonoBehaviour {
 		}
 
 
-		anim.SetFloat(hash.Direction, Mathf.Abs(currentX - transform.position.x));
+		anim.SetFloat(hash.Direction, Mathf.SmoothDamp(anim.GetFloat(hash.Direction), 
+		                                                         Mathf.Abs(currentX - transform.position.x), ref directionDamp, 0.1f));
 		//Debug.LogError(anim.GetFloat(hash.Direction));
 		scale = transform.localScale;
 

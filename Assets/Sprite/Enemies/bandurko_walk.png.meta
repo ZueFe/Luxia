@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd2fede7b6b16e94a9e9635a3ee5f83b
+guid: 96c61d9af5e5a424cbabab6c2210b8be
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,148 +45,148 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: sheet_newLady_animation_anime_1_0
+    - name: sheet_bandurko_NewAnimation_anime_1_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 1054
-        width: 212
-        height: 900
+        x: 106
+        y: 1090
+        width: 228
+        height: 588
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_1
+    - name: sheet_bandurko_NewAnimation_anime_1_1
       rect:
         serializedVersion: 2
-        x: 530
-        y: 1054
-        width: 212
-        height: 900
+        x: 562
+        y: 1088
+        width: 228
+        height: 590
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_2
+    - name: sheet_bandurko_NewAnimation_anime_1_2
       rect:
         serializedVersion: 2
-        x: 992
-        y: 1054
-        width: 210
-        height: 900
+        x: 1018
+        y: 1087
+        width: 228
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_3
+    - name: sheet_bandurko_NewAnimation_anime_1_3
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 1054
-        width: 212
-        height: 898
+        x: 1474
+        y: 1088
+        width: 232
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_4
+    - name: sheet_bandurko_NewAnimation_anime_1_4
       rect:
         serializedVersion: 2
-        x: 1918
-        y: 1054
-        width: 212
-        height: 896
+        x: 1930
+        y: 1087
+        width: 236
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_5
+    - name: sheet_bandurko_NewAnimation_anime_1_5
       rect:
         serializedVersion: 2
         x: 2382
-        y: 1050
-        width: 212
-        height: 902
+        y: 1088
+        width: 240
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_6
+    - name: sheet_bandurko_NewAnimation_anime_1_6
       rect:
         serializedVersion: 2
-        x: 2846
-        y: 1050
-        width: 211
-        height: 900
+        x: 2838
+        y: 1087
+        width: 243
+        height: 583
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_7
+    - name: sheet_bandurko_NewAnimation_anime_1_7
       rect:
         serializedVersion: 2
-        x: 3310
-        y: 1050
-        width: 208
-        height: 902
+        x: 3290
+        y: 1090
+        width: 248
+        height: 580
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_8
+    - name: sheet_bandurko_NewAnimation_anime_1_8
       rect:
         serializedVersion: 2
-        x: 110
-        y: 46
-        width: 208
-        height: 900
+        x: 90
+        y: 80
+        width: 256
+        height: 582
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_9
+    - name: sheet_bandurko_NewAnimation_anime_1_9
       rect:
         serializedVersion: 2
-        x: 558
-        y: 46
-        width: 212
-        height: 900
+        x: 550
+        y: 82
+        width: 252
+        height: 584
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_10
+    - name: sheet_bandurko_NewAnimation_anime_1_10
       rect:
         serializedVersion: 2
-        x: 1006
-        y: 46
-        width: 212
-        height: 900
+        x: 1010
+        y: 80
+        width: 244
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_11
+    - name: sheet_bandurko_NewAnimation_anime_1_11
       rect:
         serializedVersion: 2
-        x: 1458
-        y: 46
-        width: 208
-        height: 900
+        x: 1470
+        y: 82
+        width: 240
+        height: 584
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_12
+    - name: sheet_bandurko_NewAnimation_anime_1_12
       rect:
         serializedVersion: 2
-        x: 1906
-        y: 50
-        width: 208
-        height: 896
+        x: 1926
+        y: 80
+        width: 236
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_13
+    - name: sheet_bandurko_NewAnimation_anime_1_13
       rect:
         serializedVersion: 2
-        x: 2354
-        y: 47
-        width: 212
-        height: 899
+        x: 2386
+        y: 80
+        width: 232
+        height: 593
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_14
+    - name: sheet_bandurko_NewAnimation_anime_1_14
       rect:
         serializedVersion: 2
-        x: 2802
-        y: 46
-        width: 212
-        height: 900
+        x: 2842
+        y: 80
+        width: 228
+        height: 593
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_newLady_animation_anime_1_15
+    - name: sheet_bandurko_NewAnimation_anime_1_15
       rect:
         serializedVersion: 2
-        x: 3258
-        y: 46
-        width: 214
-        height: 900
+        x: 3302
+        y: 82
+        width: 224
+        height: 592
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 
