@@ -97,7 +97,7 @@ public class Player_Controller : MonoBehaviour {
 	}
 
 	private void ProcessPlayerInput(){
-		if(Input.GetButtonUp(Global_Variables.TOOGLE_FOLLOW)){
+		if(Input.GetButtonDown(Global_Variables.TOOGLE_FOLLOW)){
 			Global_Variables.Instance.FolloweresFollowing = !Global_Variables.Instance.FolloweresFollowing;
 		}
 	}

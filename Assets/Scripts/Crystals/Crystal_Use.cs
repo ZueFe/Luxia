@@ -15,7 +15,7 @@ public class Crystal_Use : MonoBehaviour {
 	}
 	
 	void OnTriggerStay(Collider col){
-		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonUp(Global_Variables.BYPASS_OBSTICLE)){
+		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
 			gameObject.GetComponentInChildren<Light>().enabled = false;
 			gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
 
