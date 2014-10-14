@@ -23,6 +23,8 @@ public class Player_Controller : MonoBehaviour {
 	private Player_Physics playerPhysics;	
 	private Vector3 scale;
 
+	private const float ADDED_ELEVATION = 0.5f;
+
 	// Use this for initialization
 	void Start () {
 		playerPhysics = GetComponent<Player_Physics>();
@@ -84,7 +86,7 @@ public class Player_Controller : MonoBehaviour {
 		}
 		
 		amountToMove.x = currentSpeed;
-		amountToMove.y = currentElevation;
+		amountToMove.y = currentElevation + AddedElevation();
 		
 		//if player is not hanging on noodle or is jumping on noodle
 		/*if(!playerPhysics.Hanging || amountToMove.y /*- Gravity * Time.deltaTime > ClimbingSpeed){		
@@ -100,5 +102,13 @@ public class Player_Controller : MonoBehaviour {
 		if(Input.GetButtonDown(Global_Variables.TOOGLE_FOLLOW)){
 			Global_Variables.Instance.FolloweresFollowing = !Global_Variables.Instance.FolloweresFollowing;
 		}
+	}
+
+	private float AddedElevation(){
+		float added = Time.time;
+
+		added = Mathf.PingPong(added, 2 * ADDED_ELEVATION);
+
+		return added - ADDED_ELEVATION;
 	}
 }

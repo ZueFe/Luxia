@@ -11,8 +11,8 @@ public class Game_Manager : MonoBehaviour {
 
 	private GameObject[] followerInstances;
 	private Game_Camera gameCamera;
-	private const float FOLLOWER_START_OFFSET = 5f;
-	private const float FOLLOWER_HEIGHT_OFFSET = 1f;
+	private const float FOLLOWER_START_OFFSET = 10f;
+	private const float FOLLOWER_HEIGHT_OFFSET = 4f;
 
 	// Use this for initialization
 	void Start () {
