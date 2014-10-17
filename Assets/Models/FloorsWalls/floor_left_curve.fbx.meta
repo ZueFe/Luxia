@@ -4,14 +4,33 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cube
+    100004: Skl__la_1
+    100006: Collider
+    100008: ColliderPlayer
     400000: //RootNode
+    400002: Cube
+    400004: Skl__la_1
+    400006: Collider
+    400008: ColliderPlayer
     2300000: //RootNode
+    2300002: Cube
+    2300004: Skl__la_1
+    2300006: Collider
+    2300008: ColliderPlayer
     3300000: //RootNode
+    3300002: Cube
+    3300004: Skl__la_1
+    3300006: Collider
+    3300008: ColliderPlayer
     4300000: Skl__la.1
     4300002: Skl__la_1
+    4300004: Cube
+    4300006: Collider
+    4300008: ColliderPlayer
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -43,8 +62,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    splitTangentsAcrossUV: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

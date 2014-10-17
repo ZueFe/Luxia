@@ -19,7 +19,7 @@ public class Obsticle_Trigger : MonoBehaviour {
 			if(player.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
 				gameObject.GetComponent<MeshRenderer>().enabled = true;
 
-				BoxCollider[] colliders = gameObject.GetComponents<BoxCollider>();
+				BoxCollider[] colliders = gameObject.GetComponentsInChildren<BoxCollider>();
 				foreach(BoxCollider c in colliders){
 					c.enabled = !c.enabled;
 				}

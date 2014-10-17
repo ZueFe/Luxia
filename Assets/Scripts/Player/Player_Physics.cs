@@ -23,7 +23,7 @@ public class Player_Physics : MonoBehaviour {
 	private RaycastHit hitForward;
 	private const int RAY_DIVIDE = 5;
 
-	private float skin = 0.0005f; 		//to keep space between collider and ground
+	private float skin = 0.005f; 		//to keep space between collider and ground
 
 	void Start(){
 		col = GetComponent<BoxCollider>();
@@ -47,6 +47,7 @@ public class Player_Physics : MonoBehaviour {
 
 
 			ray = new Ray(new Vector2(x,y), new Vector2(0, Mathf.Sign(deltaY)));
+			Debug.DrawRay(new Vector2(x,y), new Vector2(0, Mathf.Sign(deltaY)));
 
 			if(Physics.Raycast(ray, out hit, Mathf.Abs(deltaY) + skin, CollisionMask)){
 				float dst = Vector3.Distance(ray.origin, hit.point);
@@ -73,6 +74,7 @@ public class Player_Physics : MonoBehaviour {
 
 		rayForward = new Ray(new Vector2(xF,yF), new Vector2(Mathf.Sign(deltaX), 0));
 	
+			Debug.DrawRay(new Vector2(xF,yF), new Vector2(Mathf.Sign(deltaX), 0));
 
 			if(Mathf.Abs(deltaX) > 0){
 				if(Physics.Raycast(rayForward, out hitForward, Mathf.Abs(deltaX) + skin, CollisionMask)){
