@@ -15,6 +15,13 @@ ModelImporter:
     100018: right door
     100020: right door iron features
     100022: right door nails
+    100024: left_door
+    100026: left_door_iron_features
+    100028: left_door_nails
+    100030: lock_bottom
+    100032: right_door
+    100034: right_door_iron_features
+    100036: right_door_nails
     400000: //RootNode
     400002: Left
     400004: left door
@@ -27,6 +34,13 @@ ModelImporter:
     400018: right door
     400020: right door iron features
     400022: right door nails
+    400024: left_door
+    400026: left_door_iron_features
+    400028: left_door_nails
+    400030: lock_bottom
+    400032: right_door
+    400034: right_door_iron_features
+    400036: right_door_nails
     2300000: left door
     2300002: left door iron features
     2300004: left door nails
@@ -35,6 +49,13 @@ ModelImporter:
     2300010: right door
     2300012: right door iron features
     2300014: right door nails
+    2300016: left_door
+    2300018: left_door_iron_features
+    2300020: left_door_nails
+    2300022: lock_bottom
+    2300024: right_door
+    2300026: right_door_iron_features
+    2300028: right_door_nails
     3300000: left door
     3300002: left door iron features
     3300004: left door nails
@@ -43,6 +64,13 @@ ModelImporter:
     3300010: right door
     3300012: right door iron features
     3300014: right door nails
+    3300016: left_door
+    3300018: left_door_iron_features
+    3300020: left_door_nails
+    3300022: lock_bottom
+    3300024: right_door
+    3300026: right_door_iron_features
+    3300028: right_door_nails
     4300000: lock bottom
     4300002: lock
     4300004: right door iron features
@@ -51,7 +79,14 @@ ModelImporter:
     4300010: left door iron features
     4300012: left door nails
     4300014: left door
-    7400000: C4D Animation Take
+    4300016: lock_bottom
+    4300018: right_door_iron_features
+    4300020: right_door_nails
+    4300022: right_door
+    4300024: left_door_iron_features
+    4300026: left_door_nails
+    4300028: left_door
+    7400000: Open Door
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -67,7 +102,57 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Open Door
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Left
+        weight: 1
+      - path: Left/left_door
+        weight: 1
+      - path: Left/left_door_iron_features
+        weight: 1
+      - path: Left/left_door_nails
+        weight: 1
+      - path: right
+        weight: 1
+      - path: right/Lock
+        weight: 1
+      - path: right/Lock/lock
+        weight: 1
+      - path: right/Lock/lock_bottom
+        weight: 1
+      - path: right/right_door
+        weight: 1
+      - path: right/right_door_iron_features
+        weight: 1
+      - path: right/right_door_nails
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -87,7 +172,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

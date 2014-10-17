@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 7c597ac4101535e4cadd027d17d75844
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube.1
+    100004: Cube.2
+    100006: Cube.3
+    100008: Cube.4
+    100010: Cube.5
+    100012: nail
+    100014: nail.1
+    100016: nail2
+    100018: nail2.1
+    100020: nail3
+    100022: nail3.1
+    100024: nail4
+    100026: nail4.1
+    100028: //RootNode
+    100030: nail_2
+    100032: Shaft
+    400000: Cube
+    400002: Cube.1
+    400004: Cube.2
+    400006: Cube.3
+    400008: Cube.4
+    400010: Cube.5
+    400012: nail
+    400014: nail.1
+    400016: nail2
+    400018: nail2.1
+    400020: nail3
+    400022: nail3.1
+    400024: nail4
+    400026: nail4.1
+    400028: //RootNode
+    400030: nail_2
+    400032: Shaft
+    2300000: Cube
+    2300002: Cube.1
+    2300004: Cube.2
+    2300006: Cube.3
+    2300008: Cube.4
+    2300010: Cube.5
+    2300012: nail
+    2300014: nail.1
+    2300016: nail2
+    2300018: nail2.1
+    2300020: nail3
+    2300022: nail3.1
+    2300024: nail4
+    2300026: nail4.1
+    2300028: nail_2
+    2300030: Shaft
+    3300000: Cube
+    3300002: Cube.1
+    3300004: Cube.2
+    3300006: Cube.3
+    3300008: Cube.4
+    3300010: Cube.5
+    3300012: nail
+    3300014: nail.1
+    3300016: nail2
+    3300018: nail2.1
+    3300020: nail3
+    3300022: nail3.1
+    3300024: nail4
+    3300026: nail4.1
+    3300028: nail_2
+    3300030: Shaft
+    4300000: nail.1
+    4300002: nail2.1
+    4300004: nail3.1
+    4300006: nail4.1
+    4300008: nail
+    4300010: nail2
+    4300012: nail3
+    4300014: nail4
+    4300016: Cube.5
+    4300018: Cube.4
+    4300020: Cube.3
+    4300022: Cube.2
+    4300024: Cube.1
+    4300026: Cube
+    4300028: nail_2
+    4300030: Shaft
+    7400000: C4D Animation Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
