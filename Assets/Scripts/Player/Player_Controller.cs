@@ -103,6 +103,7 @@ public class Player_Controller : MonoBehaviour {
 			Global_Variables.Instance.FolloweresFollowing = !Global_Variables.Instance.FolloweresFollowing;
 		}
 	}
+	
 
 	private float AddedElevation(){
 		float added = Time.time;

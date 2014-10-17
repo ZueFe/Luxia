@@ -73,7 +73,7 @@ public class Follow_Player : MonoBehaviour {
 		
 			currentX = incrementTowards(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, Speed);
 
-			if(CheckForHole(currentX) || CheckForObsticles(currentX - transform.position.x)){
+			if(CheckForHole(currentX) ||CheckForObsticles(currentX - transform.position.x)){
 				currentX = transform.position.x;
 			}
 
@@ -141,8 +141,8 @@ public class Follow_Player : MonoBehaviour {
 		Ray ray;
 		Vector2 direction = new Vector2(Mathf.Sign(dir), 0);
 
-		for(int i = -1; i < 2; i++){
-			ray = new Ray(new Vector2(transform.position.x, transform.position.y + colSize.y /6 * i),
+		for(int i = 0; i < 1; i++){
+			ray = new Ray(new Vector2(transform.position.x, transform.position.y + colSize.y /10 * i),
 			              direction);
 		
 			if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMask)){
