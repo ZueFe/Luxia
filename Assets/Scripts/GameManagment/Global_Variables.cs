@@ -11,6 +11,7 @@ public class Global_Variables : MonoBehaviour {
 	public const int COLLISION_LAYER = 8;
 	public const string TOOGLE_FOLLOW = "Toogle Follow";
 	public const string BYPASS_OBSTICLE = "Bypass Obsticle";
+	public const string FOLLOWER_TAG = "Follower";
 
 	void Start(){
 		Instance = this;

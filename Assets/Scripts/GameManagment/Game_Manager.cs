@@ -8,8 +8,10 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject[] Followers;
 	public int NumberOfFollowers;
 	public Vector3 StartPosition = new Vector3(0f, 0.5f, 0f);
+	[HideInInspector]
+	public GameObject[] followerInstances;
 
-	private GameObject[] followerInstances;
+
 	private Game_Camera gameCamera;
 	private const float FOLLOWER_START_OFFSET = 10f;
 	private const float FOLLOWER_HEIGHT_OFFSET = 4f;
