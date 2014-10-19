@@ -7,9 +7,13 @@ public class Bandurko_Movement : MonoBehaviour {
 	public float ObsticleCheck = 1f;
 	public LayerMask[] CollisionMasks;
 
+	[HideInInspector]
+	public bool dead = false;
+
 	private Rigidbody rigidbody;
 	private float direction = 1f;
 	private Animator anim;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -21,10 +25,12 @@ public class Bandurko_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(CheckForObsticles(direction)){
-			ToogleDirection();
+		if(!dead){
+			if(CheckForObsticles(direction)){
+				ToogleDirection();
+			}
+			rigidbody.MovePosition(new Vector3(this.transform.position.x + direction * Speed * Time.deltaTime, this.transform.position.y, this.transform.position.z));
 		}
-		rigidbody.MovePosition(new Vector3(this.transform.position.x + direction * Speed * Time.deltaTime, this.transform.position.y, this.transform.position.z));
 	}
 
 	private bool CheckForObsticles(float dir){

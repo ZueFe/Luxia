@@ -28,6 +28,8 @@ public class Obsticle_Trigger : MonoBehaviour {
 
 
 				player.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+			}else{
+				//not enough energy!
 			}
 		}
 	}

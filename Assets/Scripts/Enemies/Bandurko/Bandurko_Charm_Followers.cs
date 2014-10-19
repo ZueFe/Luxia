@@ -3,18 +3,42 @@ using System.Collections;
 
 public class Bandurko_Charm_Followers : MonoBehaviour {
 
-	private bool charmed = false;
+	public GameObject BandurkoEye;
+
+	private Animator anim;
+	private Obsticle_Stats stats;
+	private bool dead = false;
+
+	void Start(){
+		anim = GetComponent<Animator>();
+		stats = GetComponent<Obsticle_Stats>();
+	}
+
 
 	void OnTriggerEnter(Collider col){
-		if(col.tag == Global_Variables.FOLLOWER_TAG){
+		if(col.tag == Global_Variables.FOLLOWER_TAG && !GetComponent<Bandurko_Movement>().dead){
 			ChangeFollowing(gameObject, false, true);
+		}
+	}
 
-			/*GameObject firstFollower = Camera.main.GetComponent<Game_Manager>().followerInstances[0];
-			Follow_Player fp = firstFollower.GetComponent<Follow_Player>();
+	void OnTriggerStay(Collider col){
+		if(!dead && col.tag == Global_Variables.PLAYER_TAG &&
+		   Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
+			GameObject player =  GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
+			Player_Stats pStats = player.GetComponent<Player_Stats>();
 
-			fp.Follows = gameObject.gameObject;
-			fp.followsPlayer = false;
-			charmed = true;*/
+			if(pStats.GetEnergy() >= stats.EnergyCost){
+				pStats.ChangeEnergy(-1f * stats.EnergyCost);
+				ChangeFollowing(GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG), true, false);
+
+				anim.SetBool(GetComponent<Bandurko_AnimHash>().Dying, true);
+				GetComponent<Bandurko_Movement>().dead = true;
+				dead = true;
+			}else{
+				//not enough energy!
+			}
+
+
 		}
 	}
 
@@ -31,13 +55,18 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 		}
 	}*/
 
-	private void ChangeFollowing(GameObject follows, bool followsPlayer, bool charmed){
+	private void ChangeFollowing(GameObject follows, bool followsPlayer, bool activeEye){
 		GameObject firstFollower = Camera.main.GetComponent<Game_Manager>().followerInstances[0];
 		Follow_Player fp = firstFollower.GetComponent<Follow_Player>();
 		
 		fp.Follows = follows;
 		fp.followsPlayer = followsPlayer;
-		this.charmed = charmed;
+
+		BandurkoEye.SetActive(activeEye);
+	}
+
+	private void DestroyObject(){
+		Destroy(gameObject);
 	}
 
 }

@@ -12,11 +12,16 @@ public class Lamps_Activate : MonoBehaviour {
 
 	void OnTriggerStay(Collider col){
 		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
+			GameObject player =  GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
+			Player_Stats pStats = player.GetComponent<Player_Stats>();
+
+			if(pStats.GetEnergy() >= stats.EnergyCost){
+
 			gameObject.GetComponent<Light>().enabled = true;
 			gameObject.GetComponent<BoxCollider>().enabled = false;
-			
-			GameObject player = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-			player.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+
+			pStats.ChangeEnergy(-1 * stats.EnergyCost);
+			}
 		}
 	}
 }
