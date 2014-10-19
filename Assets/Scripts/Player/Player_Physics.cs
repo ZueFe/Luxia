@@ -47,7 +47,6 @@ public class Player_Physics : MonoBehaviour {
 
 
 			ray = new Ray(new Vector2(x,y), new Vector2(0, Mathf.Sign(deltaY)));
-			Debug.DrawRay(new Vector2(x,y), new Vector2(0, Mathf.Sign(deltaY)));
 
 			if(Physics.Raycast(ray, out hit, Mathf.Abs(deltaY) + skin, CollisionMask)){
 				float dst = Vector3.Distance(ray.origin, hit.point);
