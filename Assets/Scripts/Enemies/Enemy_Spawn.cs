@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy_Spawn : MonoBehaviour {
 
 	public Transform[] SpawningPositions;
-	public GameObject Enemy;
+	public GameObject[] Enemies;
 
 
 	private bool activated = false;
@@ -13,8 +13,10 @@ public class Enemy_Spawn : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 
 		if(!activated && col.tag == Global_Variables.PLAYER_TAG){
+			int randPick = Random.Range(0, Enemies.Length);
+
 			int pickSpawn = Random.Range(0, SpawningPositions.Length);
-			Instantiate(Enemy, SpawningPositions[pickSpawn].transform.position, Quaternion.identity);
+			Instantiate(Enemies[randPick], SpawningPositions[pickSpawn].transform.position, Quaternion.identity);
 			activated = true;
 		}
 	}
