@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 037032a7d890e4441a4471164b7b34bf
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: sheet_bandurko_walk_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1408
+        width: 212
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_1
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1408
+        width: 224
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_2
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1407
+        width: 242
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_3
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1407
+        width: 248
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_4
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1407
+        width: 264
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_5
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 1410
+        width: 276
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_6
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 1407
+        width: 288
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_7
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 1410
+        width: 300
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_8
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 1407
+        width: 316
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_9
+      rect:
+        serializedVersion: 2
+        x: 3714
+        y: 1410
+        width: 302
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 706
+        width: 288
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_11
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 702
+        width: 278
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_12
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 702
+        width: 270
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_13
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 702
+        width: 248
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_14
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 704
+        width: 240
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_15
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 704
+        width: 224
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_16
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 706
+        width: 212
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bandurko_walk_17
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 703
+        width: 208
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
