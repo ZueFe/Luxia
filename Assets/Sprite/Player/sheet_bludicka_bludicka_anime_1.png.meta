@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b208c38effd119c488e4b79e75a883a4
+guid: 75d7b52beaebd3941a84e8310dd6de00
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,148 +45,139 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: sheet_vciel_0
+    - name: sheet_bludicka_bludicka_anime_1_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 1616
-        width: 484
-        height: 386
+        x: 15
+        y: 688
+        width: 321
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_1
+    - name: sheet_bludicka_bludicka_anime_1_1
       rect:
         serializedVersion: 2
-        x: 806
-        y: 1618
-        width: 496
-        height: 366
+        x: 419
+        y: 688
+        width: 326
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_2
+    - name: sheet_bludicka_bludicka_anime_1_2
       rect:
         serializedVersion: 2
-        x: 1502
-        y: 1622
-        width: 514
-        height: 344
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: sheet_vciel_3
-      rect:
-        serializedVersion: 2
-        x: 2198
-        y: 1622
-        width: 520
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: sheet_vciel_4
-      rect:
-        serializedVersion: 2
-        x: 2894
-        y: 1622
-        width: 532
+        x: 823
+        y: 684
+        width: 326
         height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_5
+    - name: sheet_bludicka_bludicka_anime_1_3
       rect:
         serializedVersion: 2
-        x: 62
-        y: 1118
-        width: 540
-        height: 300
+        x: 1223
+        y: 680
+        width: 333
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_6
+    - name: sheet_bludicka_bludicka_anime_1_4
       rect:
         serializedVersion: 2
-        x: 762
-        y: 1118
-        width: 548
-        height: 292
+        x: 1623
+        y: 679
+        width: 338
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_7
+    - name: sheet_bludicka_bludicka_anime_1_5
       rect:
         serializedVersion: 2
-        x: 1462
-        y: 1118
-        width: 556
-        height: 292
+        x: 2032
+        y: 679
+        width: 333
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_8
+    - name: sheet_bludicka_bludicka_anime_1_6
       rect:
         serializedVersion: 2
-        x: 2174
-        y: 1118
-        width: 548
-        height: 292
+        x: 2435
+        y: 679
+        width: 337
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_9
+    - name: sheet_bludicka_bludicka_anime_1_7
       rect:
         serializedVersion: 2
-        x: 2879
-        y: 1118
-        width: 547
-        height: 300
+        x: 2844
+        y: 679
+        width: 333
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_10
+    - name: sheet_bludicka_bludicka_anime_1_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 610
-        width: 538
+        x: 3247
+        y: 679
+        width: 334
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bludicka_bludicka_anime_1_9
+      rect:
+        serializedVersion: 2
+        x: 3655
+        y: 679
+        width: 333
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bludicka_bludicka_anime_1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 271
+        width: 333
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_bludicka_bludicka_anime_1_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 278
+        width: 334
         height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_11
+    - name: sheet_bludicka_bludicka_anime_1_12
       rect:
         serializedVersion: 2
-        x: 782
-        y: 610
-        width: 524
-        height: 332
+        x: 820
+        y: 279
+        width: 328
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_12
+    - name: sheet_bludicka_bludicka_anime_1_13
       rect:
         serializedVersion: 2
-        x: 1498
-        y: 610
-        width: 512
-        height: 350
+        x: 1232
+        y: 284
+        width: 324
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: sheet_vciel_13
+    - name: sheet_bludicka_bludicka_anime_1_14
       rect:
         serializedVersion: 2
-        x: 2208
-        y: 606
-        width: 512
-        height: 371
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: sheet_vciel_14
-      rect:
-        serializedVersion: 2
-        x: 2930
-        y: 606
-        width: 488
-        height: 386
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: sheet_vciel_15
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 102
-        width: 488
-        height: 382
+        x: 1639
+        y: 284
+        width: 322
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 
