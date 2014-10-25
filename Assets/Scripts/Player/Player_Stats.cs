@@ -24,8 +24,12 @@ public class Player_Stats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Global_Variables.Instance.FreezeTime){
+
+			return;
+		}
+
 		ChangeEnergy(-1 * energyLosePerSec * Time.deltaTime);
-		//Debug.LogError(energy);
 	}
 
 	public void ChangeEnergy(float change){

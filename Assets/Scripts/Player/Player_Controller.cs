@@ -32,6 +32,10 @@ public class Player_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Global_Variables.Instance.FreezeTime){
+			return;
+		}
+
 		ProcessLocomotion();
 		ProcessPlayerInput();
 	}

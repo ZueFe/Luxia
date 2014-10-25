@@ -25,6 +25,10 @@ public class Bandurko_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Global_Variables.Instance.FreezeTime){
+			return;
+		}
+
 		if(!dead){
 			if(CheckForObsticles(direction)){
 				ToogleDirection();

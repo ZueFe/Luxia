@@ -34,6 +34,10 @@ public class Follow_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Global_Variables.Instance.FreezeTime){
+			return;
+		}
+
 		if(Global_Variables.Instance.FolloweresFollowing){
 			FollowPlayer();
 		}else{
