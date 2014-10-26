@@ -19,6 +19,16 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 		if(col.tag == Global_Variables.FOLLOWER_TAG && !GetComponent<Bandurko_Movement>().dead){
 			ChangeFollowing(gameObject, false, true);
 		}
+
+		if(col.tag == Global_Variables.PLAYER_TAG && !GetComponent<Bandurko_Movement>().dead){
+			GetComponent<Bandurko_Movement>().fleeing = true;
+		}
+	}
+
+	void OnTriggerExit(Collider col){
+		if(col.tag == Global_Variables.PLAYER_TAG && !GetComponent<Bandurko_Movement>().dead){
+			GetComponent<Bandurko_Movement>().fleeing = false;
+		}
 	}
 
 	void OnTriggerStay(Collider col){

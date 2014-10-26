@@ -4,21 +4,31 @@ using System.Collections;
 public class Bandurko_Movement : MonoBehaviour {
 
 	public float Speed;
+	public float FleeingSpeed;
+	public float SpeedChangeTime = 1f;
 	public float ObsticleCheck = 1f;
 	public LayerMask[] CollisionMasks;
 
 	[HideInInspector]
 	public bool dead = false;
 
+	[HideInInspector]
+	public bool fleeing;
+
 	private Rigidbody rigidbody;
 	private float direction = 1f;
 	private Animator anim;
-	
+	private float timerFromLastChange = 0;
+	private float usedSpeed = 0f;
+	private float t;
+
+	private const float WAIT_FOR_DIRECTION_CHANGE = 5f;
 
 	// Use this for initialization
 	void Start () {
 		rigidbody = GetComponent<Rigidbody>();
 		ToogleDirection();
+		usedSpeed = 0f;
 
 		anim = GetComponent<Animator>();
 	}
@@ -30,10 +40,24 @@ public class Bandurko_Movement : MonoBehaviour {
 		}
 
 		if(!dead){
+			timerFromLastChange += Time.deltaTime;
+
 			if(CheckForObsticles(direction)){
 				ToogleDirection();
 			}
-			rigidbody.MovePosition(new Vector3(this.transform.position.x + direction * Speed * Time.deltaTime, this.transform.position.y, this.transform.position.z));
+
+			if(fleeing){
+				usedSpeed = Mathf.SmoothDamp(usedSpeed, FleeingSpeed,ref t, SpeedChangeTime);
+
+				if(timerFromLastChange >= WAIT_FOR_DIRECTION_CHANGE){
+					ToogleDirection();
+					timerFromLastChange = 0;
+				}
+
+			}else{
+				usedSpeed = Mathf.SmoothDamp(usedSpeed, Speed,ref t, SpeedChangeTime);
+			}
+			rigidbody.MovePosition(new Vector3(this.transform.position.x + direction * usedSpeed * Time.deltaTime, this.transform.position.y, this.transform.position.z));
 		}
 	}
 
