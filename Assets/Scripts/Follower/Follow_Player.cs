@@ -5,7 +5,7 @@ public class Follow_Player : MonoBehaviour {
 
 	public float Offset;
 	public GameObject Follows;
-	public float Speed = 5f;
+	public float ReachFollowerTime = 0.5f;
 	public float MaxFallDistance = 3f;
 	public float ObsticleCheck = 1f;
 	public bool followsPlayer;
@@ -19,6 +19,7 @@ public class Follow_Player : MonoBehaviour {
 	private Vector3 scale;
 	private Vector3 colSize;
 	private float directionDamp;
+	private float t;
 
 	// Use this for initialization
 	void Start () {
@@ -74,8 +75,8 @@ public class Follow_Player : MonoBehaviour {
 		   !(Follows.transform.position.x - Offset < transform.position.x && 
 		 	Follows.transform.position.x + Offset > transform.position.x) &&
 		   !hitPlayer){
-		
-			currentX = incrementTowards(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, Speed);
+
+			currentX = Mathf.SmoothDamp(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, ref t, 0.5f);
 
 			if(CheckForHole(currentX) ||CheckForObsticles(currentX - transform.position.x)){
 				currentX = transform.position.x;
@@ -98,8 +99,7 @@ public class Follow_Player : MonoBehaviour {
 
 		Vector3 moveTo = new Vector3(currentX, transform.position.y, transform.position.z);
 
-		rigidbody.MovePosition(moveTo);
-		
+		rigidbody.MovePosition(moveTo);		
 
 	}
 
@@ -108,22 +108,6 @@ public class Follow_Player : MonoBehaviour {
 		Vector3 posPlay = Follows.transform.position;
 
 		return Mathf.Pow(posFol.x - posPlay.x, 2) + Mathf.Pow(posFol.y - posPlay.y, 2) + Mathf.Pow(posFol.z - posPlay.z, 2);
-	}
-
-	private float incrementTowards(float n, float target, float acceleration){
-		if(n == target){			//if player moves in target speed
-			return n;
-		}
-		
-		float dir = Mathf.Sign(target - n);			//get sign of acceleration (either speed up or down)
-		n += acceleration * Time.deltaTime * dir;	//accelerate (up or down) based on acceleration speed
-		
-		if(dir == Mathf.Sign(target - n)){			//if target speed is not reached return n
-			return n;
-		}
-		
-		return target;								//if target speed is reached (or is smaller) return traget speed
-		//so you won't ever go faster than target speed
 	}
 
 	private bool CheckForHole(float currentX){

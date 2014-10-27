@@ -8,6 +8,7 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 	private Animator anim;
 	private Obsticle_Stats stats;
 	private bool dead = false;
+	private bool charming = false;
 
 	void Start(){
 		anim = GetComponent<Animator>();
@@ -18,10 +19,11 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if(col.tag == Global_Variables.FOLLOWER_TAG && !GetComponent<Bandurko_Movement>().dead){
 			ChangeFollowing(gameObject, false, true);
+			GetComponent<Bandurko_Movement>().charming = true;
 		}
 
 		if(col.tag == Global_Variables.PLAYER_TAG && !GetComponent<Bandurko_Movement>().dead){
-			GetComponent<Bandurko_Movement>().fleeing = true;
+				GetComponent<Bandurko_Movement>().fleeing = true;
 		}
 	}
 

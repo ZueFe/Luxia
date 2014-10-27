@@ -14,6 +14,8 @@ public class Bandurko_Movement : MonoBehaviour {
 
 	[HideInInspector]
 	public bool fleeing;
+	[HideInInspector]
+	public bool charming;
 
 	private Rigidbody rigidbody;
 	private float direction = 1f;
@@ -49,7 +51,7 @@ public class Bandurko_Movement : MonoBehaviour {
 			if(fleeing){
 				usedSpeed = Mathf.SmoothDamp(usedSpeed, FleeingSpeed,ref t, SpeedChangeTime);
 
-				if(timerFromLastChange >= WAIT_FOR_DIRECTION_CHANGE){
+				if(timerFromLastChange >= WAIT_FOR_DIRECTION_CHANGE && charming){
 					ToogleDirection();
 					timerFromLastChange = 0;
 				}
