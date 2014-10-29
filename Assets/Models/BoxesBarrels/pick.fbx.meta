@@ -6,15 +6,20 @@ ModelImporter:
     100000: handle
     100002: metal part
     100004: //RootNode
+    100006: metal_part
     400000: handle
     400002: metal part
     400004: //RootNode
+    400006: metal_part
     2300000: handle
     2300002: metal part
+    2300004: metal_part
     3300000: handle
     3300002: metal part
+    3300004: metal_part
     4300000: metal part
     4300002: handle
+    4300004: metal_part
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -24,7 +29,6 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5

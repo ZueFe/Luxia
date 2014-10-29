@@ -82,7 +82,6 @@ public class Follow_Player : MonoBehaviour {
 
 
 			if(CheckForHole(currentX) ||CheckForObsticles(currentX - transform.position.x)){
-				Debug.LogError("HIT THE THING!!");
 				anim.SetFloat(hash.Direction, 0f);
 				return;
 			}
@@ -126,8 +125,6 @@ public class Follow_Player : MonoBehaviour {
 	}
 
 	private bool CheckForObsticles(float dir){
-		Debug.LogError("Check for obsticle");
-
 		RaycastHit hit;
 		Ray ray;
 		Vector2 direction = new Vector2(Mathf.Sign(dir), 0);
