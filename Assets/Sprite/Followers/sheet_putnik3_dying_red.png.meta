@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: d0f8c92dd59fa78468a6db054a8ac740
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: sheet_putnik3_dying_red_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3120
+        width: 372
+        height: 849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 3122
+        width: 372
+        height: 844
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_2
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 3120
+        width: 372
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_3
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 3122
+        width: 372
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_4
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 3120
+        width: 372
+        height: 848
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_5
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 3122
+        width: 372
+        height: 844
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_6
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 3120
+        width: 372
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_7
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 3122
+        width: 379
+        height: 847
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2118
+        width: 374
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2118
+        width: 374
+        height: 840
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_10
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 2118
+        width: 372
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik3_dying_red_11
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2118
+        width: 372
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_12
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 2118
+        width: 382
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_13
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 2118
+        width: 380
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_14
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 2118
+        width: 384
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_15
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 2118
+        width: 384
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_16
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1104
+        width: 388
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_17
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1114
+        width: 388
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_18
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1101
+        width: 384
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik3_dying_red_19
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1114
+        width: 384
+        height: 843
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

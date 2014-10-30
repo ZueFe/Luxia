@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: f7bae0f22b67de54181c9af37fdcb790
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: sheet_lady_dying_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 3118
+        width: 215
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 3118
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_2
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 3118
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_3
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 3118
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_4
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 3118
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_5
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 3118
+        width: 214
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_6
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 3118
+        width: 219
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_7
+      rect:
+        serializedVersion: 2
+        x: 3646
+        y: 3118
+        width: 212
+        height: 900
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 2111
+        width: 212
+        height: 903
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_9
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 2111
+        width: 212
+        height: 903
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_10
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 2110
+        width: 212
+        height: 904
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_11
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 2111
+        width: 218
+        height: 903
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_12
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 2112
+        width: 214
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_13
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 2111
+        width: 220
+        height: 819
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_14
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 2112
+        width: 230
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_15
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2111
+        width: 231
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1104
+        width: 231
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_17
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1104
+        width: 231
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_18
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1103
+        width: 231
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_lady_dying_19
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1096
+        width: 231
+        height: 864
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

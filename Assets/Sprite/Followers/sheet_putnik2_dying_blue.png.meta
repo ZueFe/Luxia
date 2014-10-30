@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 043baea16f8c9ad44acc5e993df69f00
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: sheet_putnik2_dying_blue_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3318
+        width: 364
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_1
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 3318
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_2
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 3318
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_3
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 3318
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_4
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 3318
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_5
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 3318
+        width: 364
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_6
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 3318
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_7
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3312
+        width: 368
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_8
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 2510
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_9
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2510
+        width: 364
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_10
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2510
+        width: 364
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_11
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2510
+        width: 374
+        height: 680
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik2_dying_blue_12
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 2510
+        width: 390
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_13
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 2510
+        width: 392
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_14
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 2506
+        width: 404
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_16
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 2506
+        width: 404
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1706
+        width: 403
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_19
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1706
+        width: 403
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_20
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 1706
+        width: 403
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik2_dying_blue_24
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 1706
+        width: 403
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
