@@ -103,7 +103,7 @@ public class Player_Controller : MonoBehaviour {
 	}
 
 	private void ProcessPlayerInput(){
-		if(Input.GetButtonDown(Global_Variables.TOOGLE_FOLLOW)){
+		if(!Global_Variables.Instance.FollowersCharmed && Input.GetButtonDown(Global_Variables.TOOGLE_FOLLOW)){
 			Global_Variables.Instance.FolloweresFollowing = !Global_Variables.Instance.FolloweresFollowing;
 		}
 	}

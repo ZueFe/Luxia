@@ -20,6 +20,8 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 		if(col.tag == Global_Variables.FOLLOWER_TAG && !GetComponent<Bandurko_Movement>().dead){
 			ChangeFollowing(gameObject, false, true);
 			GetComponent<Bandurko_Movement>().charming = true;
+			Global_Variables.Instance.FolloweresFollowing = true;
+			Global_Variables.Instance.FollowersCharmed = true;
 		}
 
 		if(col.tag == Global_Variables.PLAYER_TAG && !GetComponent<Bandurko_Movement>().dead){
@@ -46,6 +48,7 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 				anim.SetBool(GetComponent<Bandurko_AnimHash>().Dying, true);
 				GetComponent<Bandurko_Movement>().dead = true;
 				dead = true;
+				Global_Variables.Instance.FollowersCharmed = false;
 			}else{
 				//not enough energy!
 			}

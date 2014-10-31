@@ -24,13 +24,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,195 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: sheet_putnik1_dying_green_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 3330
+        width: 470
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_1
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 3328
+        width: 466
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_2
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 3330
+        width: 467
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_3
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 3328
+        width: 460
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_4
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 3328
+        width: 466
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_5
+      rect:
+        serializedVersion: 2
+        x: 3118
+        y: 3327
+        width: 460
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2522
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_7
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 2522
+        width: 464
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_8
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2522
+        width: 466
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_9
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 2522
+        width: 467
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_10
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 2522
+        width: 464
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_11
+      rect:
+        serializedVersion: 2
+        x: 3114
+        y: 2522
+        width: 464
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: sheet_putnik1_dying_green_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1714
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_13
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1718
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_14
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1718
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1718
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_17
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1723
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_18
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 1716
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 910
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_24
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 911
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: sheet_putnik1_dying_green_26
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 910
+        width: 460
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

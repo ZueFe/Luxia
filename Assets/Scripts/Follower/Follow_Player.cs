@@ -21,6 +21,7 @@ public class Follow_Player : MonoBehaviour {
 	private float directionDamp;
 	private float t;
 	private bool stop;
+	private bool dead;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +37,7 @@ public class Follow_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Global_Variables.Instance.FreezeTime){
+		if(Global_Variables.Instance.FreezeTime || dead){
 			return;
 		}
 
@@ -141,5 +142,14 @@ public class Follow_Player : MonoBehaviour {
 		}
 
 		return false;
+	}
+
+	public void KillFollower(){
+		dead = true;
+		anim.SetBool(hash.Dying, false);
+	}
+
+	public void DestroyFollower(){
+		Destroy(this.gameObject);
 	}
 }

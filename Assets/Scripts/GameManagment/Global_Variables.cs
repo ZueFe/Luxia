@@ -7,6 +7,7 @@ public class Global_Variables : MonoBehaviour {
 
 	public bool FolloweresFollowing;
 	public bool FreezeTime;
+	public bool FollowersCharmed;
 
 	public const string PLAYER_TAG = "Player";
 	public const string ENEMY_TAG = "Enemy";
@@ -16,6 +17,7 @@ public class Global_Variables : MonoBehaviour {
 	public const string FOLLOWER_TAG = "Follower";
 
 	public const float CAMERA_SMOOTH_TIME = 1f;
+	public const float CAMERA_FOLLOWER_DEATH_SMOOTH_TIME = 0.2f;
 
 	void Start(){
 		Instance = this;
