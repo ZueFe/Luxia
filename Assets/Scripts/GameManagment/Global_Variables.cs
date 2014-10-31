@@ -9,6 +9,7 @@ public class Global_Variables : MonoBehaviour {
 	public bool FreezeTime;
 
 	public const string PLAYER_TAG = "Player";
+	public const string ENEMY_TAG = "Enemy";
 	public const int COLLISION_LAYER = 8;
 	public const string TOOGLE_FOLLOW = "Toogle Follow";
 	public const string BYPASS_OBSTICLE = "Bypass Obsticle";

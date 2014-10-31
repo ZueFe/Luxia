@@ -78,7 +78,7 @@ public class Follow_Player : MonoBehaviour {
 		 	Follows.transform.position.x + Offset > transform.position.x) &&
 		   !hitPlayer){
 
-			currentX = Mathf.SmoothDamp(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, ref t, 0.5f);
+			currentX = Mathf.SmoothDamp(transform.position.x, Follows.transform.position.x + Mathf.Sign(direction) * Offset, ref t, ReachFollowerTime);
 
 
 			if(CheckForHole(currentX) ||CheckForObsticles(currentX - transform.position.x)){
