@@ -10,8 +10,7 @@ public class Player_Controller : MonoBehaviour {
 	public float Acceleration = 30;			//player's acceleration
 	//public float Gravity = 20;				//gravity force
 	//public float JumpHeight = 12;			//height of jump
-
-	public bool stopped = false;
+	
 
 	private float currentSpeed;				//to hold current speed of player
 	private float targetSpeed;				//to hold speed to which player wants to speed up
