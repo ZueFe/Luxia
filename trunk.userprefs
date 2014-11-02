@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Crystals\Crystal_Use.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Obsticle\Obsticle_Trigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\Player_Stats.cs" Line="28" Column="26" />
-      <File FileName="Assets\Scripts\Crystals\Crystal_Use.cs" Line="17" Column="16" />
-      <File FileName="Assets\Scripts\Obsticle\Obsticle_Trigger.cs" Line="27" Column="76" />
-      <File FileName="Assets\Scripts\GameManagment\Global_Variables.cs" Line="13" Column="58" />
+      <File FileName="Assets\Scripts\Crystals\Crystal_Use.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManagment\Global_Variables.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Player_Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Player_Stats.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Obsticle\Obsticle_Trigger.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\Obsticle\Bridge\Bridge_Activate_Lever.cs" Line="48" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

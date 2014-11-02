@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bridge_AnimHash : MonoBehaviour {
+public class Obsticle_AnimHash : MonoBehaviour {
 
 	public int Activated;
 	

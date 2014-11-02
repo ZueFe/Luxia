@@ -33,7 +33,7 @@ public class Bridge_Activate_Lever : MonoBehaviour {
 			Player_Stats pStats = player.GetComponent<Player_Stats>();
 			
 			if(pStats.GetEnergy() >= stats.EnergyCost){
-				Bridge_AnimHash hash = GetComponent<Bridge_AnimHash>();
+				Obsticle_AnimHash hash = GetComponent<Obsticle_AnimHash>();
 
 				GetComponent<Animator>().SetBool(hash.Activated, true);
 
@@ -45,7 +45,7 @@ public class Bridge_Activate_Lever : MonoBehaviour {
 	}
 
 	void LeverActivated(){
-		Bridge_AnimHash hash = Bridge.GetComponent<Bridge_AnimHash>();
+		Obsticle_AnimHash hash = Bridge.GetComponent<Obsticle_AnimHash>();
 		
 		Bridge.GetComponent<Animator>().SetBool(hash.Activated, true);
 
