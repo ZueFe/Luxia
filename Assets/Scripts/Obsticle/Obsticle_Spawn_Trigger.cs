@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bridge_Spawn_Lever : MonoBehaviour {
+public class Obsticle_Spawn_Trigger : MonoBehaviour {
 	public GameObject[] Levers;
 
 	void Start(){
