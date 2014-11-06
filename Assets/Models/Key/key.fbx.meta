@@ -10,7 +10,9 @@ ModelImporter:
     400002: //RootNode
     400004: key
     2300000: key
+    2300002: //RootNode
     3300000: key
+    3300002: //RootNode
     4300000: key
     9500000: //RootNode
   materials:
@@ -21,7 +23,6 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
