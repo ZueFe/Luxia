@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Swarm_Movement : MonoBehaviour {
+public class Bee_Movement : MonoBehaviour {
 
 	public float Speed;
+	public float FleeingSpeed;
 	public float StartScale;
 	public float MaxScale;
+	public float MinScale;
 	public float ToReachMaxScale;
 	public float ToDieFromMaxScale;
 	public float PlayerOffset;
 	public float StartCharging;
+	public float EndCharging;
 	public float ObsticleCheck;
 	public LayerMask CollisionMasks;
 	
@@ -17,6 +20,7 @@ public class Swarm_Movement : MonoBehaviour {
 	private float sizeDecreasePerSec;
 	private GameObject player;
 	private Light playerLight;
+	private bool charging;
 
 	void Start(){
 		Vector3 scale = new Vector3(StartScale, StartScale, transform.localScale.z);
@@ -30,16 +34,44 @@ public class Swarm_Movement : MonoBehaviour {
 		playerLight = player.GetComponentInChildren<Light>();
 	}
 
-	void FixedUpdate(){
-		if(!Global_Variables.Instance.PlayerInSecondLevel){
-			IncreaseScale();
-			MoveToPlayer(Speed, Mathf.Sqrt(playerLight.range));
+	public void ResolveMovement(){
+			float scale = transform.localScale.y;
+			float speed = Speed;
+			float offset = 0f;
 
-		}
+			if(charging){
+				if(scale > EndCharging){
+					speed = Speed;
+					offset = 0f;
+				}else{
+					charging = false;
+					speed = FleeingSpeed;
+					offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
+				}
+			}else{
+				if(scale >= StartCharging){
+					charging = true;
+					speed = Speed;
+					offset = 0f;
+				}else{
+					speed = FleeingSpeed;
+					offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
+				}
+			}
+
+			if(DistanceFromPlayer() < Mathf.Sqrt(playerLight.range)){
+				DecreaseScale();
+			}else{
+				IncreaseScale();
+			}
+
+			MoveToPlayer(speed, offset);
+
+			CheckDeath();
 	}
 
 	private void CheckDeath(){
-		if(gameObject.transform.localScale.x <= 0f){
+		if(gameObject.transform.localScale.y <= MinScale){
 			Destroy(this.gameObject);
 		}
 	}
@@ -48,10 +80,10 @@ public class Swarm_Movement : MonoBehaviour {
 		return Vector3.Distance(gameObject.transform.position, player.transform.position);
 	}
 
-	private bool IsInOffsetRange(){
+	/*private bool IsInOffsetRange(){
 		float distToPlayer = DistanceFromPlayer();
 		return distToPlayer + PlayerOffset <= playerLight.range && distToPlayer >= playerLight.range;
-	}
+	}*/
 
 	private bool IsInLightRange(){
 		return DistanceFromPlayer() < playerLight.range;
@@ -70,7 +102,7 @@ public class Swarm_Movement : MonoBehaviour {
 		}
 
 		if(!CheckXObsticle(player.transform.position.x - transform.position.x)){
-			currentX =  Mathf.Lerp(currentX, player.transform.position.x - offset, Time.deltaTime * speed);
+			currentX =  Mathf.Lerp(currentX, player.transform.position.x - Mathf.Sign(direction) * offset, Time.deltaTime * speed);
 		}
 
 		Vector3 scale = transform.localScale;
@@ -127,7 +159,7 @@ public class Swarm_Movement : MonoBehaviour {
 	}
 
 	private void DecreaseScale(){
-		float scale = transform.localScale.x - sizeDecreasePerSec * Time.deltaTime;
+		float scale = transform.localScale.y - sizeDecreasePerSec * Time.deltaTime;
 
 		Vector3 newScale = new Vector3(scale, scale, transform.localScale.z);
 		

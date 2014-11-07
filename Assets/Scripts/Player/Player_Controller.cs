@@ -68,7 +68,8 @@ public class Player_Controller : MonoBehaviour {
 		//get targeted elevation and speed based on input and compute current elevation and speed based on acceleration
 		targetElevation = Input.GetAxisRaw("Vertical") * Speed;
 		targetSpeed = Input.GetAxisRaw("Horizontal") * Speed;
-		currentSpeed = incrementTowards(currentSpeed, targetSpeed, Acceleration);
+		//currentSpeed = incrementTowards(currentSpeed, targetSpeed, Acceleration);
+		currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, Time.deltaTime * Speed);
 		currentElevation = incrementTowards(currentElevation, targetElevation, Acceleration);
 		
 		
