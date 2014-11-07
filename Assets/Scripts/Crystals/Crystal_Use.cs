@@ -41,8 +41,7 @@ public class Crystal_Use : MonoBehaviour {
 			Global_Variables.Instance.FreezeTime = true;
 
 			gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
-			GameObject player = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-			player.GetComponentInChildren<Light>().intensity *= Global_Variables.PLAYER_INTENSITY_INCREASE;
+			col.gameObject.GetComponentInChildren<Light>().intensity *= Global_Variables.PLAYER_INTENSITY_INCREASE;
 
 			startDecreasing = true;
 		}
@@ -52,8 +51,7 @@ public class Crystal_Use : MonoBehaviour {
 		gameObject.GetComponentInChildren<Light>().enabled = false;
 		startDecreasing = false;
 
-		GameObject player = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-		player.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+		GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG).GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
 
 		Global_Variables.Instance.FreezeTime = false;
 	}	

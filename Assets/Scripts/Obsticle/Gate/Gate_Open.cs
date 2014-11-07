@@ -15,15 +15,13 @@ public class Gate_Open : MonoBehaviour {
 	
 	void OnTriggerStay(Collider col){
 		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonUp(Global_Variables.BYPASS_OBSTICLE)){
-			GameObject player = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-
-			if(player.GetComponent<Player_Inventory>().HasKey){
+			if(col.gameObject.GetComponent<Player_Inventory>().HasKey){
 				OpenGate ();
-				player.GetComponent<Player_Inventory>().HasKey = false;
-			}else if(player.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
+				col.gameObject.GetComponent<Player_Inventory>().HasKey = false;
+			}else if(col.gameObject.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
 
 				OpenGate();				
-				player.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+				col.gameObject.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
 			}else{
 				//not enough energy!
 			}

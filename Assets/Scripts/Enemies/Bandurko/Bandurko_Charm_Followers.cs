@@ -38,12 +38,11 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 	void OnTriggerStay(Collider col){
 		if(!dead && col.tag == Global_Variables.PLAYER_TAG &&
 		   Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
-			GameObject player =  GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-			Player_Stats pStats = player.GetComponent<Player_Stats>();
+			Player_Stats pStats = col.gameObject.GetComponent<Player_Stats>();
 
 			if(pStats.GetEnergy() >= stats.EnergyCost){
 				pStats.ChangeEnergy(-1f * stats.EnergyCost);
-				ChangeFollowing(GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG), true, false);
+				ChangeFollowing(col.gameObject, true, false);
 
 				anim.SetBool(GetComponent<Bandurko_AnimHash>().Dying, true);
 				GetComponent<Bandurko_Movement>().dead = true;

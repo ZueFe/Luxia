@@ -8,6 +8,7 @@ public class Global_Variables : MonoBehaviour {
 	public bool FolloweresFollowing;
 	public bool FreezeTime;
 	public bool FollowersCharmed;
+	public bool PlayerInSecondLevel = false;
 
 	public const string PLAYER_TAG = "Player";
 	public const string ENEMY_TAG = "Enemy";

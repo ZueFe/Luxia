@@ -16,9 +16,7 @@ public class Obsticle_Trigger : MonoBehaviour {
 	
 	void OnTriggerStay(Collider col){
 		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonUp(Global_Variables.BYPASS_OBSTICLE)){
-			GameObject player = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
-
-			if(player.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
+			if(col.gameObject.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
 				Obsticle_AnimHash hash = Obsticle.GetComponent<Obsticle_AnimHash>();
 
 				Obsticle.GetComponent<Animator>().SetBool(hash.Activated, true);
@@ -31,7 +29,7 @@ public class Obsticle_Trigger : MonoBehaviour {
 				gameObject.layer = Global_Variables.COLLISION_LAYER;
 
 
-				player.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+				col.gameObject.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
 			}else{
 				//not enough energy!
 			}

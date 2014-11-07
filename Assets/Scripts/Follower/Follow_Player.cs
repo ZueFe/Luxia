@@ -9,7 +9,7 @@ public class Follow_Player : MonoBehaviour {
 	public float MaxFallDistance = 3f;
 	public float ObsticleCheck = 1f;
 	public bool followsPlayer;
-	public LayerMask[] CollisionMasks;
+	public LayerMask CollisionMasks;
 
 	private Light playerLight;
 	private bool hitPlayer = false;
@@ -101,7 +101,6 @@ public class Follow_Player : MonoBehaviour {
 		Vector3 moveTo = new Vector3(currentX, transform.position.y, transform.position.z);
 
 		rigidbody.MovePosition(moveTo);		
-
 	}
 
 	private float GetDistanceWithPlayer(){
@@ -130,16 +129,13 @@ public class Follow_Player : MonoBehaviour {
 		Ray ray;
 		Vector2 direction = new Vector2(Mathf.Sign(dir), 0);
 
-		for(int i = 0; i < CollisionMasks.Length; i++){
-			ray = new Ray(transform.position, direction);
-			Debug.DrawRay(transform.position, direction);
+	
+		ray = new Ray(transform.position, direction);
 
-			Debug.DrawRay(this.transform.position, direction);
-
-			if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMasks[i])){
-					return true;
-			}
+		if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMasks)){
+				return true;
 		}
+
 
 		return false;
 	}

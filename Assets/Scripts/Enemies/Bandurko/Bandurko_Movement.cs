@@ -7,7 +7,7 @@ public class Bandurko_Movement : MonoBehaviour {
 	public float FleeingSpeed;
 	public float SpeedChangeTime = 1f;
 	public float ObsticleCheck = 1f;
-	public LayerMask[] CollisionMasks;
+	public LayerMask CollisionMasks;
 
 	[HideInInspector]
 	public bool dead = false;
@@ -68,12 +68,10 @@ public class Bandurko_Movement : MonoBehaviour {
 		Ray ray;
 		Vector2 direction = new Vector2(Mathf.Sign(dir), 0);
 
-		foreach(LayerMask c in CollisionMasks){
-			ray = new Ray(this.transform.position, direction);
+		ray = new Ray(this.transform.position, direction);
 			
-				if(Physics.Raycast(ray, out hit, ObsticleCheck, c)){
-					return true;
-				}
+		if(Physics.Raycast(ray, out hit, ObsticleCheck, CollisionMasks)){
+			return true;
 		}
 		
 		return false;

@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bees\Bees_DamagePlayer.cs" />
+     <Compile Include="Assets\Scripts\Bees\Swarm\Swarm_Movement.cs" />
      <Compile Include="Assets\Scripts\Camera\Camera_SetFilter.cs" />
      <Compile Include="Assets\Scripts\Crystals\Crystal_Flicker.cs" />
      <Compile Include="Assets\Scripts\Crystals\Crystal_Use.cs" />
@@ -62,6 +64,7 @@
      <Compile Include="Assets\Scripts\Key\Key_Movement.cs" />
      <Compile Include="Assets\Scripts\Key\Key_Take.cs" />
      <Compile Include="Assets\Scripts\Lamps\Lamps_Activate.cs" />
+     <Compile Include="Assets\Scripts\Maze\Maze_InSecondLevel.cs" />
      <Compile Include="Assets\Scripts\Misc\HangOnNoodle.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Bridge\Bridge_Activate_Lever.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Gate\Gate_Open.cs" />
