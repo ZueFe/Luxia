@@ -14,7 +14,7 @@ public class Gate_Open : MonoBehaviour {
 	}
 	
 	void OnTriggerStay(Collider col){
-		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonUp(Global_Variables.BYPASS_OBSTICLE)){
+		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
 			if(col.gameObject.GetComponent<Player_Inventory>().HasKey){
 				OpenGate ();
 				col.gameObject.GetComponent<Player_Inventory>().HasKey = false;
