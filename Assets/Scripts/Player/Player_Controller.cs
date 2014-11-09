@@ -113,7 +113,8 @@ public class Player_Controller : MonoBehaviour {
 		float added = Time.time;
 
 		added = Mathf.PingPong(added, 2 * ADDED_ELEVATION);
+		added -= ADDED_ELEVATION;
 
-		return added - ADDED_ELEVATION;
+		return added;
 	}
 }
