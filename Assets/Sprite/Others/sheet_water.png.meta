@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: 6d6c6a261f0f74e49b2d07fca7cfa341
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sheet_water_0
+    21300002: sheet_water_1
+    21300004: sheet_water_2
+    21300006: sheet_water_3
+    21300008: sheet_water_4
+    21300010: sheet_water_5
+    21300012: sheet_water_6
+    21300014: sheet_water_7
+    21300016: sheet_water_8
+    21300018: sheet_water_9
+    21300020: sheet_water_10
+    21300022: sheet_water_11
+    21300024: sheet_water_12
+    21300026: sheet_water_13
+    21300028: sheet_water_14
+    21300030: sheet_water_15
+    21300032: sheet_water_16
+    21300034: sheet_water_17
+    21300036: sheet_water_18
+    21300038: sheet_water_19
+    21300040: sheet_water_20
+    21300042: sheet_water_21
+    21300044: sheet_water_22
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sheet_water_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1647
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_2
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1647
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1647
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_4
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1647
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_6
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1246
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1246
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_8
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1246
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_9
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1246
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 845
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_11
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 845
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 845
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_13
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 845
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 845
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_16
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 444
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_water_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 444
+        width: 700
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
