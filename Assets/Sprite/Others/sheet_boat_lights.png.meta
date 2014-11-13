@@ -67,9 +67,9 @@ TextureImporter:
     - name: sheet_boat_lights_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1692
-        width: 859
+        x: 0
+        y: 1696
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -77,9 +77,9 @@ TextureImporter:
     - name: sheet_boat_lights_1
       rect:
         serializedVersion: 2
-        x: 861
-        y: 1692
-        width: 859
+        x: 869
+        y: 1696
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -87,9 +87,9 @@ TextureImporter:
     - name: sheet_boat_lights_2
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 1692
-        width: 859
+        x: 1738
+        y: 1696
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -97,9 +97,9 @@ TextureImporter:
     - name: sheet_boat_lights_3
       rect:
         serializedVersion: 2
-        x: 2579
-        y: 1692
-        width: 859
+        x: 2607
+        y: 1696
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -107,9 +107,9 @@ TextureImporter:
     - name: sheet_boat_lights_4
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1340
-        width: 859
+        x: 0
+        y: 1344
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -117,9 +117,9 @@ TextureImporter:
     - name: sheet_boat_lights_5
       rect:
         serializedVersion: 2
-        x: 861
-        y: 1340
-        width: 859
+        x: 869
+        y: 1344
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -127,9 +127,9 @@ TextureImporter:
     - name: sheet_boat_lights_6
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 1340
-        width: 859
+        x: 1738
+        y: 1344
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,9 +137,9 @@ TextureImporter:
     - name: sheet_boat_lights_7
       rect:
         serializedVersion: 2
-        x: 2579
-        y: 1340
-        width: 859
+        x: 2607
+        y: 1344
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
     - name: sheet_boat_lights_8
       rect:
         serializedVersion: 2
-        x: 2
-        y: 988
-        width: 859
+        x: 0
+        y: 992
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -157,9 +157,9 @@ TextureImporter:
     - name: sheet_boat_lights_9
       rect:
         serializedVersion: 2
-        x: 861
-        y: 988
-        width: 859
+        x: 869
+        y: 992
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,9 +167,9 @@ TextureImporter:
     - name: sheet_boat_lights_10
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 988
-        width: 859
+        x: 1738
+        y: 992
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,9 +177,9 @@ TextureImporter:
     - name: sheet_boat_lights_11
       rect:
         serializedVersion: 2
-        x: 2579
-        y: 988
-        width: 859
+        x: 2607
+        y: 992
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,9 +187,9 @@ TextureImporter:
     - name: sheet_boat_lights_12
       rect:
         serializedVersion: 2
-        x: 2
-        y: 636
-        width: 859
+        x: 0
+        y: 640
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,9 +197,9 @@ TextureImporter:
     - name: sheet_boat_lights_13
       rect:
         serializedVersion: 2
-        x: 861
-        y: 636
-        width: 859
+        x: 869
+        y: 640
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,9 +207,9 @@ TextureImporter:
     - name: sheet_boat_lights_14
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 636
-        width: 859
+        x: 1738
+        y: 640
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,9 +217,9 @@ TextureImporter:
     - name: sheet_boat_lights_15
       rect:
         serializedVersion: 2
-        x: 2579
-        y: 636
-        width: 859
+        x: 2607
+        y: 640
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -227,9 +227,9 @@ TextureImporter:
     - name: sheet_boat_lights_16
       rect:
         serializedVersion: 2
-        x: 2
-        y: 284
-        width: 859
+        x: 0
+        y: 288
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,9 +237,9 @@ TextureImporter:
     - name: sheet_boat_lights_17
       rect:
         serializedVersion: 2
-        x: 861
-        y: 284
-        width: 859
+        x: 869
+        y: 288
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,9 +247,9 @@ TextureImporter:
     - name: sheet_boat_lights_18
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 284
-        width: 859
+        x: 1738
+        y: 288
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -257,9 +257,9 @@ TextureImporter:
     - name: sheet_boat_lights_19
       rect:
         serializedVersion: 2
-        x: 2579
-        y: 284
-        width: 859
+        x: 2607
+        y: 288
+        width: 869
         height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
