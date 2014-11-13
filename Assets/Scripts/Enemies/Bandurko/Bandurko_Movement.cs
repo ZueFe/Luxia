@@ -39,7 +39,7 @@ public class Bandurko_Movement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if(Global_Variables.Instance.FreezeTime){
 			return;
 		}
