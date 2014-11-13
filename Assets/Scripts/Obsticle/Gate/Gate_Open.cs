@@ -17,7 +17,7 @@ public class Gate_Open : MonoBehaviour {
 		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
 			if(col.gameObject.GetComponent<Player_Inventory>().HasKey){
 				OpenGate ();
-				col.gameObject.GetComponent<Player_Inventory>().HasKey = false;
+				col.gameObject.GetComponent<Player_Inventory>().UseKey();
 			}else if(col.gameObject.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
 
 				OpenGate();				

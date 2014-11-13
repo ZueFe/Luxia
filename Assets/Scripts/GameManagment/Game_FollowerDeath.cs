@@ -43,8 +43,6 @@ public class Game_FollowerDeath : MonoBehaviour {
 		if(GetDistanceWithPlayer() >= playerLight.range){
 			deathTimer += Time.deltaTime;
 
-			Debug.LogError(GetCurrentDeathTime());
-
 			if(deathTimer > currentReachSpeed *  Random.Range(MinRandomParam, MaxRandomParam)){
 				SetUpDeath();
 				SwitchCamera();
