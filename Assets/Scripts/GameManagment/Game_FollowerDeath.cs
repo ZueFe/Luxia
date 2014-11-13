@@ -43,6 +43,8 @@ public class Game_FollowerDeath : MonoBehaviour {
 		if(GetDistanceWithPlayer() >= playerLight.range){
 			deathTimer += Time.deltaTime;
 
+			Debug.LogError(GetCurrentDeathTime());
+
 			if(deathTimer > currentReachSpeed *  Random.Range(MinRandomParam, MaxRandomParam)){
 				SetUpDeath();
 				SwitchCamera();
@@ -89,5 +91,13 @@ public class Game_FollowerDeath : MonoBehaviour {
 		Vector3 posPlay = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG).transform.position;
 		
 		return Mathf.Pow(posFol.x - posPlay.x, 2) + Mathf.Pow(posFol.y - posPlay.y, 2) + Mathf.Pow(posFol.z - posPlay.z, 2);
+	}
+
+	public float GetCurrentDeathTime(){
+		return (currentReachSpeed - deathTimer) / currentReachSpeed;
+	}
+
+	public int NumberOfLivingFollowers(){
+		return lastFollowerIndex + 1;
 	}
 }
