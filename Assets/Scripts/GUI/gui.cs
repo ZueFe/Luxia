@@ -14,7 +14,7 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
 		public Font nightmareFont;
-		private string labelText= "So far, so good!";
+		private string labelText = "So far, so good!";
 
 		void OnGUI ()
 		{
@@ -37,8 +37,8 @@ public class gui : MonoBehaviour
 			
 
 				int screenHeight = Screen.height;
-				int panelHeight = screenWidth /12;	
-				GUI.DrawTexture (new Rect (0, screenHeight - panelHeight , screenWidth, panelHeight), panel, ScaleMode.StretchToFill);
+				int panelHeight = screenWidth / 12;	
+				GUI.DrawTexture (new Rect (0, screenHeight - panelHeight, screenWidth, panelHeight), panel, ScaleMode.StretchToFill);
 
 
 				GUI.DrawTexture (new Rect (30, screenHeight - 105, 300, 120), HealthBarBackground, ScaleMode.StretchToFill);
@@ -78,15 +78,16 @@ public class gui : MonoBehaviour
 				}
 				
 
-		GUI.Label (new Rect (140, screenHeight -27, 70, 30), "Health", fontStyle);
-		GUI.Label (new Rect (screenWidth-210, screenHeight -27, 70, 30), "Pilgrim's life", fontStyle);
+				GUI.Label (new Rect (140, screenHeight - 27, 70, 30), "Health", fontStyle);
+				GUI.Label (new Rect (screenWidth - 210, screenHeight - 27, 70, 30), "Pilgrim's life", fontStyle);
 
-		if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG) {
-			labelText = "Oh no! Potato monster stole your pilgrms!";
-		}
-		else{
-			labelText = "So far, so good!";
-		}
+				if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
+						labelText = "Your pilgrims are in mortal peril!";	
+				} else if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG) {
+						labelText = "Oh no! Potato monster stole your pilgrms!";
+				} else {
+						labelText = "So far, so good!";
+				}
 
 		}
 
