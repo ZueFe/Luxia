@@ -16,6 +16,7 @@ public class Global_Variables : MonoBehaviour {
 	public const string TOOGLE_FOLLOW = "Toogle Follow";
 	public const string BYPASS_OBSTICLE = "Bypass Obsticle";
 	public const string FOLLOWER_TAG = "Follower";
+	public const string LIGHT_OBST_TAG = "LightObstacle";
 
 	public const float CAMERA_SMOOTH_TIME = 1f;
 	public const float CAMERA_FOLLOWER_DEATH_SMOOTH_TIME = 0.2f;
