@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: ce79199d14bc2894aae969b8fd22bcf6
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - messageBoard: {fileID: 2800000, guid: 02fc7c4fe838cc542b510917e41ccc72, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
