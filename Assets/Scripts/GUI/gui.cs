@@ -14,6 +14,7 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
 		public Font nightmareFont;
+		private string labelText= "So far, so good!";
 
 		void OnGUI ()
 		{
@@ -30,8 +31,9 @@ public class gui : MonoBehaviour
 				GUIStyle fontStyle = new GUIStyle ();
 				fontStyle.font = nightmareFont;
 				fontStyle.fontSize = 20;
+				fontStyle.fontStyle = FontStyle.Bold;
 				fontStyle.alignment = TextAnchor.UpperCenter;
-				GUI.Label (new Rect (screenWidth / 2 - messageBoardWidth / 2, 3, messageBoardWidth, messageBoardWidth / 5), "Oh no! Something happend!", fontStyle);
+				GUI.Label (new Rect (screenWidth / 2 - messageBoardWidth / 2, 3, messageBoardWidth, messageBoardWidth / 5), labelText, fontStyle);
 			
 
 				int screenHeight = Screen.height;
@@ -75,10 +77,16 @@ public class gui : MonoBehaviour
 		
 				}
 				
-		fontStyle.fontStyle = FontStyle.Bold;
+
 		GUI.Label (new Rect (140, screenHeight -27, 70, 30), "Health", fontStyle);
 		GUI.Label (new Rect (screenWidth-210, screenHeight -27, 70, 30), "Pilgrim's life", fontStyle);
 
+		if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG) {
+			labelText = "Oh no! Potato monster stole your pilgrms!";
+		}
+		else{
+			labelText = "So far, so good!";
+		}
 
 		}
 
