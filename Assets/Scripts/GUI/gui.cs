@@ -14,6 +14,7 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillPurple;
 		public Font nightmareFont;
 
+
 		void OnGUI ()
 		{
 				// Make a background box
@@ -38,14 +39,31 @@ public class gui : MonoBehaviour
 		GUI.DrawTexture (new Rect (0, screenHeight - panelHeight/2,screenWidth, panelHeight), panel, ScaleMode.StretchToFill);
 
 
-		GUI.DrawTexture (new Rect (30, screenHeight - panelHeight/3-10,300, 120), HealthBarBackground, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (30, screenHeight - panelHeight/3-10,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (30, screenHeight - panelHeight/3-10,300, 120), HealthBarForeground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarBackground, ScaleMode.StretchToFill);
 
-		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - panelHeight/3-10,300, 120), HealthBarBackground, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - panelHeight/3-10,300, 120), HealthBarFillPurple, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - panelHeight/3-10,300, 120), HealthBarForeground, ScaleMode.StretchToFill);
 
+		float life = GameObject.FindWithTag(Global_Variables.PLAYER_TAG).GetComponent<Player_Stats>().GetEnergy() / 100f;
+
+		GUI.BeginGroup (new Rect (30, screenHeight - 120,300*life, 120));
+		//GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (0, 0,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
+		GUI.EndGroup ();
+
+
+		GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarForeground, ScaleMode.StretchToFill);
+
+		GUI.DrawTexture (new Rect (350, screenHeight - 100,70,70), key, ScaleMode.StretchToFill);
+
+		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - 120,300, 120), HealthBarBackground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - 120,300, 120), HealthBarFillPurple, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth-330, screenHeight - 120,300, 120), HealthBarForeground, ScaleMode.StretchToFill);
+
+		GUI.DrawTexture (new Rect (screenWidth-410, screenHeight - 100,70,70), head, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth-490, screenHeight - 100,70,70), head, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth-570, screenHeight - 100,70,70), head, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth-650, screenHeight - 100,70,70), head, ScaleMode.StretchToFill);
+
+		
 
 		}
 
