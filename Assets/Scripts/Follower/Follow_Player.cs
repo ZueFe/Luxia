@@ -143,6 +143,11 @@ public class Follow_Player : MonoBehaviour {
 	public void KillFollower(){
 		dead = true;
 		anim.SetBool(hash.Dying, false);
+
+		int r = Random.Range(1, 4);
+
+		gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/death gasp" + r, typeof(AudioClip));
+		gameObject.GetComponent<AudioSource>().audio.Play();
 	}
 
 	public void DestroyFollower(){

@@ -33,6 +33,9 @@ public class Bandurko_Movement : MonoBehaviour {
 		usedSpeed = 0f;
 
 		anim = GetComponent<Animator>();
+
+		GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/bandurko laugh", typeof(AudioClip));
+		GetComponent<AudioSource>().audio.Play();
 	}
 	
 	// Update is called once per frame

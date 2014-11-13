@@ -25,7 +25,13 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 		}
 
 		if(col.tag == Global_Variables.PLAYER_TAG && !GetComponent<Bandurko_Movement>().dead){
-				GetComponent<Bandurko_Movement>().fleeing = true;
+			GetComponent<Bandurko_Movement>().fleeing = true;
+		
+			if(GetComponent<Bandurko_Movement>().charming){
+				gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/bandurko death2", typeof(AudioClip));
+				gameObject.GetComponent<AudioSource>().audio.Play();
+			}
+
 		}
 	}
 
@@ -41,6 +47,8 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 			Player_Stats pStats = col.gameObject.GetComponent<Player_Stats>();
 
 			if(pStats.GetEnergy() >= stats.EnergyCost){
+				gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/bandurko death", typeof(AudioClip));
+				gameObject.GetComponent<AudioSource>().audio.Play();
 				pStats.ChangeEnergy(-1f * stats.EnergyCost);
 				ChangeFollowing(col.gameObject, true, false);
 
