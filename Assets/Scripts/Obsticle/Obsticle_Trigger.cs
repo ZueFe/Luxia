@@ -15,7 +15,7 @@ public class Obsticle_Trigger : MonoBehaviour {
 	}
 	
 	void OnTriggerStay(Collider col){
-		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonUp(Global_Variables.BYPASS_OBSTICLE)){
+		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
 			if(col.gameObject.GetComponent<Player_Stats>().GetEnergy() >= stats.EnergyCost){
 				Obsticle_AnimHash hash = Obsticle.GetComponent<Obsticle_AnimHash>();
 

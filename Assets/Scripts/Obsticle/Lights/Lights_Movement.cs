@@ -8,12 +8,13 @@ public class Lights_Movement : MonoBehaviour {
 
 	//[HideInInspector]
 	public Transform[] WayOutOfMaze;
-	//[HideInInspector]
+	[HideInInspector]
 	public bool FoundByPlayer;
-	//[HideInInspector]
+	[HideInInspector]
 	public int ofMazeIndex = -1;
+	[HideInInspector]
+	public bool turnedToBoat = false;
 
-	private bool turnedToBoat = false;
 	private Animator anim;
 	private Obsticle_AnimHash hash;
 
@@ -27,12 +28,16 @@ public class Lights_Movement : MonoBehaviour {
 		if(turnedToBoat){
 			if(!anim.GetBool(hash.Activated)){
 				anim.SetBool(hash.Activated, true);
+
+				BoxCollider[] col = GetComponentsInChildren<BoxCollider>();
+				foreach(BoxCollider c in col){
+					c.enabled = true;
+				}
 			}
 
-			return;
-		}
 
-		if(WayOutOfMaze.Length != 0){
+
+		}else if(WayOutOfMaze.Length != 0){
 			if(ofMazeIndex >= WayOutOfMaze.Length){
 				turnedToBoat = true;
 			}else{
