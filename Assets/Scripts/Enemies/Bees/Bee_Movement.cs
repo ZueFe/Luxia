@@ -14,6 +14,7 @@ public class Bee_Movement : MonoBehaviour {
 	public float StartCharging;
 	public float EndCharging;
 	public float ObsticleCheck;
+	public bool Flee;
 	public LayerMask CollisionMasks;
 	
 	private float sizeIncreasePerSec;
@@ -43,13 +44,13 @@ public class Bee_Movement : MonoBehaviour {
 				if(scale > EndCharging){
 					speed = Speed;
 					offset = 0f;
-				}else{
+				}else if(Flee){
 					charging = false;
 					speed = FleeingSpeed;
 					offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
 				}
 			}else{
-				if(scale >= StartCharging){
+				if(scale >= StartCharging || !Flee){
 					charging = true;
 					speed = Speed;
 					offset = 0f;
@@ -72,7 +73,12 @@ public class Bee_Movement : MonoBehaviour {
 
 	private void CheckDeath(){
 		if(gameObject.transform.localScale.y <= MinScale){
-			Destroy(this.gameObject);
+			if(transform.parent != null){
+				Destroy(transform.parent.gameObject);
+			}else{
+				Destroy(this.gameObject);
+			}
+
 		}
 	}
 
