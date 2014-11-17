@@ -29,9 +29,16 @@ public class Bandurko_Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidbody = GetComponent<Rigidbody>();
-		direction = Mathf.Sign(transform.position.x - Camera.main.GetComponent<Game_Manager>().followerInstances[0].transform.position.x);
+		direction = Mathf.Sign(Camera.main.GetComponent<Game_Manager>().followerInstances[0].transform.position.x - transform.position.x);
 
-		ToogleDirection();
+		if(direction < 0){
+			Vector3 newScale = this.transform.localScale;
+			newScale.x *= -1f;
+			
+			this.transform.localScale = newScale;
+		}
+
+		//ToogleDirection();
 		usedSpeed = 0f;
 
 		anim = GetComponent<Animator>();
