@@ -11,11 +11,11 @@ public class SingleBee_AI : MonoBehaviour {
 
 	public bool playerInSight;
 	private float speed;
-	private Vector3 previousPos;
+	//private Vector3 previousPos;
 
 	void Start(){
 		speed = gameObject.GetComponentInChildren<Bee_Movement>().Speed;
-		previousPos = Bee.transform.position;
+		//previousPos = Bee.transform.position;
 	}
 
 	void FixedUpdate(){
@@ -44,15 +44,17 @@ public class SingleBee_AI : MonoBehaviour {
 	}
 
 	private void MoveBackToSpot(){
-		Bee.transform.position = Vector3.Lerp(Bee.transform.position, DefensiveSpot.position, Time.deltaTime * ReturnSpeed);
-
+		Vector3 current = Vector3.Lerp(Bee.transform.position, DefensiveSpot.position, Time.deltaTime * ReturnSpeed);
 		Vector3 scale = Bee.transform.localScale;
-		float dir = Mathf.Sign (previousPos.x - Bee.transform.position.x);
-		scale.x *= dir;
 
-		Bee.transform.localScale = scale;
+		if((current.x - Bee.transform.position.x != 0) && Mathf.Sign(scale.x) != Mathf.Sign(current.x - Bee.transform.position.x)){
+			scale.x = -1 * scale.x;
+			Bee.transform.localScale = scale;
+		}
 
-		previousPos = Bee.transform.position;
+		Bee.transform.position = current;
+
+		//previousPos = Bee.transform.position;
 	}
 
 	private float AddedElevation(){
