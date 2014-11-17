@@ -1,21 +1,23 @@
 fileFormatVersion: 2
-guid: 4bf2b8b5c7bc39b40a647843cfed4721
+guid: 7e6e1f4592c8ad042b08144480b45a0b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sheet_evil_bludicka_0
-    21300002: sheet_evil_bludicka_1
-    21300004: sheet_evil_bludicka_2
-    21300006: sheet_evil_bludicka_3
-    21300008: sheet_evil_bludicka_4
-    21300010: sheet_evil_bludicka_5
-    21300012: sheet_evil_bludicka_6
-    21300014: sheet_evil_bludicka_7
-    21300016: sheet_evil_bludicka_8
-    21300018: sheet_evil_bludicka_9
-    21300020: sheet_evil_bludicka_10
-    21300022: sheet_evil_bludicka_11
-    21300024: sheet_evil_bludicka_12
-    21300026: sheet_evil_bludicka_13
+    21300000: sheet_evil_bludicka_dying_0
+    21300002: sheet_evil_bludicka_dying_1
+    21300004: sheet_evil_bludicka_dying_2
+    21300006: sheet_evil_bludicka_dying_3
+    21300008: sheet_evil_bludicka_dying_4
+    21300010: sheet_evil_bludicka_dying_5
+    21300012: sheet_evil_bludicka_dying_6
+    21300014: sheet_evil_bludicka_dying_7
+    21300016: sheet_evil_bludicka_dying_8
+    21300018: sheet_evil_bludicka_dying_9
+    21300020: sheet_evil_bludicka_dying_10
+    21300022: sheet_evil_bludicka_dying_11
+    21300024: sheet_evil_bludicka_dying_12
+    21300026: sheet_evil_bludicka_dying_13
+    21300028: sheet_evil_bludicka_dying_14
+    21300030: sheet_evil_bludicka_dying_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,143 +59,163 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: sheet_evil_bludicka_0
+    - name: sheet_evil_bludicka_dying_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 660
-        width: 364
-        height: 354
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_1
+    - name: sheet_evil_bludicka_dying_1
       rect:
         serializedVersion: 2
-        x: 396
-        y: 660
-        width: 374
-        height: 351
+        x: 600
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_2
+    - name: sheet_evil_bludicka_dying_2
       rect:
         serializedVersion: 2
-        x: 801
-        y: 654
-        width: 375
-        height: 356
+        x: 1200
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_3
+    - name: sheet_evil_bludicka_dying_3
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 649
-        width: 385
-        height: 360
+        x: 1800
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_4
+    - name: sheet_evil_bludicka_dying_4
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 649
-        width: 388
-        height: 359
+        x: 2400
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_5
+    - name: sheet_evil_bludicka_dying_5
       rect:
         serializedVersion: 2
-        x: 2004
-        y: 649
-        width: 388
-        height: 365
+        x: 3000
+        y: 1448
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_6
-      rect:
-        serializedVersion: 2
-        x: 2414
-        y: 653
-        width: 384
-        height: 358
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_7
-      rect:
-        serializedVersion: 2
-        x: 2823
-        y: 654
-        width: 381
-        height: 356
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_8
-      rect:
-        serializedVersion: 2
-        x: 3227
-        y: 653
-        width: 381
-        height: 357
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_9
-      rect:
-        serializedVersion: 2
-        x: 3631
-        y: 654
-        width: 384
-        height: 358
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_10
+    - name: sheet_evil_bludicka_dying_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 243
-        width: 361
-        height: 364
+        y: 848
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_11
+    - name: sheet_evil_bludicka_dying_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 245
-        width: 385
-        height: 360
+        x: 600
+        y: 848
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_12
+    - name: sheet_evil_bludicka_dying_8
       rect:
         serializedVersion: 2
-        x: 800
-        y: 249
-        width: 375
-        height: 355
+        x: 1200
+        y: 848
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: sheet_evil_bludicka_13
+    - name: sheet_evil_bludicka_dying_9
       rect:
         serializedVersion: 2
-        x: 1208
-        y: 255
-        width: 374
-        height: 351
+        x: 1800
+        y: 848
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 848
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 848
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 248
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 248
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_evil_bludicka_dying_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 248
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
