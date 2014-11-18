@@ -104,7 +104,7 @@ public class Bee_Movement : MonoBehaviour {
 		direction = player.transform.position.x - transform.position.x;
 
 		if(!CheckYObsticle(player.transform.position.y - transform.position.y)){
-			currentY = Mathf.Lerp(currentY, player.transform.position.y, Time.deltaTime * speed);
+			currentY = Mathf.Lerp(currentY, player.transform.position.y, Time.fixedDeltaTime * speed);
 		}
 
 		if(!CheckXObsticle(player.transform.position.x - transform.position.x)){

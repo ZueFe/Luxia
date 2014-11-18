@@ -6,7 +6,7 @@ public class Lights_ScaleBoat : MonoBehaviour {
 	public float EndScale;
 
 	private bool startScaling;
-	private const float ERROR_MARGIN = 0.05f;
+	private const float ERROR_MARGIN = 0.005f;
 
 	void Update(){
 		if(startScaling){
