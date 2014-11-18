@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_64;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,23 +39,23 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Bees\Bee_Movement.cs" />
-     <Compile Include="Assets\Scripts\Bees\Bees_DamagePlayer.cs" />
-     <Compile Include="Assets\Scripts\Bees\Single\SingleBee_AI.cs" />
-     <Compile Include="Assets\Scripts\Bees\Swarm\Swarm_AI.cs" />
      <Compile Include="Assets\Scripts\Camera\Camera_SetFilter.cs" />
      <Compile Include="Assets\Scripts\Crystals\Crystal_Flicker.cs" />
      <Compile Include="Assets\Scripts\Crystals\Crystal_Use.cs" />
      <Compile Include="Assets\Scripts\Enemies\Bandurko\Bandurko_AnimHash.cs" />
      <Compile Include="Assets\Scripts\Enemies\Bandurko\Bandurko_Charm_Followers.cs" />
      <Compile Include="Assets\Scripts\Enemies\Bandurko\Bandurko_Movement.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Bees\Bee_Movement.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Bees\Bees_DamagePlayer.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Bees\Single\SingleBee_AI.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Bees\Swarm\Swarm_AI.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_Spawn.cs" />
      <Compile Include="Assets\Scripts\Follower\Follow_Player.cs" />
      <Compile Include="Assets\Scripts\Follower\Follower_AnimHash.cs" />
@@ -69,8 +69,13 @@
      <Compile Include="Assets\Scripts\Lamps\Lamps_Activate.cs" />
      <Compile Include="Assets\Scripts\Maze\Maze_InSecondLevel.cs" />
      <Compile Include="Assets\Scripts\Misc\HangOnNoodle.cs" />
+     <Compile Include="Assets\Scripts\Music\Music_SmoothStart.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Bridge\Bridge_Activate_Lever.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Gate\Gate_Open.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Lights\Light_WaypointTrigger.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Lights\Lights_BoardFollower.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Lights\Lights_FoundByPlayer.cs" />
+     <Compile Include="Assets\Scripts\Obsticle\Lights\Lights_Movement.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Obsticle_AnimHash.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Obsticle_Spawn_Trigger.cs" />
      <Compile Include="Assets\Scripts\Obsticle\Obsticle_Stats.cs" />
