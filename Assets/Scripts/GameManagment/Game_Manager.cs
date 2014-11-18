@@ -14,7 +14,7 @@ public class Game_Manager : MonoBehaviour {
 
 	private Game_Camera gameCamera;
 	private const float FOLLOWER_START_OFFSET = 10f;
-	private const float FOLLOWER_HEIGHT_OFFSET = 4f;
+	private const float FOLLOWER_HEIGHT_OFFSET = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +31,7 @@ public class Game_Manager : MonoBehaviour {
 		GenerateFollower(p, true, 0, Random.Range(0, Followers.Length), StartPosition.x - FOLLOWER_START_OFFSET, FOLLOWER_HEIGHT_OFFSET);
 
 		for(int i = 1; i < NumberOfFollowers; i++){
-			GenerateFollower(followerInstances[i - 1], false, i, Random.Range(0, Followers.Length), (-1 * FOLLOWER_START_OFFSET -2*i), FOLLOWER_HEIGHT_OFFSET);
+			GenerateFollower(followerInstances[i - 1], false, i, Random.Range(0, Followers.Length), (StartPosition.x -1 * FOLLOWER_START_OFFSET -2*i), FOLLOWER_HEIGHT_OFFSET);
 		}
 	}
 
