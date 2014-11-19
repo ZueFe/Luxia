@@ -1,21 +1,6 @@
 fileFormatVersion: 2
 guid: 4bf2b8b5c7bc39b40a647843cfed4721
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: sheet_evil_bludicka_0
-    21300002: sheet_evil_bludicka_1
-    21300004: sheet_evil_bludicka_2
-    21300006: sheet_evil_bludicka_3
-    21300008: sheet_evil_bludicka_4
-    21300010: sheet_evil_bludicka_5
-    21300012: sheet_evil_bludicka_6
-    21300014: sheet_evil_bludicka_7
-    21300016: sheet_evil_bludicka_8
-    21300018: sheet_evil_bludicka_9
-    21300020: sheet_evil_bludicka_10
-    21300022: sheet_evil_bludicka_11
-    21300024: sheet_evil_bludicka_12
-    21300026: sheet_evil_bludicka_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,7 +35,6 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -65,8 +49,7 @@ TextureImporter:
         width: 364
         height: 354
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_1
       rect:
         serializedVersion: 2
@@ -75,8 +58,7 @@ TextureImporter:
         width: 374
         height: 351
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_2
       rect:
         serializedVersion: 2
@@ -85,8 +67,7 @@ TextureImporter:
         width: 375
         height: 356
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_3
       rect:
         serializedVersion: 2
@@ -95,8 +76,7 @@ TextureImporter:
         width: 385
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_4
       rect:
         serializedVersion: 2
@@ -105,8 +85,7 @@ TextureImporter:
         width: 388
         height: 359
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_5
       rect:
         serializedVersion: 2
@@ -115,8 +94,7 @@ TextureImporter:
         width: 388
         height: 365
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_6
       rect:
         serializedVersion: 2
@@ -125,8 +103,7 @@ TextureImporter:
         width: 384
         height: 358
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_7
       rect:
         serializedVersion: 2
@@ -135,8 +112,7 @@ TextureImporter:
         width: 381
         height: 356
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_8
       rect:
         serializedVersion: 2
@@ -145,8 +121,7 @@ TextureImporter:
         width: 381
         height: 357
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_9
       rect:
         serializedVersion: 2
@@ -155,8 +130,7 @@ TextureImporter:
         width: 384
         height: 358
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_10
       rect:
         serializedVersion: 2
@@ -164,9 +138,8 @@ TextureImporter:
         y: 243
         width: 361
         height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: .469999999, y: .5}
     - name: sheet_evil_bludicka_11
       rect:
         serializedVersion: 2
@@ -175,8 +148,7 @@ TextureImporter:
         width: 385
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_12
       rect:
         serializedVersion: 2
@@ -185,8 +157,7 @@ TextureImporter:
         width: 375
         height: 355
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: sheet_evil_bludicka_13
       rect:
         serializedVersion: 2
@@ -195,7 +166,6 @@ TextureImporter:
         width: 374
         height: 351
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
