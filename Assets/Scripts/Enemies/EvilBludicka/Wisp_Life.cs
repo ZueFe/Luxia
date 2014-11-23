@@ -5,6 +5,8 @@ public class Wisp_Life : MonoBehaviour {
 
 	public float Lifetime;
 	[HideInInspector]
+	public bool InMaze = true;
+	[HideInInspector]
 	public bool isDead;
 	private float timer;
 	private Bandurko_AnimHash hash;
@@ -15,7 +17,9 @@ public class Wisp_Life : MonoBehaviour {
 
 	void FixedUpdate(){
 		if(!isDead){
-			timer += Time.deltaTime;
+			if(InMaze){
+				timer += Time.deltaTime;
+			}
 
 			if(timer >= Lifetime){
 				isDead = true;

@@ -60,10 +60,7 @@ public class Player_Physics : MonoBehaviour {
 
 				//Grounded = true;
 				break;
-			}
-
-
-		
+			}		
 		}
 
 		for(int i = 0; i < 3; i++){
