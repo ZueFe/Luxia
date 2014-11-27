@@ -14,6 +14,8 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
 		public Font nightmareFont;
+		public float timer = 30;
+
 		private string labelText = "So far, so good!";
 
 		void OnGUI ()
@@ -99,7 +101,10 @@ public class gui : MonoBehaviour
 
 
 				//MESSAGES
-				if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
+				if (timer<3) {
+						labelText="You don't have enough energy!";
+				}
+				else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 						labelText = "Your pilgrims are in mortal peril!";	
 				} else if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG) {
 						labelText = "Oh no! Potato monster stole your pilgrms!";
@@ -107,6 +112,13 @@ public class gui : MonoBehaviour
 						labelText = "So far, so good!";
 				}
 
+		}
+
+		void Update(){
+			timer += Time.deltaTime;
+			if (timer > 30) {
+				timer = 30;		
+			}
 		}
 
 

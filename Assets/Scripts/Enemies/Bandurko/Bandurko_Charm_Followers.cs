@@ -60,7 +60,7 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 				dead = true;
 				Global_Variables.Instance.FollowersCharmed = false;
 			}else{
-				//not enough energy!
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().timer = 0;
 			}
 
 

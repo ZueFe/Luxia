@@ -31,7 +31,7 @@ public class Obsticle_Trigger : MonoBehaviour {
 
 				col.gameObject.GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
 			}else{
-				//not enough energy!
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().timer = 0;
 			}
 		}
 	}
