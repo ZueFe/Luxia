@@ -1,13 +1,37 @@
 fileFormatVersion: 2
-guid: c850bbd2db807fa4eadc60cc8cc9f96e
+guid: 6d26313f7c0f99d48aaf416543ad2964
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane
+    100000: Cinema4D_Editor
+    100002: Connector
+    100004: Connector_1
+    100006: Connector_2
+    100008: Connector_3
+    100010: Joint_1
+    100012: Root
+    100014: Sphere
+    100016: //RootNode
+    100018: web
+    400000: Cinema4D_Editor
+    400002: Connector
+    400004: Connector_1
+    400006: Connector_2
+    400008: Connector_3
+    400010: Joint_1
+    400012: Root
+    400014: Sphere
+    400016: //RootNode
+    400018: web
+    2300000: Sphere
+    2300002: web
+    2300004: //RootNode
+    3300000: Sphere
+    3300002: web
+    3300004: //RootNode
+    4300000: Sphere
+    4300002: web
+    4300004: Plane
     7400000: C4D Animation Take
     9500000: //RootNode
   materials:
