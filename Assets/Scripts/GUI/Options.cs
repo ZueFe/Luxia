@@ -6,6 +6,7 @@ public class Options : MonoBehaviour {
 	public Font nightmareFont;
 	public GUISkin skin;
 	private float musicVolume = 70.0f;
+	private float sfxVolume = 70.0f;
 	private bool musciOn = true;
 
 	void OnGUI ()
@@ -37,17 +38,25 @@ public class Options : MonoBehaviour {
 		GUI.EndGroup ();
 
 
-		musciOn = GUI.Toggle (new Rect (screenWidth /2+screenWidth /7, 100 , screenWidth / 20, screenWidth / 20), musciOn, "");
-		GUI.Label (new Rect (screenWidth /2+20, 105 , 100,screenWidth / 20), "Sound effects:", fontStyle);
+		musciOn = GUI.Toggle (new Rect (screenWidth /2+screenWidth /8, 100 , screenWidth / 20, screenWidth / 20), musciOn, "");
+		GUI.Label (new Rect (screenWidth /2+20, 105 , 100,screenWidth / 20), "Sounds:", fontStyle);
 
 
 		GUI.Label (new Rect (screenWidth /2+20, 105 + screenWidth / 20, 100,screenWidth / 20), "Music volume:", fontStyle);
-		musicVolume = GUI.HorizontalSlider(new Rect (screenWidth /2+screenWidth / 7, 90+ screenWidth / 20, screenWidth / 3,screenWidth /13),musicVolume,-15,115);
+		musicVolume = GUI.HorizontalSlider(new Rect (screenWidth /2+screenWidth / 8, 105+ screenWidth / 20, screenWidth / 3,screenWidth /18),musicVolume,-15,115);
 		if (musicVolume < 0) {
 			musicVolume=0;
 				}
 		if (musicVolume > 100) {
 			musicVolume=100;
+		}
+		GUI.Label (new Rect (screenWidth /2+20, 105 + screenWidth / 10, 100,screenWidth / 20), "SFX volume:", fontStyle);
+		sfxVolume = GUI.HorizontalSlider(new Rect (screenWidth /2+screenWidth / 8, 110+ screenWidth / 10, screenWidth / 3,screenWidth /18),sfxVolume,-15,115);
+		if (sfxVolume < 0) {
+			sfxVolume=0;
+		}
+		if (sfxVolume > 100) {
+			sfxVolume=100;
 		}
 
 
@@ -56,6 +65,7 @@ public class Options : MonoBehaviour {
 		}
 		if (GUI.Button (new Rect (screenWidth /2 -screenWidth /8 , screenHeight - screenHeight/ 7, screenWidth / 4, screenHeight / 7), "Reset settings")) {
 			musicVolume=70;
+			sfxVolume=70;
 			musciOn = true;
 		}
 		if (GUI.Button (new Rect (screenWidth-(screenWidth/8)- screenWidth / 4, screenHeight - screenHeight/ 7, screenWidth / 4, screenHeight / 7), "Done!")) {
