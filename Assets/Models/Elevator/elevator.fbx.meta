@@ -262,7 +262,7 @@ ModelImporter:
     4300096: wheel1.1.2
     4300098: elevator
     4300100: metal parts
-    7400000: C4D Animation Take
+    7400000: MoveElevator
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -272,14 +272,92 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MoveElevator
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .999143898
+        functionName: SwitchBackToPlayer
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: box
+        weight: 1
+      - path: CHAIN
+        weight: 1
+      - path: CHAIN.1
+        weight: 1
+      - path: CHAIN.2
+        weight: 1
+      - path: CHAIN.3
+        weight: 1
+      - path: CHAIN.4
+        weight: 1
+      - path: CHAIN.5
+        weight: 1
+      - path: CHAIN.6
+        weight: 1
+      - path: CHAIN.7
+        weight: 1
+      - path: construction
+        weight: 1
+      - path: construction.1
+        weight: 1
+      - path: Null
+        weight: 1
+      - path: Null/door
+        weight: 1
+      - path: Null/door.1
+        weight: 1
+      - path: Null/elevator
+        weight: 1
+      - path: Null/metal parts
+        weight: 1
+      - path: Null/wheel1.1
+        weight: 1
+      - path: Null/wheel1.1.2
+        weight: 1
+      - path: Null/wheel1.2
+        weight: 1
+      - path: Null/wheel1.2.2
+        weight: 1
+      - path: wheel1
+        weight: 1
+      - path: wheel2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

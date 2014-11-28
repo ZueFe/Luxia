@@ -20,6 +20,7 @@ public class Global_Variables : MonoBehaviour {
 
 	public const float CAMERA_SMOOTH_TIME = 1f;
 	public const float CAMERA_FOLLOWER_DEATH_SMOOTH_TIME = 0.2f;
+	public const float MOVE_TO_ELEVATOR_SMOOTHING = 4f;
 
 	public const float PLAYER_INTENSITY_INCREASE = 2f;
 
