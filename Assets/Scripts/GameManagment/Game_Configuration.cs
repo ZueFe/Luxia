@@ -30,6 +30,7 @@ public class Game_Configuration : MonoBehaviour {
 		GameObject.DontDestroyOnLoad(this.gameObject);
 
 		//change in case you wanna add animations before starting main menu
+		//comment this line in case you are debugging
 		Application.LoadLevel("mainMenu");
 	}
 }
