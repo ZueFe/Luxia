@@ -35,7 +35,9 @@ public class Gate_Open : MonoBehaviour {
 		
 		BoxCollider[] colliders = transform.parent.GetComponentsInChildren<BoxCollider> ();
 		foreach (BoxCollider c in colliders) {
+			if(c.gameObject.GetComponent<Key_Take>() == null){
 				c.enabled = !c.enabled;
+			}
 		}
 		
 		gameObject.layer = Global_Variables.COLLISION_LAYER;
