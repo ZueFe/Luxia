@@ -99,6 +99,12 @@ public class gui : MonoBehaviour
 						GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - (d / 2) - 45, d, d), key, ScaleMode.StretchToFill);
 				}
 
+				if (screenWidth > 1200) {
+					fontStyle.fontSize = screenWidth / 60;
+				} else {
+					fontStyle.fontSize =20;
+				}
+
 
 				//MESSAGES
 				if (timer<3) {
