@@ -28,7 +28,6 @@ public class Elevator_MoveFollowers : MonoBehaviour {
 		if(col.tag == Global_Variables.FOLLOWER_TAG){
 			followersIn++;
 			if(followersIn <= 1){
-				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui> ().areInElevator = true;
 				col.gameObject.GetComponent<Follow_Player>().Follows = MoveTo;
 				col.gameObject.GetComponent<Follow_Player>().followsPlayer = false;
 				allIn = true;
