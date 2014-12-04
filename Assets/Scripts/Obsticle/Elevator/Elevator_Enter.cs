@@ -15,6 +15,7 @@ public class Elevator_Enter : MonoBehaviour {
 				fp.Follows = MoveTo;
 				fp.followsPlayer = false;
 				fp.ReachFollowerTime *= Global_Variables.MOVE_TO_ELEVATOR_SMOOTHING;
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui> ().areInElevator = true;
 			}
 		}
 	}
