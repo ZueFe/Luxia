@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Options : MonoBehaviour
@@ -67,8 +67,8 @@ public class Options : MonoBehaviour
 						Application.LoadLevel ("mainMenu");
 				}
 				if (GUI.Button (new Rect (screenWidth / 2 - screenWidth / 8, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Reset settings")) {
-						musicVolume = 75f;
-						sfxVolume = 75f;
+						musicVolume = 100f;
+						sfxVolume = 100f;
 						musciOn = true;
 				}
 				if (GUI.Button (new Rect (screenWidth - (screenWidth / 8) - screenWidth / 4, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Done!")) {
