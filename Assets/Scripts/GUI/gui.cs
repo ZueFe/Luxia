@@ -15,14 +15,13 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillRed;
 		public Font nightmareFont;
 		public float timer = 30;
-
 		private string labelText = "So far, so good!";
 
 		void OnGUI ()
 		{
 				GUIStyle fontStyle = new GUIStyle ();
 				fontStyle.font = nightmareFont;
-				fontStyle.fontSize = 20;
+				
 				fontStyle.fontStyle = FontStyle.Bold;
 				fontStyle.alignment = TextAnchor.UpperCenter;
 
@@ -36,9 +35,17 @@ public class gui : MonoBehaviour
 						messageBoardWidth = 600;
 				}
 
+
+				if (screenWidth > 1200) {
+						fontStyle.fontSize = screenWidth / 60;
+				} else {
+						fontStyle.fontSize = 20;
+				}
+
 				GUI.DrawTexture (new Rect (screenWidth / 2 - messageBoardWidth / 2, -35, messageBoardWidth, messageBoardWidth / 5), messageBoard, ScaleMode.StretchToFill);
 				GUI.Label (new Rect (screenWidth / 2 - messageBoardWidth / 2, 3, messageBoardWidth, messageBoardWidth / 5), labelText, fontStyle);
 			
+				fontStyle.fontSize = 20;
 
 				//MAIN PANEL
 				int panelHeight = screenWidth / 12;	
@@ -56,32 +63,32 @@ public class gui : MonoBehaviour
 						healthBarWidth = 400;
 				}
 
-				GUI.DrawTexture (new Rect (borderGap, screenHeight - 105, healthBarWidth, 120), HealthBarBackground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (borderGap, screenHeight - 75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
 
 				float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
 
-				GUI.BeginGroup (new Rect (borderGap, screenHeight - 105, healthBarWidth * life, 120));
+		GUI.BeginGroup (new Rect (borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth * life, 90 + healthBarWidth / 5));
 				//GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
-				GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillBlue, ScaleMode.StretchToFill);
 				GUI.EndGroup ();
 
-				GUI.DrawTexture (new Rect (borderGap, screenHeight - 105, healthBarWidth, 120), HealthBarForeground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth,90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
 
 				GUI.Label (new Rect (healthBarWidth / 2 - 15, screenHeight - 27, 70, 30), "Health", fontStyle);
 
 				//LIFEBAR			
-				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 105, healthBarWidth, 120), HealthBarBackground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
 
 				float pilgrimLife = Camera.main.GetComponent<Game_FollowerDeath> ().GetCurrentDeathTime () - 0.05f;
 
-				GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 105, healthBarWidth * pilgrimLife, 120));
+		GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth * pilgrimLife, 90 + healthBarWidth / 5));
 				if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
-						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 120), HealthBarFillRed, ScaleMode.StretchToFill);
+			GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillRed, ScaleMode.StretchToFill);
 				} else {
-						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 120), HealthBarFillPurple, ScaleMode.StretchToFill);
+			GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillPurple, ScaleMode.StretchToFill);
 				}
 				GUI.EndGroup ();
-				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 105, healthBarWidth, 120), HealthBarForeground, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
 
 				GUI.Label (new Rect (screenWidth - healthBarWidth / 2 - 35 - borderGap, screenHeight - 27, 70, 30), "Pilgrim's life", fontStyle);
 
@@ -90,7 +97,7 @@ public class gui : MonoBehaviour
 				if (d < 40)
 						d = 40;
 				for (int i= 0; i<Camera.main.GetComponent<Game_FollowerDeath>().NumberOfLivingFollowers(); i++) {
-						GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - d - borderGap + 5 - (i * (d + 5)), screenHeight - (d / 2) - 45, d, d), head, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - d - borderGap + 5 - (i * (d + 5)), screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), head, ScaleMode.StretchToFill);
 		
 				}
 				
@@ -99,18 +106,13 @@ public class gui : MonoBehaviour
 						GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - (d / 2) - 45, d, d), key, ScaleMode.StretchToFill);
 				}
 
-				if (screenWidth > 1200) {
-					fontStyle.fontSize = screenWidth / 60;
-				} else {
-					fontStyle.fontSize =20;
-				}
+				
 
 
 				//MESSAGES
-				if (timer<3) {
-						labelText="You don't have enough energy!";
-				}
-				else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
+				if (timer < 3) {
+						labelText = "You don't have enough energy!";
+				} else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 						labelText = "Your pilgrims are in mortal peril!";	
 				} else if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG) {
 						labelText = "Oh no! Potato monster stole your pilgrms!";
@@ -120,11 +122,12 @@ public class gui : MonoBehaviour
 
 		}
 
-		void Update(){
-			timer += Time.deltaTime;
-			if (timer > 30) {
-				timer = 30;		
-			}
+		void Update ()
+		{
+				timer += Time.deltaTime;
+				if (timer > 30) {
+						timer = 30;		
+				}
 		}
 
 
