@@ -105,7 +105,7 @@ public class gui : MonoBehaviour
 				
 				//KEY	
 				if (GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Inventory> ().HasKey) {
-						GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - (d / 2) - 45, d, d), key, ScaleMode.StretchToFill);
+			GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), key, ScaleMode.StretchToFill);
 				}
 
 				
