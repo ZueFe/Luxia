@@ -9,8 +9,13 @@ public class Game_Camera : MonoBehaviour {
 	private float t1;
 	private float t2;
 
+
 	public void setTarget(Transform t){
 		target = t;
+	}
+
+	public Transform getTarget(){
+		return target;
 	}
 
 	void LateUpdate(){

@@ -13,11 +13,14 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillBlue;
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
+		public Texture map;
 		public Font nightmareFont;
 		public float timer = 30;
 		public bool areInElevator = false;
 
 		private string labelText = "So far, so good!";
+
+		public bool mapOn = false;
 
 		void OnGUI ()
 		{
@@ -108,6 +111,11 @@ public class gui : MonoBehaviour
 			GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), key, ScaleMode.StretchToFill);
 				}
 
+
+			if (mapOn) {
+					GUI.DrawTexture (new Rect (10, 10 , screenWidth-20, screenHeight-20), map, ScaleMode.StretchToFill);
+
+				}
 				
 
 
@@ -130,7 +138,10 @@ public class gui : MonoBehaviour
 				if (timer > 30) {
 						timer = 30;		
 				}
-		}
+	
+
+	
+	}
 
 
 	
