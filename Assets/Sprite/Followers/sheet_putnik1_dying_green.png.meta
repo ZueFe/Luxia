@@ -1,6 +1,28 @@
 fileFormatVersion: 2
 guid: a2f7bc557c7d0354ab6279f07e4fceb4
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: sheet_putnik1_dying_green_0
+    21300002: sheet_putnik1_dying_green_1
+    21300004: sheet_putnik1_dying_green_2
+    21300006: sheet_putnik1_dying_green_3
+    21300008: sheet_putnik1_dying_green_4
+    21300010: sheet_putnik1_dying_green_5
+    21300012: sheet_putnik1_dying_green_6
+    21300014: sheet_putnik1_dying_green_7
+    21300016: sheet_putnik1_dying_green_8
+    21300018: sheet_putnik1_dying_green_9
+    21300020: sheet_putnik1_dying_green_10
+    21300022: sheet_putnik1_dying_green_11
+    21300024: sheet_putnik1_dying_green_12
+    21300026: sheet_putnik1_dying_green_13
+    21300028: sheet_putnik1_dying_green_14
+    21300030: sheet_putnik1_dying_green_15
+    21300032: sheet_putnik1_dying_green_17
+    21300034: sheet_putnik1_dying_green_18
+    21300036: sheet_putnik1_dying_green_19
+    21300038: sheet_putnik1_dying_green_24
+    21300040: sheet_putnik1_dying_green_26
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +77,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_1
       rect:
         serializedVersion: 2
@@ -63,6 +87,7 @@ TextureImporter:
         height: 694
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_2
       rect:
         serializedVersion: 2
@@ -72,6 +97,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_3
       rect:
         serializedVersion: 2
@@ -81,6 +107,7 @@ TextureImporter:
         height: 694
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_4
       rect:
         serializedVersion: 2
@@ -90,6 +117,7 @@ TextureImporter:
         height: 694
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_5
       rect:
         serializedVersion: 2
@@ -99,6 +127,7 @@ TextureImporter:
         height: 695
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_6
       rect:
         serializedVersion: 2
@@ -108,6 +137,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_7
       rect:
         serializedVersion: 2
@@ -117,6 +147,7 @@ TextureImporter:
         height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_8
       rect:
         serializedVersion: 2
@@ -126,6 +157,7 @@ TextureImporter:
         height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_9
       rect:
         serializedVersion: 2
@@ -135,6 +167,7 @@ TextureImporter:
         height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_10
       rect:
         serializedVersion: 2
@@ -144,6 +177,7 @@ TextureImporter:
         height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_11
       rect:
         serializedVersion: 2
@@ -153,6 +187,7 @@ TextureImporter:
         height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_12
       rect:
         serializedVersion: 2
@@ -162,6 +197,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_13
       rect:
         serializedVersion: 2
@@ -171,6 +207,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_14
       rect:
         serializedVersion: 2
@@ -180,6 +217,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_15
       rect:
         serializedVersion: 2
@@ -189,6 +227,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_17
       rect:
         serializedVersion: 2
@@ -198,6 +237,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_18
       rect:
         serializedVersion: 2
@@ -207,6 +247,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_19
       rect:
         serializedVersion: 2
@@ -216,6 +257,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_24
       rect:
         serializedVersion: 2
@@ -225,6 +267,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_putnik1_dying_green_26
       rect:
         serializedVersion: 2
@@ -234,5 +277,6 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

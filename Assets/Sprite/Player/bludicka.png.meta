@@ -1,6 +1,13 @@
 fileFormatVersion: 2
 guid: 7f7bba10f9e9ed44aac9b8f8c8be793d
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: bludicka_0
+    21300002: bludicka_1
+    21300004: bludicka_2
+    21300006: bludicka_3
+    21300008: bludicka_4
+    21300010: bludicka_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +42,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +62,7 @@ TextureImporter:
         height: 264
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bludicka_1
       rect:
         serializedVersion: 2
@@ -63,6 +72,7 @@ TextureImporter:
         height: 256
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bludicka_2
       rect:
         serializedVersion: 2
@@ -72,6 +82,7 @@ TextureImporter:
         height: 248
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bludicka_3
       rect:
         serializedVersion: 2
@@ -81,6 +92,7 @@ TextureImporter:
         height: 256
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bludicka_4
       rect:
         serializedVersion: 2
@@ -90,6 +102,7 @@ TextureImporter:
         height: 248
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bludicka_5
       rect:
         serializedVersion: 2
@@ -99,5 +112,6 @@ TextureImporter:
         height: 248
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

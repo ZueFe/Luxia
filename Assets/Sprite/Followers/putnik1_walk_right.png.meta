@@ -1,6 +1,24 @@
 fileFormatVersion: 2
 guid: 5f40029add8f91348a5133959f096d55
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: sheet_gandalf_NewAnimation_anime_1_0
+    21300002: sheet_gandalf_NewAnimation_anime_1_1
+    21300004: sheet_gandalf_NewAnimation_anime_1_2
+    21300006: sheet_gandalf_NewAnimation_anime_1_3
+    21300008: sheet_gandalf_NewAnimation_anime_1_4
+    21300010: sheet_gandalf_NewAnimation_anime_1_5
+    21300012: sheet_gandalf_NewAnimation_anime_1_6
+    21300014: sheet_gandalf_NewAnimation_anime_1_7
+    21300016: sheet_gandalf_NewAnimation_anime_1_8
+    21300018: sheet_gandalf_NewAnimation_anime_1_9
+    21300020: sheet_gandalf_NewAnimation_anime_1_10
+    21300022: sheet_gandalf_NewAnimation_anime_1_11
+    21300024: sheet_gandalf_NewAnimation_anime_1_12
+    21300026: sheet_gandalf_NewAnimation_anime_1_13
+    21300028: sheet_gandalf_NewAnimation_anime_1_14
+    21300030: putnik1_walk_right_15
+    21300032: putnik1_walk_right_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +73,7 @@ TextureImporter:
         height: 688
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_1
       rect:
         serializedVersion: 2
@@ -63,6 +83,7 @@ TextureImporter:
         height: 692
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_2
       rect:
         serializedVersion: 2
@@ -72,6 +93,7 @@ TextureImporter:
         height: 694
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_3
       rect:
         serializedVersion: 2
@@ -81,6 +103,7 @@ TextureImporter:
         height: 697
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_4
       rect:
         serializedVersion: 2
@@ -90,6 +113,7 @@ TextureImporter:
         height: 699
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_5
       rect:
         serializedVersion: 2
@@ -99,6 +123,7 @@ TextureImporter:
         height: 705
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_6
       rect:
         serializedVersion: 2
@@ -108,6 +133,7 @@ TextureImporter:
         height: 698
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_7
       rect:
         serializedVersion: 2
@@ -117,6 +143,7 @@ TextureImporter:
         height: 695
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_8
       rect:
         serializedVersion: 2
@@ -126,6 +153,7 @@ TextureImporter:
         height: 699
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_9
       rect:
         serializedVersion: 2
@@ -135,6 +163,7 @@ TextureImporter:
         height: 698
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_10
       rect:
         serializedVersion: 2
@@ -144,6 +173,7 @@ TextureImporter:
         height: 698
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_11
       rect:
         serializedVersion: 2
@@ -153,6 +183,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_12
       rect:
         serializedVersion: 2
@@ -162,6 +193,7 @@ TextureImporter:
         height: 703
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_13
       rect:
         serializedVersion: 2
@@ -171,6 +203,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_gandalf_NewAnimation_anime_1_14
       rect:
         serializedVersion: 2
@@ -180,6 +213,7 @@ TextureImporter:
         height: 704
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: putnik1_walk_right_15
       rect:
         serializedVersion: 2
@@ -189,6 +223,7 @@ TextureImporter:
         height: 695
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: putnik1_walk_right_16
       rect:
         serializedVersion: 2
@@ -198,5 +233,6 @@ TextureImporter:
         height: 691
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
