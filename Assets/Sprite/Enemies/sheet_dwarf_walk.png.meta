@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: 78e02779e68bd9540b2190b4a395efd5
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sheet_dwarf_walk
+    21300002: sheet_dwarf_walk_0
+    21300004: sheet_dwarf_walk_1
+    21300006: sheet_dwarf_walk_2
+    21300008: sheet_dwarf_walk_3
+    21300010: sheet_dwarf_walk_4
+    21300012: sheet_dwarf_walk_5
+    21300014: sheet_dwarf_walk_6
+    21300016: sheet_dwarf_walk_7
+    21300018: sheet_dwarf_walk_8
+    21300020: sheet_dwarf_walk_9
+    21300022: sheet_dwarf_walk_10
+    21300024: sheet_dwarf_walk_11
+    21300026: sheet_dwarf_walk_12
+    21300028: sheet_dwarf_walk_13
+    21300030: sheet_dwarf_walk_14
+    21300032: sheet_dwarf_walk_15
+    21300034: sheet_dwarf_walk_16
+    21300036: sheet_dwarf_walk_17
+    21300038: sheet_dwarf_walk_18
+    21300040: sheet_dwarf_walk_19
+    21300042: sheet_dwarf_walk_20
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sheet_dwarf_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3196
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2296
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_17
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1396
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 496
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_dwarf_walk_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 496
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
