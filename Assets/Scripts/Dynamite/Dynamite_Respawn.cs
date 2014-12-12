@@ -3,9 +3,17 @@ using System.Collections;
 
 public class Dynamite_Respawn : MonoBehaviour {
 
-	public float RespawnTime;
+	public float MaxRespawnTime;
+	public float MinRespawnTime;
 
 	private float timer;
+	private float respawnTime;
+	private bool timeChanged;
+
+	void Start(){
+		timeChanged = true;
+		respawnTime = Random.Range(MinRespawnTime, MaxRespawnTime);
+	}
 
 	void Update(){
 		bool enabled = GetComponentInChildren<MeshRenderer>().enabled;
@@ -13,7 +21,7 @@ public class Dynamite_Respawn : MonoBehaviour {
 		if(!enabled){
 			timer += Time.deltaTime;
 
-			if(timer >= RespawnTime){				
+			if(timer >= respawnTime){				
 				MeshRenderer[] r = GetComponentsInChildren<MeshRenderer>();
 				foreach(MeshRenderer rr in r){
 					rr.enabled = true;
@@ -22,7 +30,11 @@ public class Dynamite_Respawn : MonoBehaviour {
 				GetComponent<BoxCollider>().enabled = true;
 
 				timer = 0f;
+				timeChanged = false;
 			}
+		}else if(!timeChanged){
+			timeChanged = true;
+			respawnTime = Random.Range(MinRespawnTime, MaxRespawnTime);
 		}
 	}
 }
