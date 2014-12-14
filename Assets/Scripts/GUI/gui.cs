@@ -7,6 +7,7 @@ public class gui : MonoBehaviour
 		public Texture messageBoard;
 		public Texture panel;
 		public Texture key;
+		public Texture dynamite;
 		public Texture head;
 		public Texture HealthBarBackground;
 		public Texture HealthBarForeground;
@@ -33,6 +34,7 @@ public class gui : MonoBehaviour
 				int screenWidth = Screen.width;
 				int screenHeight = Screen.height;
 				int borderGap = 20;
+				int inventoryItems = 0;
 
 				//MESSAGE BOARD
 				int messageBoardWidth = screenWidth / 2;
@@ -108,11 +110,17 @@ public class gui : MonoBehaviour
 				
 				//KEY	
 				if (GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Inventory> ().HasKey) {
-			GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), key, ScaleMode.StretchToFill);
+					inventoryItems++;
+					GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), key, ScaleMode.StretchToFill);
 				}
 
+				//Dynamite
+				if (GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Inventory> ().HasDynamite) {
+					GUI.DrawTexture (new Rect (healthBarWidth + d / 2+ inventoryItems*(d+5), screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), dynamite, ScaleMode.StretchToFill);
+				}
+				
 
-			if (mapOn) {
+				if (mapOn) {
 					GUI.DrawTexture (new Rect (10, 10 , screenWidth-20, screenHeight-20), map, ScaleMode.StretchToFill);
 
 				}
