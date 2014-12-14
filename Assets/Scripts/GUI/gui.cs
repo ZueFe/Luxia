@@ -15,12 +15,11 @@ public class gui : MonoBehaviour
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
 		public Texture map;
+		public Texture mark;
 		public Font nightmareFont;
 		public float timer = 30;
 		public bool areInElevator = false;
-
 		private string labelText = "So far, so good!";
-
 		public bool mapOn = false;
 
 		void OnGUI ()
@@ -70,32 +69,32 @@ public class gui : MonoBehaviour
 						healthBarWidth = 400;
 				}
 
-		GUI.DrawTexture (new Rect (borderGap, screenHeight - 75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
 
 				float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
 
-		GUI.BeginGroup (new Rect (borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth * life, 90 + healthBarWidth / 5));
+				GUI.BeginGroup (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * life, 90 + healthBarWidth / 5));
 				//GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillBlue, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillBlue, ScaleMode.StretchToFill);
 				GUI.EndGroup ();
 
-		GUI.DrawTexture (new Rect (borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth,90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
 
 				GUI.Label (new Rect (healthBarWidth / 2 - 15, screenHeight - 27, 70, 30), "Health", fontStyle);
 
 				//LIFEBAR			
-		GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
 
 				float pilgrimLife = Camera.main.GetComponent<Game_FollowerDeath> ().GetCurrentDeathTime () - 0.05f;
 
-		GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth * pilgrimLife, 90 + healthBarWidth / 5));
+				GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * pilgrimLife, 90 + healthBarWidth / 5));
 				if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
-			GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillRed, ScaleMode.StretchToFill);
+						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillRed, ScaleMode.StretchToFill);
 				} else {
-			GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillPurple, ScaleMode.StretchToFill);
+						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillPurple, ScaleMode.StretchToFill);
 				}
 				GUI.EndGroup ();
-		GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight -75- healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
+				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
 
 				GUI.Label (new Rect (screenWidth - healthBarWidth / 2 - 35 - borderGap, screenHeight - 27, 70, 30), "Pilgrim's life", fontStyle);
 
@@ -104,25 +103,35 @@ public class gui : MonoBehaviour
 				if (d < 40)
 						d = 40;
 				for (int i= 0; i<Camera.main.GetComponent<Game_FollowerDeath>().NumberOfLivingFollowers(); i++) {
-				GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - d - borderGap + 5 - (i * (d + 5)), screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), head, ScaleMode.StretchToFill);
+						GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - d - borderGap + 5 - (i * (d + 5)), screenHeight - 30 - healthBarWidth / 10 - d / 2, d, d), head, ScaleMode.StretchToFill);
 		
 				}
 				
 				//KEY	
 				if (GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Inventory> ().HasKey) {
-					inventoryItems++;
-					GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), key, ScaleMode.StretchToFill);
+						inventoryItems++;
+						GUI.DrawTexture (new Rect (healthBarWidth + d / 2, screenHeight - 30 - healthBarWidth / 10 - d / 2, d, d), key, ScaleMode.StretchToFill);
 				}
 
 				//Dynamite
 				if (GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Inventory> ().HasDynamite) {
-					GUI.DrawTexture (new Rect (healthBarWidth + d / 2+ inventoryItems*(d+5), screenHeight - 30 - healthBarWidth / 10 - d/2 , d, d), dynamite, ScaleMode.StretchToFill);
+						GUI.DrawTexture (new Rect (healthBarWidth + d / 2 + inventoryItems * (d + 5), screenHeight - 30 - healthBarWidth / 10 - d / 2, d, d), dynamite, ScaleMode.StretchToFill);
 				}
 				
-
-				if (mapOn) {
-					GUI.DrawTexture (new Rect (10, 10 , screenWidth-20, screenHeight-20), map, ScaleMode.StretchToFill);
-
+				
+				 
+				if (mapOn) {				
+						float w = screenWidth;
+						float h = screenWidth / (map.width / map.height);
+						if (screenHeight < h) {
+								h = screenHeight;
+								w = screenHeight * (map.width / map.height);
+						}
+						float r = w/map.width;
+						GUI.DrawTexture (new Rect ((screenWidth - w) / 2, (screenHeight - h) / 2, w, h), map, ScaleMode.StretchToFill);
+			Vector3 pos = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG).transform.position;
+			float marksize = mark.width*r;
+			GUI.DrawTexture (new Rect ((screenWidth - w) / 2 + r*(425+2.81f*pos.x)-marksize/2, (screenHeight - h) / 2 + r*(755-3*pos.y) -marksize/2, marksize, marksize), mark, ScaleMode.StretchToFill);
 				}
 				
 
@@ -149,7 +158,7 @@ public class gui : MonoBehaviour
 	
 
 	
-	}
+		}
 
 
 	

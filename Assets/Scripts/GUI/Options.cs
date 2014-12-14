@@ -34,7 +34,12 @@ public class Options : MonoBehaviour
 				GUI.skin = skin;
 				GUI.Label (new Rect (screenWidth / 2 - 200, 10, 400, 100), "Options", fontStyle);
 
-				fontStyle.fontSize = 30;
+				if (screenWidth > 1200) {
+					fontStyle.fontSize = 30;
+				} else{
+					fontStyle.fontSize = screenWidth / 40;
+				}
+
 				fontStyle.alignment = TextAnchor.MiddleLeft;
 
 				musciOn = GUI.Toggle (new Rect (screenWidth / 4 + screenWidth / 8, 100, screenWidth / 20, screenWidth / 20), musciOn, "");
