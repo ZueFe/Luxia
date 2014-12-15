@@ -16,6 +16,7 @@ public class Global_Variables : MonoBehaviour {
 	public const string TOOGLE_FOLLOW = "Toogle Follow";
 	public const string BYPASS_OBSTICLE = "Bypass Obsticle";
 	public const string MAP = "Map";
+	public const string GAME_MENU = "Game menu";
 	public const string FOLLOWER_TAG = "Follower";
 	public const string LIGHT_OBST_TAG = "LightObstacle";
 	public const string CONFIG_TAG = "Config";
