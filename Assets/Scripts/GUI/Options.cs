@@ -5,12 +5,12 @@ public class Options : MonoBehaviour
 {
 
 		public Font nightmareFont;
+		public Texture background;
 		public GUISkin skin;
 		public float musicVolume;
 		public float sfxVolume;
 		public bool musciOn;
-		public bool optionsOn=false;
-		
+		public bool optionsOn = false;
 
 		void OnGUI ()
 		{
@@ -24,6 +24,8 @@ public class Options : MonoBehaviour
 			
 						int screenWidth = Screen.width;
 						int screenHeight = Screen.height;
+
+						GUI.DrawTextureWithTexCoords(new Rect(0,0,screenWidth,screenHeight),background,new Rect(0, 0, screenWidth / background.width, screenHeight / background.height));
 
 						GUI.skin = skin;
 						GUI.Label (new Rect (screenWidth / 2 - 200, 10, 400, 100), "Options", fontStyle);
@@ -61,13 +63,13 @@ public class Options : MonoBehaviour
 								sfxVolume = 100;
 						}
 
-			GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicVolume = musicVolume / 100;
-			GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().SFXVolume = sfxVolume / 100;
-			GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = musciOn;
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicVolume = musicVolume / 100;
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().SFXVolume = sfxVolume / 100;
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = musciOn;
 				
 						if (GUI.Button (new Rect (screenWidth / 8, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Cancel")) {
-							GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().LoadMusicPrefs();
-							optionsOn=false;
+								GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().LoadMusicPrefs ();
+								optionsOn = false;
 								
 						}
 						if (GUI.Button (new Rect (screenWidth / 2 - screenWidth / 8, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Reset settings")) {
@@ -91,7 +93,7 @@ public class Options : MonoBehaviour
 								PlayerPrefs.Save ();
 
 								
-								optionsOn=false;
+								optionsOn = false;
 						}
 
 				}
