@@ -20,6 +20,9 @@ public class Global_Variables : MonoBehaviour {
 	public const string LIGHT_OBST_TAG = "LightObstacle";
 	public const string CONFIG_TAG = "Config";
 
+	public const string BLINKING_SHADER = "Transparent/Diffuse";
+	public const string ORIGINAL_SHADER = "Diffuse";
+
 	public const float CAMERA_SMOOTH_TIME = 1f;
 	public const float CAMERA_FOLLOWER_DEATH_SMOOTH_TIME = 0.2f;
 	public const float MOVE_TO_ELEVATOR_SMOOTHING = 4f;
