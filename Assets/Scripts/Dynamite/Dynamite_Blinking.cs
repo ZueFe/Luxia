@@ -16,7 +16,7 @@ public class Dynamite_Blinking : MonoBehaviour {
 	private Renderer mat;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		blinking = true;
 		blinkingColor = Color.black;
 		mat = GetComponent<Renderer>();

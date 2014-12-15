@@ -10,6 +10,7 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 	private Rigidbody[] rocks;
 	private bool explosionCountdown;
 	private float timer;
+	private float originalVolume;
 
 	void Start(){
 		rocks = GetComponentsInChildren<Rigidbody>();
@@ -47,6 +48,20 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 	private void ExplodeRocks(){
 		Dynamite.SetActive(false);
 		Instantiate(Explosion,Dynamite.transform.position, Quaternion.identity);
+		GetComponent<BoxCollider>().enabled = false;
+
+		GameObject config = GameObject.FindGameObjectWithTag(Global_Variables.CONFIG_TAG);
+		AudioSource a = GetComponent<AudioSource>();
+
+		if(config != null){
+			Game_Configuration con = config.GetComponent<Game_Configuration>();
+
+			if(con.MusicOn){
+				a.volume = originalVolume * con.SFXVolume;
+			}
+		}
+
+		a.Play();
 
 		foreach(Rigidbody r in rocks){
 			r.useGravity = true;
