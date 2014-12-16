@@ -6,6 +6,9 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 	public GameObject Explosion;
 	public GameObject Dynamite;
 	public float ExplosionTime;
+	
+	[HideInInspector]
+	public bool RocksBlown;
 
 	private Rigidbody[] rocks;
 	private bool explosionCountdown;
@@ -14,15 +17,18 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 
 	void Start(){
 		rocks = GetComponentsInChildren<Rigidbody>();
+		RocksBlown = false;
 	}
 
 	void Update(){
-		if(explosionCountdown){
+		if(explosionCountdown && !Global_Variables.Instance.FreezeTime){
 			timer += Time.deltaTime;
 
 			if(timer >= ExplosionTime){
 				ExplodeRocks();
+				TurnOfCrystal();
 				explosionCountdown = false;
+				RocksBlown = true;
 				timer = 0f;
 			}
 		}
@@ -69,4 +75,17 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 		}
 	}
 
+	private void TurnOfCrystal(){
+		GameObject crystal = transform.parent.GetComponentInChildren<FinalBoss_CrystalDynamiteConnection>().gameObject;
+		FinalBoss_GrowCrystalLight[] lights = transform.parent.GetComponentsInChildren<FinalBoss_GrowCrystalLight>();
+
+		foreach(FinalBoss_GrowCrystalLight l in lights){
+			l.activated = false;
+		}
+	
+		Dwarf_Movement dwarf = GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).GetComponent<Dwarf_Movement>();
+
+		dwarf.RemoveTarget(crystal);
+		dwarf.RemoveCurrentTarget(crystal);
+	}
 }

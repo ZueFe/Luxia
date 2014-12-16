@@ -30,10 +30,12 @@ public class FinalBoss_GrowCrystalLight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(activated){
-			GrowCrystal();
-		}else{
-			ShutDownCrystal();
+		if(!Global_Variables.Instance.FreezeTime){
+			if(activated){
+				GrowCrystal();
+			}else{
+				ShutDownCrystal();
+			}
 		}
 	}
 
@@ -50,6 +52,9 @@ public class FinalBoss_GrowCrystalLight : MonoBehaviour {
 		if(l.enabled){
 			l.enabled = false;
 		}
+
+		GetComponentInParent<FinalBoss_ActivateCrystal>().Activated = false;
+
 		transform.localScale = Vector3.SmoothDamp(transform.localScale, Vector3.zero, ref u, ShuttingSpeed);
 		l.intensity = Mathf.SmoothDamp(l.intensity, 0f, ref k, ShuttingSpeed);
 	}

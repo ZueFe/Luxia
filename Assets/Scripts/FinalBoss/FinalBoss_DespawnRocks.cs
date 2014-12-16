@@ -15,25 +15,27 @@ public class FinalBoss_DespawnRocks : MonoBehaviour {
 	}
 
 	void Update(){
-		if(startDespawning){
-			timer += Time.deltaTime;
+		if (!Global_Variables.Instance.FreezeTime) {
+			if (startDespawning) {
+				timer += Time.deltaTime;
 
-			if(timer >= 2){
-				gameObject.SetActive(false);
+			if (timer >= 2) {
+				gameObject.SetActive (false);
 			}
 		}
 
 
-		if(!rig.isKinematic && !startDespawning){
+		if (!rig.isKinematic && !startDespawning) {
 			maxTimer += Time.deltaTime;
 
-			if(maxTimer >= MaxDespawnTime){
+			if (maxTimer >= MaxDespawnTime) {
 				startDespawning = true;
 			}
 
-			if(rig.velocity.magnitude < 0.5f){
+			if (rig.velocity.magnitude < 0.5f) {
 				startDespawning = true;
 			}
 		}
 	}
+ }
 }

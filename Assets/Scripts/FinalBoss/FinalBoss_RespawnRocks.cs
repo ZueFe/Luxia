@@ -17,19 +17,21 @@ public class FinalBoss_RespawnRocks : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(startRespawning){
-			timer += Time.deltaTime;
-
-			if(timer >= RespawnTime){
-				Restart();
-				startRespawning = false;
-				timer = 0;
-			}
-		}else{
-			startRespawning = CheckForRespawn();
-
+		if(!Global_Variables.Instance.FreezeTime){
 			if(startRespawning){
-				DeleteOldRocks();
+				timer += Time.deltaTime;
+
+				if(timer >= RespawnTime){
+					Restart();
+					startRespawning = false;
+					timer = 0;
+				}
+			}else{
+				startRespawning = CheckForRespawn();
+
+				if(startRespawning){
+					DeleteOldRocks();
+				}
 			}
 		}
 	}
@@ -55,7 +57,7 @@ public class FinalBoss_RespawnRocks : MonoBehaviour {
 
 	private void DeleteOldRocks(){
 		foreach(Transform t in GetComponentsInChildren<Transform>()){
-			if(t.gameObject != gameObject){
+			if(t.gameObject != gameObject && t.gameObject.tag != Global_Variables.CRYSTAL_TAG){
 				Destroy(t.gameObject);
 			}
 		}

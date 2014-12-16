@@ -16,25 +16,27 @@ public class Dynamite_Respawn : MonoBehaviour {
 	}
 
 	void Update(){
-		bool enabled = GetComponentInChildren<MeshRenderer>().enabled;
+		if(!Global_Variables.Instance.FreezeTime){
+			bool enabled = GetComponentInChildren<MeshRenderer>().enabled;
 
-		if(!enabled){
-			timer += Time.deltaTime;
+			if(!enabled){
+				timer += Time.deltaTime;
 
-			if(timer >= respawnTime){				
-				MeshRenderer[] r = GetComponentsInChildren<MeshRenderer>();
-				foreach(MeshRenderer rr in r){
-					rr.enabled = true;
+				if(timer >= respawnTime){				
+					MeshRenderer[] r = GetComponentsInChildren<MeshRenderer>();
+					foreach(MeshRenderer rr in r){
+						rr.enabled = true;
+					}
+
+					GetComponent<BoxCollider>().enabled = true;
+
+					timer = 0f;
+					timeChanged = false;
 				}
-
-				GetComponent<BoxCollider>().enabled = true;
-
-				timer = 0f;
-				timeChanged = false;
+			}else if(!timeChanged){
+				timeChanged = true;
+				respawnTime = Random.Range(MinRespawnTime, MaxRespawnTime);
 			}
-		}else if(!timeChanged){
-			timeChanged = true;
-			respawnTime = Random.Range(MinRespawnTime, MaxRespawnTime);
 		}
 	}
 }

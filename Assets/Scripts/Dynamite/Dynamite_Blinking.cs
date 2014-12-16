@@ -24,29 +24,31 @@ public class Dynamite_Blinking : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(blinking){
-			if(mat.material.shader != Shader.Find(Global_Variables.BLINKING_SHADER)){
-				mat.material.shader = Shader.Find(Global_Variables.BLINKING_SHADER);
-				mat.material.mainTexture = InvisibleTexture;
-			}
-
-			mat.material.color = Color.Lerp(mat.material.color, blinkingColor, Time.deltaTime * BlinkingSpeed);
-
-			timer += Time.deltaTime;
-
-			if(timer >= BlinkingTime){
-				timer = 0;
-				if(blinkingColor == Color.black){
-					blinkingColor = Color.white;
-				}else{
-					blinkingColor = Color.black;
+		if(!Global_Variables.Instance.FreezeTime){
+			if(blinking){
+				if(mat.material.shader != Shader.Find(Global_Variables.BLINKING_SHADER)){
+					mat.material.shader = Shader.Find(Global_Variables.BLINKING_SHADER);
+					mat.material.mainTexture = InvisibleTexture;
 				}
-			}
-		}else{
-			if(mat.material.shader != Shader.Find(Global_Variables.ORIGINAL_SHADER)){
-				mat.material.shader = Shader.Find(Global_Variables.ORIGINAL_SHADER);
-				mat.material.mainTexture = OriginalTexture;
-				mat.material.color = Color.white;
+
+				mat.material.color = Color.Lerp(mat.material.color, blinkingColor, Time.deltaTime * BlinkingSpeed);
+
+				timer += Time.deltaTime;
+
+				if(timer >= BlinkingTime){
+					timer = 0;
+					if(blinkingColor == Color.black){
+						blinkingColor = Color.white;
+					}else{
+						blinkingColor = Color.black;
+					}
+				}
+			}else{
+				if(mat.material.shader != Shader.Find(Global_Variables.ORIGINAL_SHADER)){
+					mat.material.shader = Shader.Find(Global_Variables.ORIGINAL_SHADER);
+					mat.material.mainTexture = OriginalTexture;
+					mat.material.color = Color.white;
+				}
 			}
 		}
 	}

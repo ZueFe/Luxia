@@ -98,4 +98,15 @@ public class Game_FollowerDeath : MonoBehaviour {
 	public int NumberOfLivingFollowers(){
 		return lastFollowerIndex + 1;
 	}
+
+	public void KillLastFollower(){
+		Follower_AnimHash hash = followers[lastFollowerIndex].GetComponent<Follower_AnimHash>();
+		followers[lastFollowerIndex].GetComponent<Animator>().SetBool(hash.Dying, true);
+
+		lastFollowerIndex--;
+	}
+
+	public GameObject GetLastFollower(){
+		return followers[lastFollowerIndex];
+	}
 }
