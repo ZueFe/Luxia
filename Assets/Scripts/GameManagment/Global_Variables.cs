@@ -6,6 +6,7 @@ public class Global_Variables : MonoBehaviour {
 	public static Global_Variables Instance;
 
 	public bool FolloweresFollowing;
+	public bool FollowersStopped;
 	public bool FreezeTime;
 	public bool FollowersCharmed;
 	public bool PlayerInSecondLevel = false;

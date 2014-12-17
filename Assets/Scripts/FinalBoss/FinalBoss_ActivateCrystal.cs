@@ -21,8 +21,6 @@ public class FinalBoss_ActivateCrystal : MonoBehaviour {
 				Dwarf_Movement dm = GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).GetComponent<Dwarf_Movement>();
 
 				if(dm == null){
-					Debug.LogError("This");
-
 					GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).SetActive(false);
 					GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).SetActive(true);
 					dm = GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).GetComponent<Dwarf_Movement>();

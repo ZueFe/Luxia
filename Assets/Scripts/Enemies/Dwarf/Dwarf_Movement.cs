@@ -54,8 +54,6 @@ public class Dwarf_Movement : MonoBehaviour {
 			return;
 		}
 	
-		Debug.LogError(GetComponent<FinalBoss_Stats>().GetCurrentHealth());
-
 		if(!isStunt){
 			PickTarget();
 

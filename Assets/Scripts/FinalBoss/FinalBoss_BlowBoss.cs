@@ -26,6 +26,8 @@ public class FinalBoss_BlowBoss : MonoBehaviour {
 				GetComponent<AudioSource>().Play();
 				ExplodeExit();
 
+				Global_Variables.Instance.FollowersStopped = false;
+
 				Destroy(transform.root.gameObject);
 			}
 		}

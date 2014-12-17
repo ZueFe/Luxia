@@ -41,6 +41,12 @@ public class Follow_Player : MonoBehaviour {
 			return;
 		}
 
+		if(Global_Variables.Instance.FollowersStopped && 
+		   Follows.Equals(GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG))){
+			anim.SetFloat(hash.Direction, 0f);
+			return;
+		}
+
 		if(Global_Variables.Instance.FolloweresFollowing){
 			FollowPlayer();
 		}else{
