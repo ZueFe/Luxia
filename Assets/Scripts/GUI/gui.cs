@@ -174,10 +174,10 @@ public class gui : MonoBehaviour
 								labelText = "So far, so good!";
 						}
 				
-					//	if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () == 0) {
+						if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () == 0) {
 								Global_Variables.Instance.FreezeTime = true;
 								drawDeathScreen ();
-					//	}
+						}
 				}
 
 				
