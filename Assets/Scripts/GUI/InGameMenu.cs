@@ -37,7 +37,7 @@ public class InGameMenu : MonoBehaviour
 
 		void Update ()
 		{
-		if (Input.GetButtonDown (Global_Variables.GAME_MENU) && Camera.main.GetComponent<Game_Camera> ().getTarget ().gameObject.tag == Global_Variables.PLAYER_TAG && !GetComponent<Options> ().optionsOn&&!Global_Variables.Instance.FreezeTime) {
+		if (Input.GetButtonDown (Global_Variables.GAME_MENU) && Camera.main.GetComponent<Game_Camera> ().getTarget ().gameObject.tag == Global_Variables.PLAYER_TAG && !GetComponent<Options> ().optionsOn&&!GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().deathScreenOn) {
 						menuOn = !menuOn;
 						Global_Variables.Instance.FreezeTime = menuOn;
 				}

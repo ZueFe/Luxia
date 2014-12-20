@@ -1,15 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Key\Key_Take.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GUI\gui.cs">
     <Files>
-      <File FileName="Assets\Scripts\GUI\InGameMenu.cs" Line="23" Column="61" />
-      <File FileName="Assets\Scripts\GUI\gui.cs" Line="135" Column="5" />
-      <File FileName="Assets\Scripts\GUI\MainMenu.cs" Line="32" Column="4" />
-      <File FileName="Assets\Scripts\GameManagment\Game_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI\Options.cs" Line="72" Column="42" />
-      <File FileName="Assets\Scripts\Map\Map.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManagment\Global_Variables.cs" Line="19" Column="44" />
-      <File FileName="Assets\Scripts\Key\Key_Take.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\gui.cs" Line="230" Column="26" />
+      <File FileName="Assets\Scripts\GUI\InGameMenu.cs" Line="40" Column="274" />
+      <File FileName="Assets\Scripts\GUI\MainMenu.cs" Line="22" Column="23" />
+      <File FileName="Assets\Scripts\Map\Map.cs" Line="17" Column="63" />
+      <File FileName="Assets\Scripts\GUI\Options.cs" Line="23" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

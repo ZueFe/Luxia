@@ -31,6 +31,7 @@ public class gui : MonoBehaviour
 		private int screenHeight;
 		private GUIStyle fontStyle;
 		public GUISkin skin;
+		public bool deathScreenOn = false;
 
 		void OnGUI ()
 		{
@@ -168,16 +169,20 @@ public class gui : MonoBehaviour
 								labelText = "You don't have enough energy!";
 						} else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 								labelText = "Your pilgrims are in mortal peril!";	
-						} else if (Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG && !areInElevator) {
+						} else if (!deathScreenOn && Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG && !areInElevator) {
 								labelText = "Oh no! Potato monster stole your pilgrms!";
 						} else {
 								labelText = "So far, so good!";
 						}
 				
-						if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () == 0) {
+						if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () <= 0) {
+								deathScreenOn = true;
 								Global_Variables.Instance.FreezeTime = true;
-								drawDeathScreen ();
 						}
+									
+				}
+				if (deathScreenOn) {
+						drawDeathScreen ();
 				}
 
 				
@@ -207,10 +212,10 @@ public class gui : MonoBehaviour
 						GUI.color = gameEnd;		
 				}
 				//GUI.DrawTextureWithTexCoords (new Rect (0, 0, screenWidth, screenHeight), background, new Rect (0, 0, screenWidth / background.width, screenHeight / background.height));
-		Texture2D back = new Texture2D (1,1);
-		back.SetPixel (0, 0, new Color(0,0.14f, 0.26f,GUI.color.a));
-		back.Apply();
-		GUI.DrawTexture (new Rect (0,0,screenWidth,screenHeight), back, ScaleMode.StretchToFill);
+				Texture2D back = new Texture2D (1, 1);
+				back.SetPixel (0, 0, new Color (0, 0.14f, 0.26f, GUI.color.a));
+				back.Apply ();
+				GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), back, ScaleMode.StretchToFill);
 
 				GUI.color = gameEnd;	
 				fontStyle.fontSize = 50;
@@ -220,10 +225,15 @@ public class gui : MonoBehaviour
 				GUI.Label (new Rect (0, screenHeight / 2 - screenHeight / 5, screenWidth, screenHeight / 5), "You failed!", fontStyle);
 		
 				if (GUI.Button (new Rect (screenWidth / 2 - (screenWidth / 4) - 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "New Game")) {
+						
 						Application.LoadLevel ("base");
+						deathScreenOn = false;
+						
 				}
 				if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
+						
 						Application.LoadLevel ("mainMenu");
+						deathScreenOn = false;
 				}
 
 				
