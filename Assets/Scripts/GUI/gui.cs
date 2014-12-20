@@ -9,8 +9,12 @@ public class gui : MonoBehaviour
 		public Texture key;
 		public Texture dynamite;
 		public Texture head;
+		public Texture background;
 		public Texture HealthBarBackground;
 		public Texture HealthBarForeground;
+		public Texture HealthBarBossBackground;
+		public Texture HealthBarBossForeground;
+		public Texture HealthBarBossFill;
 		public Texture HealthBarFillBlue;
 		public Texture HealthBarFillPurple;
 		public Texture HealthBarFillRed;
@@ -21,18 +25,25 @@ public class gui : MonoBehaviour
 		public bool areInElevator = false;
 		private string labelText = "So far, so good!";
 		public bool mapOn = false;
+		public bool bossActivated = false;
+		private Color gameEnd = new Color (1, 1, 1, 0);
+		private int screenWidth;
+		private int screenHeight;
+		private GUIStyle fontStyle;
+		public GUISkin skin;
 
 		void OnGUI ()
 		{
-		if (!GetComponent<Options> ().optionsOn) {
-						GUIStyle fontStyle = new GUIStyle ();
+				GUI.skin = skin;
+				if (!GetComponent<Options> ().optionsOn) {
+						fontStyle = new GUIStyle ();
 						fontStyle.font = nightmareFont;
 				
 						fontStyle.fontStyle = FontStyle.Bold;
 						fontStyle.alignment = TextAnchor.UpperCenter;
 
-						int screenWidth = Screen.width;
-						int screenHeight = Screen.height;
+						screenWidth = Screen.width;
+						screenHeight = Screen.height;
 						int borderGap = 20;
 						int inventoryItems = 0;
 
@@ -99,6 +110,21 @@ public class gui : MonoBehaviour
 
 						GUI.Label (new Rect (screenWidth - healthBarWidth / 2 - 35 - borderGap, screenHeight - 27, 70, 30), "Pilgrim's life", fontStyle);
 
+
+						//BOSS HEALTHBAR
+						if (bossActivated) {
+								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossBackground, ScaleMode.StretchToFill);
+			
+								float bossLife = GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().GetCurrentHealth () / GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().MaxHealth;
+			
+								GUI.BeginGroup (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, bossLife * (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7));
+								GUI.DrawTexture (new Rect (0, 0, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossFill, ScaleMode.StretchToFill);
+		
+								GUI.EndGroup ();
+								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossForeground, ScaleMode.StretchToFill);
+
+						}
+
 						//FOLLOWERS
 						int d = screenWidth / 22;
 						if (d < 40)
@@ -147,7 +173,14 @@ public class gui : MonoBehaviour
 						} else {
 								labelText = "So far, so good!";
 						}
+				
+					//	if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () == 0) {
+								Global_Variables.Instance.FreezeTime = true;
+								drawDeathScreen ();
+					//	}
 				}
+
+				
 
 		}
 
@@ -157,9 +190,46 @@ public class gui : MonoBehaviour
 				if (timer > 30) {
 						timer = 30;		
 				}
+
 	
 
 	
+		}
+
+		private void drawDeathScreen ()
+		{
+				gameEnd.a += 0.002f;
+				
+				
+				if (gameEnd.a > 0.8f) {
+						GUI.color = new Color (1, 1, 1, 0.8f);
+				} else {
+						GUI.color = gameEnd;		
+				}
+				//GUI.DrawTextureWithTexCoords (new Rect (0, 0, screenWidth, screenHeight), background, new Rect (0, 0, screenWidth / background.width, screenHeight / background.height));
+		Texture2D back = new Texture2D (1,1);
+		back.SetPixel (0, 0, new Color(0,0.14f, 0.26f,GUI.color.a));
+		back.Apply();
+		GUI.DrawTexture (new Rect (0,0,screenWidth,screenHeight), back, ScaleMode.StretchToFill);
+
+				GUI.color = gameEnd;	
+				fontStyle.fontSize = 50;
+				fontStyle.fontStyle = FontStyle.Bold;
+				fontStyle.alignment = TextAnchor.MiddleCenter;
+				fontStyle.normal.textColor = gameEnd;
+				GUI.Label (new Rect (0, screenHeight / 2 - screenHeight / 5, screenWidth, screenHeight / 5), "You failed!", fontStyle);
+		
+				if (GUI.Button (new Rect (screenWidth / 2 - (screenWidth / 4) - 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "New Game")) {
+						Application.LoadLevel ("base");
+				}
+				if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
+						Application.LoadLevel ("mainMenu");
+				}
+
+				
+				GUI.color = Color.white;
+			
+
 		}
 
 
