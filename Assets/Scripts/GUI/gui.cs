@@ -32,6 +32,7 @@ public class gui : MonoBehaviour
 		private GUIStyle fontStyle;
 		public GUISkin skin;
 		public bool deathScreenOn = false;
+		public bool winScreenOn = false;
 
 		void OnGUI ()
 		{
@@ -115,13 +116,14 @@ public class gui : MonoBehaviour
 						//BOSS HEALTHBAR
 						if (bossActivated) {
 								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossBackground, ScaleMode.StretchToFill);
+								
+										float bossLife = GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().GetCurrentHealth () / GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().MaxHealth;
 			
-								float bossLife = GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().GetCurrentHealth () / GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().MaxHealth;
-			
-								GUI.BeginGroup (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, bossLife * (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7));
-								GUI.DrawTexture (new Rect (0, 0, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossFill, ScaleMode.StretchToFill);
+										GUI.BeginGroup (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, bossLife * (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7));
+										GUI.DrawTexture (new Rect (0, 0, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossFill, ScaleMode.StretchToFill);
 		
-								GUI.EndGroup ();
+										GUI.EndGroup ();
+								
 								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossForeground, ScaleMode.StretchToFill);
 
 						}
@@ -176,15 +178,18 @@ public class gui : MonoBehaviour
 						}
 				
 						if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () <= 0) {
-								deathScreenOn = true;
+								deathScreenOn = true;	
 								Global_Variables.Instance.FreezeTime = true;
+								
 						}
 									
 				}
 				if (deathScreenOn) {
 						drawDeathScreen ();
 				}
-
+				if (winScreenOn) {
+						drawWinScreen ();
+				}
 				
 
 		}
@@ -228,6 +233,7 @@ public class gui : MonoBehaviour
 						
 						Application.LoadLevel ("base");
 						deathScreenOn = false;
+
 						
 				}
 				if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
@@ -243,5 +249,45 @@ public class gui : MonoBehaviour
 		}
 
 
+	private void drawWinScreen(){
+		gameEnd.a += 0.002f;
+		
+		
+		if (gameEnd.a > 0.9f) {
+			GUI.color = new Color (1, 1, 1, 0.9f);
+		} else {
+			GUI.color = gameEnd;		
+		}
+		//GUI.DrawTextureWithTexCoords (new Rect (0, 0, screenWidth, screenHeight), background, new Rect (0, 0, screenWidth / background.width, screenHeight / background.height));
+		Texture2D back = new Texture2D (1, 1);
+		back.SetPixel (0, 0, new Color (0,0.3f,0, GUI.color.a));
+		back.Apply ();
+		GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), back, ScaleMode.StretchToFill);
+		
+		GUI.color = gameEnd;	
+		fontStyle.fontSize = 50;
+		fontStyle.fontStyle = FontStyle.Bold;
+		fontStyle.alignment = TextAnchor.MiddleCenter;
+		fontStyle.normal.textColor = gameEnd;
+		GUI.Label (new Rect (0, screenHeight / 2 - screenHeight / 5, screenWidth, screenHeight / 5), "Congratulations!", fontStyle);
+		
+		if (GUI.Button (new Rect (screenWidth / 2 - (screenWidth / 4) - 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "New Game")) {
+			
+			Application.LoadLevel ("base");
+			winScreenOn = false;
+			
+		}
+		if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
+			
+			Application.LoadLevel ("mainMenu");
+			winScreenOn = false;
+		}
+		
+		
+		GUI.color = Color.white;
+		
+	}
+	
+	
 	
 }

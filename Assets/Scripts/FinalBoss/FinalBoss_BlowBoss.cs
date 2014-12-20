@@ -29,6 +29,7 @@ public class FinalBoss_BlowBoss : MonoBehaviour {
 				Global_Variables.Instance.FollowersStopped = false;
 
 				Destroy(transform.root.gameObject);
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossActivated=false;
 			}
 		}
 	}
