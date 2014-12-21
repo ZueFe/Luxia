@@ -1,0 +1,40 @@
+<size=40><b>Luxia Game Credits</b></size>
+
+<size=30><b>Project Leader</b></size>
+<size=25>Zuzana Ferkova</size>
+
+<size=30><b>2D Art</b></size>
+<size=25>Katarana Furmanova</size>
+
+<size=30><b>3D Art</b></size>
+<size=25>Jan Pater</size>
+
+<size=30><b>Audio Artist</b></size>
+<size=25>Jan Pater
+Adam Uvira</size>
+
+<size=30><b>Game Design</b></size>
+<size=25>Zuzana Ferkova
+Katarina Furmanova
+Jan Pater</size>
+
+<size=30><b>Level Design</b></size>
+<size=25>Jan Pater
+Zuana Ferkova</size>
+
+<size=30><b>Programmers</b></size>
+<size=25>Zuzana Ferkova
+Katarina Furmanova</size>
+
+<size=30><b>Special Thanks</b></size>
+<size=25>Ben Throop
+The Mansfield Clan
+Mgr. Jiri Chmelik Ph.D.
+Milan Dolezal
+Antonin Hojny
+
+
+This game was created for class PV255, Digital Games
+at Masaryk University, Brno, Fall 2014.</size>
+
+
