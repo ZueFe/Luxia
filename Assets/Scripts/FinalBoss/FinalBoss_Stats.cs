@@ -19,7 +19,7 @@ public class FinalBoss_Stats : MonoBehaviour {
 		currentHealth += dmg;
 
 		if(currentHealth <= 0){
-			currentHealth = 1f;
+			currentHealth = 1;
 		}
 	}
 }

@@ -33,6 +33,8 @@ public class gui : MonoBehaviour
 		public GUISkin skin;
 		public bool deathScreenOn = false;
 		public bool winScreenOn = false;
+		public bool bossAttacking = false;
+		public bool bossStunt = false;
 
 		void OnGUI ()
 		{
@@ -117,12 +119,12 @@ public class gui : MonoBehaviour
 						if (bossActivated) {
 								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossBackground, ScaleMode.StretchToFill);
 								
-										float bossLife = GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().GetCurrentHealth () / GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().MaxHealth;
+								float bossLife = GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().GetCurrentHealth () / GameObject.FindWithTag (Global_Variables.FINAL_BOSS_TAG).GetComponent<FinalBoss_Stats> ().MaxHealth;
 			
-										GUI.BeginGroup (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, bossLife * (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7));
-										GUI.DrawTexture (new Rect (0, 0, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossFill, ScaleMode.StretchToFill);
+								GUI.BeginGroup (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, bossLife * (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7));
+								GUI.DrawTexture (new Rect (0, 0, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossFill, ScaleMode.StretchToFill);
 		
-										GUI.EndGroup ();
+								GUI.EndGroup ();
 								
 								GUI.DrawTexture (new Rect (screenWidth / 2 - (messageBoardWidth - messageBoardWidth / 5) / 2, messageBoardWidth / 7 - 45, (messageBoardWidth - messageBoardWidth / 5), messageBoardWidth / 7), HealthBarBossForeground, ScaleMode.StretchToFill);
 
@@ -167,8 +169,18 @@ public class gui : MonoBehaviour
 
 
 						//MESSAGES
-						if (timer < 3) {
+						if (bossStunt) {
+								if (timer > 3.5f && labelText.Equals ("FINISH HIM!!!")) {
+										labelText = "";
+										timer = 3;
+								} else if (timer > 3.5f) {
+										labelText = "FINISH HIM!!!";
+										timer = 3;
+								}
+						} else if (timer < 3) {
 								labelText = "You don't have enough energy!";
+						} else if (bossAttacking) {
+								labelText = "The dwarf is going for your pilgrims!";
 						} else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 								labelText = "Your pilgrims are in mortal peril!";	
 						} else if (!deathScreenOn && Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG && !areInElevator) {
@@ -248,45 +260,45 @@ public class gui : MonoBehaviour
 
 		}
 
-
-	private void drawWinScreen(){
-		gameEnd.a += 0.002f;
+		private void drawWinScreen ()
+		{
+				gameEnd.a += 0.002f;
 		
 		
-		if (gameEnd.a > 0.9f) {
-			GUI.color = new Color (1, 1, 1, 0.9f);
-		} else {
-			GUI.color = gameEnd;		
-		}
-		//GUI.DrawTextureWithTexCoords (new Rect (0, 0, screenWidth, screenHeight), background, new Rect (0, 0, screenWidth / background.width, screenHeight / background.height));
-		Texture2D back = new Texture2D (1, 1);
-		back.SetPixel (0, 0, new Color (0,0.3f,0, GUI.color.a));
-		back.Apply ();
-		GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), back, ScaleMode.StretchToFill);
+				if (gameEnd.a > 0.9f) {
+						GUI.color = new Color (1, 1, 1, 0.9f);
+				} else {
+						GUI.color = gameEnd;		
+				}
+				//GUI.DrawTextureWithTexCoords (new Rect (0, 0, screenWidth, screenHeight), background, new Rect (0, 0, screenWidth / background.width, screenHeight / background.height));
+				Texture2D back = new Texture2D (1, 1);
+				back.SetPixel (0, 0, new Color (0, 0.3f, 0, GUI.color.a));
+				back.Apply ();
+				GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), back, ScaleMode.StretchToFill);
 		
-		GUI.color = gameEnd;	
-		fontStyle.fontSize = 50;
-		fontStyle.fontStyle = FontStyle.Bold;
-		fontStyle.alignment = TextAnchor.MiddleCenter;
-		fontStyle.normal.textColor = gameEnd;
-		GUI.Label (new Rect (0, screenHeight / 2 - screenHeight / 5, screenWidth, screenHeight / 5), "Congratulations!", fontStyle);
+				GUI.color = gameEnd;	
+				fontStyle.fontSize = 50;
+				fontStyle.fontStyle = FontStyle.Bold;
+				fontStyle.alignment = TextAnchor.MiddleCenter;
+				fontStyle.normal.textColor = gameEnd;
+				GUI.Label (new Rect (0, screenHeight / 2 - screenHeight / 5, screenWidth, screenHeight / 5), "Congratulations!", fontStyle);
 		
-		if (GUI.Button (new Rect (screenWidth / 2 - (screenWidth / 4) - 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "New Game")) {
+				if (GUI.Button (new Rect (screenWidth / 2 - (screenWidth / 4) - 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "New Game")) {
 			
-			Application.LoadLevel ("base");
-			winScreenOn = false;
+						Application.LoadLevel ("base");
+						winScreenOn = false;
 			
-		}
-		if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
+				}
+				if (GUI.Button (new Rect (screenWidth / 2 + 10, screenHeight / 2 + 5, screenWidth / 4, screenHeight / 7), "Main menu")) {
 			
-			Application.LoadLevel ("mainMenu");
-			winScreenOn = false;
+						Application.LoadLevel ("mainMenu");
+						winScreenOn = false;
+				}
+		
+		
+				GUI.color = Color.white;
+		
 		}
-		
-		
-		GUI.color = Color.white;
-		
-	}
 	
 	
 	

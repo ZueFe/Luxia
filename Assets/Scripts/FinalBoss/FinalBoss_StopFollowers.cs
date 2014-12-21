@@ -24,6 +24,7 @@ public class FinalBoss_StopFollowers : MonoBehaviour {
 			
 			activated = true;
 			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossActivated=true;
+			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = true;
 			Global_Variables.Instance.FollowersStopped = true;
 		}
 	}

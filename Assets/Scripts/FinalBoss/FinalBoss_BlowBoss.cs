@@ -30,6 +30,9 @@ public class FinalBoss_BlowBoss : MonoBehaviour {
 
 				Destroy(transform.root.gameObject);
 				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossActivated=false;
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = false;
+				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossStunt = false;
+
 			}
 		}
 	}

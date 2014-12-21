@@ -68,6 +68,11 @@ public class Dwarf_Movement : MonoBehaviour {
 			ResolveStunt();
 		}
 
+		if (currentTarget.tag == Global_Variables.FOLLOWER_TAG ) {
+			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = true;
+		} else {
+			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = false;
+		}
 	}
 
 	private void ResolveLocoMotion(){
@@ -162,6 +167,8 @@ public class Dwarf_Movement : MonoBehaviour {
 				currentTarget = Camera.main.GetComponent<Game_FollowerDeath>().GetLastFollower();
 			}
 		}
+
+
 	}
 
 	public void DecreaseMiningTimer(){
@@ -182,6 +189,8 @@ public class Dwarf_Movement : MonoBehaviour {
 		}
 
 		isStunt = (GetComponent<FinalBoss_Stats>().GetCurrentHealth() <= 1f || dynamitePlaced);
+		GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossStunt = (GetComponent<FinalBoss_Stats>().GetCurrentHealth() <= 1f);
+		GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().timer = 3;
 	}
 
 	private void CheckForDynamite(){
@@ -197,6 +206,7 @@ public class Dwarf_Movement : MonoBehaviour {
 
 		if(stuntTimer >= ToRecoverFromStunt){
 			isStunt = false;
+			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossStunt = false;
 			GetComponent<FinalBoss_Stats>().ChangeHP(dmgPerExplosion - 1);
 			Dynamite.SetActive(false);
 			stuntTimer = 0;
