@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 5ec321f1b8f9b074d85fcba8e3d6f890
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - nightmareFont: {fileID: 12800000, guid: 4dc0b0d77fa3f8d439ded64d188cd5d8, type: 3}
+  - skin: {fileID: 11400000, guid: 9890b280cb45e834db945d35b109bf26, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
