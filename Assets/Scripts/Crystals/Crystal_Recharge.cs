@@ -16,6 +16,7 @@ public class Crystal_Recharge : MonoBehaviour {
 
 		if(timer >= RechargeTime){
 			gameObject.GetComponentInChildren<Light>().enabled = true;
+			gameObject.GetComponentInChildren<Light>().intensity = 5.6f;
 			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
 		}
 	}

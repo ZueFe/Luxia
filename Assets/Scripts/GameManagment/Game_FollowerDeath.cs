@@ -109,4 +109,8 @@ public class Game_FollowerDeath : MonoBehaviour {
 	public GameObject GetLastFollower(){
 		return followers[lastFollowerIndex];
 	}
+
+	public void HurtLastFollower(float dmg){
+		deathTimer += dmg;
+	}
 }

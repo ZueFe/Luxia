@@ -7,6 +7,7 @@ public class Dwarf_Movement : MonoBehaviour {
 	public float Speed;
 	public float SpeedChangeTime = 1f;
 	public float Offset;
+	public float DmgToFollower;
 	public float MinMiningTime;
 	public float MaxMiningTime;
 	public int ExplosionsToKill;
@@ -32,7 +33,7 @@ public class Dwarf_Movement : MonoBehaviour {
 	private bool isAttacking;
 	private Vector3 scale;
 	private float killTimer;
-	private const float TIME_TO_KILL_FOLLOWER = 5f;
+	private const float ONE_DMG_TO_FOLLOWER = 2.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -108,10 +109,13 @@ public class Dwarf_Movement : MonoBehaviour {
 
 	private void PickTarget(){
 		if(currentTarget != null && currentTarget.tag == Global_Variables.FOLLOWER_TAG && targets.Count == 0){
-			killTimer += Time.deltaTime;
+			if(CloseToTarget()){
+				killTimer += Time.deltaTime;
+			}
 
-			if(isAttacking && killTimer >= TIME_TO_KILL_FOLLOWER){
-				Camera.main.GetComponent<Game_FollowerDeath>().KillLastFollower(); //kill last follower when close
+			if(isAttacking && killTimer >= ONE_DMG_TO_FOLLOWER){
+				Camera.main.GetComponent<Game_FollowerDeath>().HurtLastFollower(DmgToFollower);
+				//Camera.main.GetComponent<Game_FollowerDeath>().KillLastFollower(); //kill last follower when close
 				killTimer = 0f;
 			}
 
@@ -211,5 +215,9 @@ public class Dwarf_Movement : MonoBehaviour {
 			Dynamite.SetActive(false);
 			stuntTimer = 0;
 		}
+	}
+
+	public bool CloseToTarget(){
+		return (Mathf.Abs(transform.position.x - currentTarget.transform.position.x) <= Offset);
 	}
 }
