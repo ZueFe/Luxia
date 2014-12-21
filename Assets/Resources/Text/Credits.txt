@@ -4,12 +4,12 @@
 <size=25>Zuzana Ferkova</size>
 
 <size=30><b>2D Art</b></size>
-<size=25>Katarana Furmanova</size>
+<size=25>Katarina Furmanova</size>
 
 <size=30><b>3D Art</b></size>
 <size=25>Jan Pater</size>
 
-<size=30><b>Audio Artist</b></size>
+<size=30><b>Audio Artists</b></size>
 <size=25>Jan Pater
 Adam Uvira</size>
 
@@ -20,7 +20,7 @@ Jan Pater</size>
 
 <size=30><b>Level Design</b></size>
 <size=25>Jan Pater
-Zuana Ferkova</size>
+Zuzana Ferkova</size>
 
 <size=30><b>Programmers</b></size>
 <size=25>Zuzana Ferkova

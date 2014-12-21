@@ -33,7 +33,6 @@ public class Credits : MonoBehaviour {
 					//	y = screenHeight;		
 			timer = 0;
 				}
-		print (timer);
 		GUI.skin = skin;
 		if (GUI.Button (new Rect (20, screenHeight - screenHeight / 8, screenWidth / 5, screenHeight / 8), "Back")) {
 			Application.LoadLevel ("mainMenu");
