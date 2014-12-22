@@ -6,11 +6,12 @@ public class HowToPlay : MonoBehaviour {
 	public GUISkin skin;
 	public GameObject[] objects;
 	private int index;
-		private string[] obsticles = new string[]{"How to play","Luxia","Followers","Bridge","Gate","Water","Potato monster","Bees","Evil wisp","The Dwarf"};
+		private string[] obsticles = new string[]{"How to play","Luxia","Followers","Map","Bridge","Gate","Water","Potato monster","Bees","Evil wisp","The Dwarf"};
 	private string[] obsticle_desc = new string[]{
 		"",
 		"This is Luxia, the character you control. She can fly freely through the maze, however her energy is constanty decreasing. To refill the energy, find glowing crystal and press action button (E by default).",
 		"The pilgrims you need to save. They follow your light, but you can tell them to stop/start following you whenever you like (F key by default). They can only walk on solid ground. Be carful not to leave them in the dark for too long. The darkness will swallow them!",
+		"Should you become lost, you can look at the map of the maze, where your position will be marked (M key by default).",
 		"You will come accros numerous bridges in this game. To overcome them, you can use your energy or find a lever in the maze.",
 		"When you come accros closed gate, you need to search for a key. Alternatively, you can use your energy to open it.",
 		"To get your pilgrims over the water you need to find a group of light wisps, that will form a boat from light.",
@@ -90,7 +91,7 @@ public class HowToPlay : MonoBehaviour {
 			fontStyle.fontSize = 25;
 			fontStyle.wordWrap = true;
 			string entry = "In this game, you become a light wisp called Luxia and your job is to save pilgrims lost in an underground maze. \n  \n"+ 
-				"This guide should help you with your mission. You will find here entries on: \n  \n genral game principles (p. 2-3) \n obsticles (p. 4-6) \n enemies (p. 7-9) \n final boss (p. 10)";
+				"This guide should help you with your mission. You will find here entries on: \n  \n genral game principles (p. 2-4) \n obsticles (p. 5-7) \n enemies (p. 8-10) \n final boss (p. 11)";
 
 			GUI.Label (new Rect (screenWidth / 2 - screenWidth/4,  screenHeight / 3, screenWidth / 2, screenHeight /2), entry, fontStyle);
 
