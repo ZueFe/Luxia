@@ -22,6 +22,7 @@ public class HowToPlay : MonoBehaviour {
 	};
 	private int screenWidth;
 	private int screenHeight;
+	private int size = 25;
 
 	void OnGUI ()
 	{		
@@ -36,9 +37,16 @@ public class HowToPlay : MonoBehaviour {
 		screenWidth = Screen.width;
 		screenHeight = Screen.height;
 
+		size = screenWidth / 40;
+		if (size < 20)
+						size = 20;
+		if (size > 25)
+						size = 25;
+
+
 		GUI.Label (new Rect (screenWidth / 2 - screenWidth / 4, 30, screenWidth/2, 40), obsticles [index]+" ("+(index+1f)+"/"+objects.Length+")", fontStyle);
-		fontStyle.fontSize = 25;
-		GUI.Label (new Rect (screenWidth / 2 - screenWidth/4, screenHeight - screenHeight / 4, screenWidth / 2, 100), obsticle_desc [index], fontStyle);
+		fontStyle.fontSize = size;
+		GUI.Label (new Rect (screenWidth / 2 - screenWidth/4, screenHeight - screenHeight / 3-10, screenWidth / 2,  screenHeight / 3), obsticle_desc [index], fontStyle);
 
 
 		if (GUI.Button (new Rect (40, screenHeight/2 - screenHeight /16, screenWidth / 7, screenHeight / 8), "Previous")) {
@@ -88,7 +96,7 @@ public class HowToPlay : MonoBehaviour {
 			fontStyle.alignment = TextAnchor.MiddleCenter;
 			fontStyle.normal.textColor = Color.white;
 			fontStyle.fontStyle = FontStyle.Bold;
-			fontStyle.fontSize = 25;
+			fontStyle.fontSize = size;
 			fontStyle.wordWrap = true;
 			string entry = "In this game, you become a light wisp called Luxia and your job is to save pilgrims lost in an underground maze. \n  \n"+ 
 				"This guide should help you with your mission. You will find here entries on: \n  \n genral game principles (p. 2-4) \n obsticles (p. 5-7) \n enemies (p. 8-10) \n final boss (p. 11)";
