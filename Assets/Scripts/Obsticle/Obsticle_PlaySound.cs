@@ -11,6 +11,7 @@ public class Obsticle_PlaySound : MonoBehaviour {
 		AudioClip ac = (AudioClip)Resources.Load("Sounds/" + SoundFileName);
 		AudioSource audioS = gameObject.GetComponent<AudioSource>();
 
+
 		audioS.clip = ac;
 		audioS.Play();
 	}

@@ -14,6 +14,7 @@ public class FinalBoss_StopFollowers : MonoBehaviour {
 				
 			int pickSpawn = Random.Range(0, SpawningPositions.Length);
 			Instantiate(Enemies[randPick], SpawningPositions[pickSpawn].transform.position, Quaternion.identity);
+
 			Destroy(this.gameObject);
 		}
 	}

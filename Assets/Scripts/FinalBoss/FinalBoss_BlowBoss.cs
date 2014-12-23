@@ -6,10 +6,13 @@ public class FinalBoss_BlowBoss : MonoBehaviour {
 	public GameObject Explosion;
 	public float ExplosionTime;
 
+	[HideInInspector]
+	public bool dynamiteSet;
+
 	private GameObject Exit;
 		
 	private float timer;
-	private bool dynamiteSet;
+
 
 	void Start(){
 		Exit = GameObject.FindGameObjectWithTag(Global_Variables.EXIT_TAG);
@@ -20,35 +23,28 @@ public class FinalBoss_BlowBoss : MonoBehaviour {
 			timer += Time.deltaTime;
 
 			if(timer >= ExplosionTime){
-				gameObject.transform.parent.gameObject.SetActive(false);
-				Instantiate(Explosion,gameObject.transform.parent.position, Quaternion.identity);
+				Instantiate(Explosion,GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).transform.position, Quaternion.identity);
 
 				GetComponent<AudioSource>().Play();
+
+				GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).SetActive(false);
 				ExplodeExit();
 
 				Global_Variables.Instance.FollowersStopped = false;
 
-				Destroy(transform.root.gameObject);
 				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossActivated=false;
 				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = false;
 				GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossStunt = false;
 
+				dynamiteSet = false;
+
+				//Destroy(transform.root.gameObject);
+
+
 			}
 		}
 	}
 
-	void OnTriggerStay(Collider col){
-		if(col.tag == Global_Variables.PLAYER_TAG && Input.GetButtonDown(Global_Variables.BYPASS_OBSTICLE)){
-			if(col.GetComponent<Player_Inventory>().HasDynamite){
-
-				GetComponent<Dynamite_Blinking>().blinking = false;
-				dynamiteSet = true;
-				col.GetComponent<Player_Inventory>().UseDynamite();
-			}else{
-				//DONT HAVE DYNAMITE
-			}
-		}
-	}
 
 	private void ExplodeExit(){
 		Rigidbody[] exitRocks = Exit.GetComponentsInChildren<Rigidbody>();

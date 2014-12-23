@@ -18,6 +18,7 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 	void Start(){
 		rocks = GetComponentsInChildren<Rigidbody>();
 		RocksBlown = false;
+		originalVolume = GetComponent<AudioSource>().volume;
 	}
 
 	void Update(){
@@ -64,10 +65,16 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 
 			if(con.MusicOn){
 				a.volume = originalVolume * con.SFXVolume;
+			}else{
+				a.volume = 0f;
 			}
+			Debug.LogError(con + " " + a.volume);
 		}
 
+		a.clip = (AudioClip)Resources.Load("Sounds/NearExplosionB");
 		a.Play();
+
+		Debug.LogError(a.isPlaying);
 
 		foreach(Rigidbody r in rocks){
 			r.useGravity = true;
@@ -83,9 +90,13 @@ public class FinalBoss_BlowRocks : MonoBehaviour {
 			l.activated = false;
 		}
 	
-		Dwarf_Movement dwarf = GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG).GetComponent<Dwarf_Movement>();
+		GameObject dwarf_m = GameObject.FindGameObjectWithTag(Global_Variables.FINAL_BOSS_TAG);
 
-		dwarf.RemoveTarget(crystal);
-		dwarf.RemoveCurrentTarget(crystal);
+
+		if(dwarf_m != null){
+			Dwarf_Movement dwarf = dwarf_m.GetComponent<Dwarf_Movement>();
+			dwarf.RemoveTarget(crystal);
+			dwarf.RemoveCurrentTarget(crystal);
+		}
 	}
 }
