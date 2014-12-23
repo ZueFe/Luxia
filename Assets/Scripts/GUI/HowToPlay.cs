@@ -12,13 +12,13 @@ public class HowToPlay : MonoBehaviour {
 		"This is Luxia, the character you control. She can fly freely through the maze, however her energy is constanty decreasing. To refill the energy, find glowing crystal and press action button (E by default).",
 		"The pilgrims you need to save. They follow your light, but you can tell them to stop/start following you whenever you like (F key by default). They can only walk on solid ground. Be carful not to leave them in the dark for too long. The darkness will swallow them!",
 		"Should you become lost, you can look at the map of the maze, where your position will be marked (M key by default).",
-		"You will come accros numerous bridges in this game. To overcome them, you can use your energy or find a lever in the maze.",
-		"When you come accros closed gate, you need to search for a key. Alternatively, you can use your energy to open it.",
-		"To get your pilgrims over the water you need to find a group of light wisps, that will form a boat from light.",
+		"You will come accros numerous bridges in this game. To overcome them, you can use your energy near the bridge (E by default) or find a lever in the maze.",
+		"When you come accros closed gate, you need to search for a key. Alternatively, you can use your energy near the gate (E by default) to open it.",
+		"To get your pilgrims over the water you need to find a group of light wisps. They will lead you out of the maze and form a boat from light.",
 		"Potato monster will hyntotize you pilgrims, so they will no longer follow you. You need to kill him with your energy.",
-		"These dark bees feer the light. Traveling in swarm or alone, they grow bigger in the darkness, but if you keep them in the light long enough, they will disappear. Just watch out and don't touch them directly.",
+		"These dark bees fear the light. Traveling in swarm or alone, they grow bigger in the darkness, but if you keep them in the light long enough, they will disappear. Just watch out and don't touch them directly.",
 		"This evil wisp sucks your light and the only thing you can do about it is try to avoid her crazy moves until she disappears. Good luck!",
-		"The man to be feared. You need to occupy him by lighting up a crystal, and while he is mining it, set up a dynamite over his head. Watch out, when he is not mining, he is attacking your pilgrims."
+		"The man to be feared. You need to occupy him by lighting up a crystal, and while he is mining it, set up a dynamite over his head. Watch out, when he is not mining, he will attack your pilgrims."
 	};
 	private int screenWidth;
 	private int screenHeight;
