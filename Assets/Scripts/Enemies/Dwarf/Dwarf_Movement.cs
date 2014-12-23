@@ -69,11 +69,16 @@ public class Dwarf_Movement : MonoBehaviour {
 			ResolveStunt();
 		}
 
-		if (currentTarget.tag == Global_Variables.FOLLOWER_TAG ) {
-			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = true;
-		} else {
-			GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().bossAttacking = false;
-		}
+		if (currentTarget.tag == Global_Variables.FOLLOWER_TAG && CloseToTarget ()) {
+						GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossAttacking = true;
+						GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossMining = false;
+				} else if (currentTarget.tag != null && CloseToTarget ()) {
+						GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossMining = true;
+						GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossAttacking = false;
+				} else {
+			GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossMining = false;
+			GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().bossAttacking = false;
+				}
 	}
 
 	private void ResolveLocoMotion(){

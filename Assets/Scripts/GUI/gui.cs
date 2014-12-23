@@ -35,6 +35,7 @@ public class gui : MonoBehaviour
 		public bool winScreenOn = false;
 		public bool bossAttacking = false;
 		public bool bossStunt = false;
+		public bool bossMining = false;
 
 		void OnGUI ()
 		{
@@ -180,7 +181,9 @@ public class gui : MonoBehaviour
 						} else if (timer < 3) {
 								labelText = "You don't have enough energy!";
 						} else if (bossAttacking) {
-								labelText = "The dwarf is going for your pilgrims!";
+								labelText = "The dwarf is attacking your pilgrims!";
+						} else if (bossMining) {
+								labelText = "The dwarf is mining a crystal.";
 						} else if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 								labelText = "Your pilgrims are in mortal peril!";	
 						} else if (!deathScreenOn && Camera.main.GetComponent<Game_Manager> ().followerInstances [0].GetComponent<Follow_Player> ().Follows.gameObject.tag != Global_Variables.PLAYER_TAG && !areInElevator) {
