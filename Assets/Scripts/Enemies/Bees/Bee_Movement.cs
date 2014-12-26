@@ -61,7 +61,6 @@ public class Bee_Movement : MonoBehaviour {
 			}
 
 			if(DistanceFromPlayer() < Mathf.Sqrt(playerLight.range)){
-			Debug.LogError(DistanceFromPlayer());
 				DecreaseScale();
 			}else{
 				IncreaseScale();
