@@ -13,6 +13,7 @@ public class Crystal_Use : MonoBehaviour {
 	private float lightIntensityDecrease;
 	private bool startDecreasing;
 	private float timer;
+	private float addLifePerSecond;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class Crystal_Use : MonoBehaviour {
 		stats = gameObject.GetComponent<Obsticle_Stats>();
 		lightRangeDecrease = light.range / ChannelingTime;
 		lightIntensityDecrease = light.intensity / ChannelingTime;
+		addLifePerSecond = (-1 * stats.EnergyCost) / ChannelingTime;
 	}
 
 	void Update(){
@@ -28,6 +30,9 @@ public class Crystal_Use : MonoBehaviour {
 
 			light.intensity -= lightIntensityDecrease * Time.deltaTime;
 			light.range -= lightRangeDecrease * Time.deltaTime;
+			GameObject p = GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG);
+
+			p.GetComponent<Player_Stats>().ChangeEnergy(addLifePerSecond * Time.deltaTime);
 
 			if(timer >= ChannelingTime){
 				timer = 0;
@@ -51,7 +56,7 @@ public class Crystal_Use : MonoBehaviour {
 		gameObject.GetComponentInChildren<Light>().enabled = false;
 		startDecreasing = false;
 
-		GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG).GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
+		//GameObject.FindGameObjectWithTag(Global_Variables.PLAYER_TAG).GetComponent<Player_Stats>().ChangeEnergy(-1 * stats.EnergyCost);
 
 		Global_Variables.Instance.FreezeTime = false;
 	}	

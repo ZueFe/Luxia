@@ -47,7 +47,7 @@ public class Bee_Movement : MonoBehaviour {
 				}else if(Flee){
 					charging = false;
 					speed = FleeingSpeed;
-					offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
+				offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
 				}
 			}else{
 				if(scale >= StartCharging || !Flee){
@@ -56,11 +56,12 @@ public class Bee_Movement : MonoBehaviour {
 					offset = 0f;
 				}else{
 					speed = FleeingSpeed;
-					offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
+				offset = Mathf.Sqrt(playerLight.range) + PlayerOffset;
 				}
 			}
 
 			if(DistanceFromPlayer() < Mathf.Sqrt(playerLight.range)){
+			Debug.LogError(DistanceFromPlayer());
 				DecreaseScale();
 			}else{
 				IncreaseScale();
@@ -83,7 +84,8 @@ public class Bee_Movement : MonoBehaviour {
 	}
 
 	private float DistanceFromPlayer(){
-		return Vector3.Distance(gameObject.transform.position, player.transform.position);
+		//return Vector3.Distance(gameObject.transform.position, player.transform.position);
+		return Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
 	}
 
 	/*private bool IsInOffsetRange(){
