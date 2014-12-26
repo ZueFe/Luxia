@@ -3,7 +3,7 @@ using System.Collections;
 
 public class gui : MonoBehaviour
 {
-
+		public Texture cracks;
 		public Texture messageBoard;
 		public Texture panel;
 		public Texture key;
@@ -65,6 +65,12 @@ public class gui : MonoBehaviour
 								fontStyle.fontSize = 20;
 						}
 
+						float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
+
+						GUI.color = new Color(1,1,1,1-life);
+						GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), cracks, ScaleMode.StretchToFill);
+						GUI.color = new Color(1,1,1,1);
+
 						GUI.DrawTexture (new Rect (screenWidth / 2 - messageBoardWidth / 2, -35, messageBoardWidth, messageBoardWidth / 5), messageBoard, ScaleMode.StretchToFill);
 						GUI.Label (new Rect (screenWidth / 2 - messageBoardWidth / 2, 3, messageBoardWidth, messageBoardWidth / 5), labelText, fontStyle);
 			
@@ -87,9 +93,7 @@ public class gui : MonoBehaviour
 						}
 
 						GUI.DrawTexture (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
-
-						float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
-
+									
 						GUI.BeginGroup (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * life, 90 + healthBarWidth / 5));
 						//GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
 						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillBlue, ScaleMode.StretchToFill);
