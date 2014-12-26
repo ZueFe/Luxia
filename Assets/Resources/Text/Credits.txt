@@ -29,6 +29,8 @@ Katarina Furmanova</size>
 <size=30><b>Special Thanks</b></size>
 <size=25>Ben Throop
 The Mansfield Clan
+Marek Galvanek
+Maros Tkacik
 Mgr. Jiri Chmelik Ph.D.
 Milan Dolezal
 Antonin Hojny
