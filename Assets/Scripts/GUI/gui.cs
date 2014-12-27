@@ -67,7 +67,8 @@ public class gui : MonoBehaviour
 
 						float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
 
-						GUI.color = new Color(1,1,1,1-life);
+						float opacity = life>0.33f?0:1-(3*life);
+						GUI.color = new Color(1,1,1,opacity);
 						GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), cracks, ScaleMode.StretchToFill);
 						GUI.color = new Color(1,1,1,1);
 
@@ -94,7 +95,7 @@ public class gui : MonoBehaviour
 
 						GUI.DrawTexture (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
 									
-						GUI.BeginGroup (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * life, 90 + healthBarWidth / 5));
+						GUI.BeginGroup (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * (life/1.15f + 0.085f), 90 + healthBarWidth / 5));
 						//GUI.DrawTexture (new Rect (30, screenHeight - 120,300, 120), HealthBarFillBlue, ScaleMode.StretchToFill);
 						GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillBlue, ScaleMode.StretchToFill);
 						GUI.EndGroup ();
@@ -108,7 +109,7 @@ public class gui : MonoBehaviour
 
 						float pilgrimLife = Camera.main.GetComponent<Game_FollowerDeath> ().GetCurrentDeathTime () - 0.05f;
 
-						GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * pilgrimLife, 90 + healthBarWidth / 5));
+			GUI.BeginGroup (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth * (pilgrimLife/1.15f + 0.085f), 90 + healthBarWidth / 5));
 						if (pilgrimLife < (1 - Camera.main.GetComponent<Game_FollowerDeath> ().MaxRandomParam)) {
 								GUI.DrawTexture (new Rect (0, 0, healthBarWidth, 90 + healthBarWidth / 5), HealthBarFillRed, ScaleMode.StretchToFill);
 						} else {
@@ -196,7 +197,7 @@ public class gui : MonoBehaviour
 								labelText = "So far, so good!";
 						}
 				
-						if (life <= 0.08f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () <= 0) {
+						if (life <= 0.0f || Camera.main.GetComponent<Game_FollowerDeath> ().NumberOfLivingFollowers () <= 0) {
 								deathScreenOn = true;	
 								Global_Variables.Instance.FreezeTime = true;
 								
