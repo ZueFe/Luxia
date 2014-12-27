@@ -67,7 +67,7 @@ public class gui : MonoBehaviour
 
 						float life = GameObject.FindWithTag (Global_Variables.PLAYER_TAG).GetComponent<Player_Stats> ().GetEnergy () / 100f - 0.05f;
 
-						float opacity = life>0.33f?0:1-(3*life);
+						float opacity = life>0.25f?0:1-(4*life);
 						GUI.color = new Color(1,1,1,opacity);
 						GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), cracks, ScaleMode.StretchToFill);
 						GUI.color = new Color(1,1,1,1);
