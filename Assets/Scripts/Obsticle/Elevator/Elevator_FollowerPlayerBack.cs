@@ -12,8 +12,9 @@ public class Elevator_FollowerPlayerBack : MonoBehaviour {
 
 		GameObject.FindGameObjectWithTag("GUI").GetComponent<gui> ().areInElevator = false;
 
-		foreach(GameObject f in Camera.main.GetComponent<Game_Manager>().followerInstances){
-			f.transform.parent = null;
+		for(int i = 0; i < Camera.main.GetComponent<Game_FollowerDeath>().NumberOfLivingFollowers();i++){
+			Camera.main.GetComponent<Game_Manager>().followerInstances[i].transform.parent = null;
 		}
+
 	}
 }
