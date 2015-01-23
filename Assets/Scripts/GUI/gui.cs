@@ -37,6 +37,11 @@ public class gui : MonoBehaviour
 		public bool bossStunt = false;
 		public bool bossMining = false;
 
+		void Start(){
+			Screen.showCursor = false;
+			
+		}
+
 		void OnGUI ()
 		{
 				GUI.skin = skin;
@@ -102,7 +107,7 @@ public class gui : MonoBehaviour
 
 						GUI.DrawTexture (new Rect (borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarForeground, ScaleMode.StretchToFill);
 
-						GUI.Label (new Rect (healthBarWidth / 2 - 15, screenHeight - 27, 70, 30), "Health", fontStyle);
+						GUI.Label (new Rect (healthBarWidth / 2 - 15, screenHeight - 27, 70, 30), "Light", fontStyle);
 
 						//LIFEBAR			
 						GUI.DrawTexture (new Rect (screenWidth - healthBarWidth - borderGap, screenHeight - 75 - healthBarWidth / 5, healthBarWidth, 90 + healthBarWidth / 5), HealthBarBackground, ScaleMode.StretchToFill);
@@ -211,6 +216,7 @@ public class gui : MonoBehaviour
 						drawWinScreen ();
 				}
 				
+				
 
 		}
 
@@ -228,6 +234,7 @@ public class gui : MonoBehaviour
 
 		private void drawDeathScreen ()
 		{
+				Screen.showCursor = true;
 				gameEnd.a += 0.002f;
 				
 				
@@ -270,6 +277,7 @@ public class gui : MonoBehaviour
 
 		private void drawWinScreen ()
 		{
+				Screen.showCursor = true;
 				gameEnd.a += 0.002f;
 		
 		

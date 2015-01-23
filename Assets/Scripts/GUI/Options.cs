@@ -15,6 +15,7 @@ public class Options : MonoBehaviour
 		void OnGUI ()
 		{
 				if (optionsOn) {
+						Screen.showCursor = true;
 						GUIStyle fontStyle = new GUIStyle ();
 						fontStyle.font = nightmareFont;
 						fontStyle.fontSize = 50;
@@ -25,7 +26,14 @@ public class Options : MonoBehaviour
 						int screenWidth = Screen.width;
 						int screenHeight = Screen.height;
 
-						GUI.DrawTextureWithTexCoords(new Rect(0,0,screenWidth,screenHeight),background,new Rect(0, 0, screenWidth / background.width, screenHeight / background.height));
+						
+						for (int i = 0; i<screenWidth; i=i+background.width) {
+								for (int j = 0; j<screenHeight; j=j+background.height) {
+										GUI.DrawTexture (new Rect (i, j, background.width, background.height), background, ScaleMode.StretchToFill);
+								}
+						}
+
+						
 
 						GUI.skin = skin;
 						GUI.Label (new Rect (screenWidth / 2 - 200, 10, 400, 100), "Options", fontStyle);
@@ -70,7 +78,7 @@ public class Options : MonoBehaviour
 						if (GUI.Button (new Rect (screenWidth / 8, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Cancel")) {
 								GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().LoadMusicPrefs ();
 								optionsOn = false;
-								
+																
 						}
 						if (GUI.Button (new Rect (screenWidth / 2 - screenWidth / 8, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Reset settings")) {
 								musicVolume = 100f;
@@ -78,26 +86,44 @@ public class Options : MonoBehaviour
 								musciOn = true;
 						}
 						if (GUI.Button (new Rect (screenWidth - (screenWidth / 8) - screenWidth / 4, screenHeight - screenHeight / 7, screenWidth / 4, screenHeight / 7), "Done!")) {
-						
-								GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicVolume = musicVolume / 100;
-								GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().SFXVolume = sfxVolume / 100;
-								if (musciOn) {
-										PlayerPrefs.SetInt ("MusicOn", 1);
-										GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = true;
-								} else {
-										PlayerPrefs.SetInt ("MusicOn", 0);
-										GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = false;
-								}
-								PlayerPrefs.SetFloat ("MusicVolume", musicVolume / 100);
-								PlayerPrefs.SetFloat ("SFXVolume", sfxVolume / 100);
-								PlayerPrefs.Save ();
-
+								doneAction ();
 								
-								optionsOn = false;
 						}
 
 				}
 
 		}
 
+		private void doneAction ()
+		{
+				GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicVolume = musicVolume / 100;
+				GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().SFXVolume = sfxVolume / 100;
+				if (musciOn) {
+						PlayerPrefs.SetInt ("MusicOn", 1);
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = true;
+				} else {
+						PlayerPrefs.SetInt ("MusicOn", 0);
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().MusicOn = false;
+				}
+				PlayerPrefs.SetFloat ("MusicVolume", musicVolume / 100);
+				PlayerPrefs.SetFloat ("SFXVolume", sfxVolume / 100);
+				PlayerPrefs.Save ();
+		
+		
+				optionsOn = false;
+		}
+
+		void Update ()
+		{
+				if (Input.GetButtonDown (Global_Variables.GAME_MENU)) {
+						GameObject.FindGameObjectWithTag ("Config").GetComponent<Game_Configuration> ().LoadMusicPrefs ();
+						optionsOn = false;
+				}
+				if (Input.GetButtonDown (Global_Variables.SUBMIT)) {
+						doneAction ();
+				}
+
+		}
+	
 }
+	

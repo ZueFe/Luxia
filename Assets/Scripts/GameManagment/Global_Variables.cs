@@ -21,6 +21,8 @@ public class Global_Variables : MonoBehaviour {
 	public const string BYPASS_OBSTICLE = "Use/Attack";
 	public const string MAP = "Map";
 	public const string GAME_MENU = "Game menu";
+	public const string HORIZONTAL = "Horizontal";
+	public const string SUBMIT = "Submit";
 	public const string FOLLOWER_TAG = "Follower";
 	public const string LIGHT_OBST_TAG = "LightObstacle";
 	public const string CONFIG_TAG = "Config";

@@ -105,4 +105,27 @@ public class HowToPlay : MonoBehaviour {
 
 		}
 	}
+
+	void Update ()
+	{
+				if (Input.GetButtonDown (Global_Variables.GAME_MENU)) {
+						Application.LoadLevel ("mainMenu");
+				}
+
+
+		if (Input.GetButtonDown (Global_Variables.HORIZONTAL) && Input.GetAxis (Global_Variables.HORIZONTAL)>0) {
+			index++;
+			if(index==objects.Length){
+				index=0;
+			}
+		}
+		if (Input.GetButtonDown (Global_Variables.HORIZONTAL) && Input.GetAxis (Global_Variables.HORIZONTAL)<0 ) {
+			index--;
+			if(index<0){
+				index=objects.Length-1;
+			}
+		}
+	
+		}
+
 }

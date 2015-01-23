@@ -9,7 +9,9 @@ public class InGameMenu : MonoBehaviour
 
 		void OnGUI ()
 		{
-	
+				if (!GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().deathScreenOn && !GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().winScreenOn) {
+						Screen.showCursor = menuOn;	
+				}
 				if (menuOn && !GetComponent<Options> ().optionsOn) {
 						int screenWidth = Screen.width;
 						int screenHeight = Screen.height;
@@ -18,6 +20,7 @@ public class InGameMenu : MonoBehaviour
 						if (GUI.Button (new Rect ((screenWidth - (screenWidth / 4)) / 2, screenHeight / 10 + screenHeight / 7 - 10, screenWidth / 4, screenHeight / 7), "Resume Game")) {
 								menuOn = false;
 								Global_Variables.Instance.FreezeTime = menuOn;
+															
 						}
 
 						if (GUI.Button (new Rect ((screenWidth - (screenWidth / 4)) / 2, screenHeight / 10 + 2 * (screenHeight / 7 - 10), screenWidth / 4, screenHeight / 7), "Options")) {
@@ -37,7 +40,7 @@ public class InGameMenu : MonoBehaviour
 
 		void Update ()
 		{
-		if (Input.GetButtonDown (Global_Variables.GAME_MENU) && Camera.main.GetComponent<Game_Camera> ().getTarget ().gameObject.tag == Global_Variables.PLAYER_TAG && !GetComponent<Options> ().optionsOn&&!GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().deathScreenOn&&!GameObject.FindGameObjectWithTag("GUI").GetComponent<gui>().winScreenOn) {
+				if (Input.GetButtonDown (Global_Variables.GAME_MENU) && Camera.main.GetComponent<Game_Camera> ().getTarget ().gameObject.tag == Global_Variables.PLAYER_TAG && !GetComponent<Options> ().optionsOn && !GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().deathScreenOn && !GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().winScreenOn) {
 						menuOn = !menuOn;
 						Global_Variables.Instance.FreezeTime = menuOn;
 				}

@@ -42,6 +42,10 @@ public class Credits : MonoBehaviour {
 
 	void Update(){
 		timer += 70*Time.deltaTime;
+
+		if (Input.GetButtonDown (Global_Variables.GAME_MENU)) {
+			Application.LoadLevel ("mainMenu");
+		}
 	}
 
 }
