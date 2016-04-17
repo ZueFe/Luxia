@@ -10,7 +10,7 @@ public class InGameMenu : MonoBehaviour
 		void OnGUI ()
 		{
 				if (!GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().deathScreenOn && !GameObject.FindGameObjectWithTag ("GUI").GetComponent<gui> ().winScreenOn) {
-						Screen.showCursor = menuOn;	
+						Cursor.visible = menuOn;	
 				}
 				if (menuOn && !GetComponent<Options> ().optionsOn) {
 						int screenWidth = Screen.width;

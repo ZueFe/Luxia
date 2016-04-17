@@ -106,7 +106,7 @@ public class Follow_Player : MonoBehaviour {
 
 		Vector3 moveTo = new Vector3(currentX, transform.position.y, transform.position.z);
 
-		rigidbody.MovePosition(moveTo);		
+		GetComponent<Rigidbody>().MovePosition(moveTo);		
 	}
 
 	private float GetDistanceWithPlayer(){
@@ -153,7 +153,7 @@ public class Follow_Player : MonoBehaviour {
 		int r = Random.Range(1, 4);
 
 		gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/death gasp" + r, typeof(AudioClip));
-		gameObject.GetComponent<AudioSource>().audio.Play();
+		gameObject.GetComponent<AudioSource>().GetComponent<AudioSource>().Play();
 	}
 
 	public void DestroyFollower(){

@@ -38,7 +38,7 @@ public class gui : MonoBehaviour
 		public bool bossMining = false;
 
 		void Start(){
-			Screen.showCursor = false;
+			Cursor.visible = false;
 			
 		}
 
@@ -234,7 +234,7 @@ public class gui : MonoBehaviour
 
 		private void drawDeathScreen ()
 		{
-				Screen.showCursor = true;
+				Cursor.visible = true;
 				gameEnd.a += 0.002f;
 				
 				
@@ -277,7 +277,7 @@ public class gui : MonoBehaviour
 
 		private void drawWinScreen ()
 		{
-				Screen.showCursor = true;
+				Cursor.visible = true;
 				gameEnd.a += 0.002f;
 		
 		

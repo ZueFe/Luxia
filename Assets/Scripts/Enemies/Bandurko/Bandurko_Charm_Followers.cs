@@ -30,7 +30,7 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 			if(GetComponent<Bandurko_Movement>().charming){
 				if(!GetComponent<AudioSource>().isPlaying){
 					gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/bandurko death2", typeof(AudioClip));
-					gameObject.GetComponent<AudioSource>().audio.Play();
+					gameObject.GetComponent<AudioSource>().GetComponent<AudioSource>().Play();
 				}
 			}
 
@@ -51,7 +51,7 @@ public class Bandurko_Charm_Followers : MonoBehaviour {
 			if(pStats.GetEnergy() >= stats.EnergyCost){
 
 				gameObject.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load("Sounds/bandurko death", typeof(AudioClip));
-				gameObject.GetComponent<AudioSource>().audio.Play();
+				gameObject.GetComponent<AudioSource>().GetComponent<AudioSource>().Play();
 				pStats.ChangeEnergy(-1f * stats.EnergyCost);
 				ChangeFollowing(col.gameObject, true, false);
 

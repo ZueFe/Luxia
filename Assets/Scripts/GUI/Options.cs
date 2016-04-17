@@ -15,7 +15,7 @@ public class Options : MonoBehaviour
 		void OnGUI ()
 		{
 				if (optionsOn) {
-						Screen.showCursor = true;
+						Cursor.visible = true;
 						GUIStyle fontStyle = new GUIStyle ();
 						fontStyle.font = nightmareFont;
 						fontStyle.fontSize = 50;

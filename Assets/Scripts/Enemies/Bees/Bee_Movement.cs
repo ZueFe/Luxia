@@ -121,7 +121,7 @@ public class Bee_Movement : MonoBehaviour {
 
 		Vector3 moveTo = new Vector3(currentX, currentY, transform.position.z);
 		
-		rigidbody.MovePosition(moveTo);		
+		GetComponent<Rigidbody>().MovePosition(moveTo);		
 	}
 
 	private bool CheckYObsticle(float dir){
